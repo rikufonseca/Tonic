@@ -1,24 +1,22 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <p> Services </p>
+      <p> <%= t('.services') %> </p>
     <% end %>
     <%= link_to "#", class: "navbar-brand" do %>
-      <p> Products </p>
+      <p> <%= t('.products') %> </p>
     <% end %>
     <%= link_to "#", class: "navbar-brand" do %>
-      <p> Jewelries </p>
+      <p> <%= t('.jewelries') %> </p>
     <% end %>
     <%= image_tag "TONIC_logo_site.jpg" %>
      <%= link_to "#", class: "navbar-brand" do %>
-      <p> About </p>
+      <p> <%= t('.about') %> </p>
     <% end %>
      <%= link_to "#", class: "navbar-brand" do %>
-      <p> Contact </p>
+      <p> <%= t('.contact') %> </p>
     <% end %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
+    <%= link_to "ENG", root_path(locale: "en"), class:"underlin" %>
+    <%= link_to "GR", root_path(locale: "gr"), class:"underlin"%>
   </div>
 </div>

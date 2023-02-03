@@ -1,0 +1,8 @@
+gr:
+  shared:
+    navbar:
+      services: "Υπηρεσίες"
+      products: "Προϊόντα"
+      jewelries: "Κοσμήματα"
+      about: "Σχετικά με"
+      contact: "Επικοινωνία"
