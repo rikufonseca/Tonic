@@ -10,9 +10,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_01_092401) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_03_110326) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone_number"
+    t.string "email"
+    t.string "category_gr"
+    t.string "category_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jewelries", force: :cascade do |t|
+    t.string "name_gr"
+    t.string "name_en"
+    t.text "description_gr"
+    t.text "description_en"
+    t.integer "price"
+    t.string "theme_gr"
+    t.string "theme_en"
+    t.string "category_en"
+    t.string "category_gr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name_gr"
+    t.string "name_en"
+    t.text "description_gr"
+    t.text "description_en"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "name_gr"
+    t.string "name_en"
+    t.text "description_gr"
+    t.text "description_en"
+    t.integer "price"
+    t.string "category_en"
+    t.string "category_gr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
