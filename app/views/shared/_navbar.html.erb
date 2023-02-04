@@ -1,21 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <p> <%= t('.services') %> </p>
-    <% end %>
-    <%= link_to "#", class: "navbar-brand" do %>
-      <p> <%= t('.products') %> </p>
-    <% end %>
-    <%= link_to "#", class: "navbar-brand" do %>
-      <p> <%= t('.jewelries') %> </p>
-    <% end %>
+    <%= link_to t('.services'), services_path, class: "navbar-brand" %>
+    <%= link_to t('.products'), products_path, class: "navbar-brand" %>
+    <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand" %>
     <%= image_tag "TONIC_logo_site.jpg" %>
-     <%= link_to "#", class: "navbar-brand" do %>
-      <p> <%= t('.about') %> </p>
-    <% end %>
-     <%= link_to "#", class: "navbar-brand" do %>
-      <p> <%= t('.contact') %> </p>
-    <% end %>
+     <%= link_to t('.about'), root_path, class: "navbar-brand" %>
+     <%= link_to t('.contact'), contacts_path, class: "navbar-brand" %>
     <%= link_to "ENG", root_path(locale: "en"), class:"underlin" %>
     <%= link_to "GR", root_path(locale: "gr"), class:"underlin"%>
   </div>
