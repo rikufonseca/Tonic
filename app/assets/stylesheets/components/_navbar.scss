@@ -3,10 +3,42 @@
   background: white;
 }
 
+.navbar-lewagon-flex {
+  display: flex;
+  justify-content: flex-start;
+  width:341.56px;
+}
+
+.navbar-lewagon-flex-two {
+  display: flex;
+  justify-content: flex-end;
+  width: 341.56px;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.english, .greek {
+  position: relative;
+  top: -2px;
+  right: 12px;
+  padding: 0 12px
+}
+
+.logo {
+  width: 241px;
+}
+
+.padding {
+  padding: 0 10px;
+  font-size: 17px;
+}
+
+.margin {
+  margin-left: 12px;
 }
