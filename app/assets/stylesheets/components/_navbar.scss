@@ -1,5 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
+}
+
+.background {
   background: white;
 }
 
@@ -31,14 +34,22 @@
 }
 
 .logo {
-  width: 241px;
+  width: 214px;
+  margin-top: 20px;
 }
 
 .padding {
   padding: 0 10px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .margin {
   margin-left: 12px;
+}
+
+.home-page {
+  background-image: url("home_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }

@@ -1,21 +1,23 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="navbar-lewagon-flex">
-    <%= link_to t('.services'), services_path, class: "navbar-brand padding margin" %>
-    <%= link_to t('.products'), products_path, class: "navbar-brand padding" %>
-    <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding" %>
-  </div>
-  <%= image_tag "TONIC_logo_site.jpg", class: "logo" %>
-  <div class="navbar-lewagon-flex-two">
-    <%= link_to t('.about'), root_path, class: "navbar-brand padding" %>
-    <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding" %>
-      <% if params[:locale] == "en" || params[:locale].nil? %>
-        <%= link_to root_path(locale: "gr"),  class:"greek" do %>
-          <% image_tag("greek_flag", width: 28) %>
-        <% end %>
-      <% else %>
-        <%= link_to root_path(locale: "en"),  class:"english" do %>
-          <% image_tag("english_flag", width: 28) %>
-        <% end %>
-      <% end %>
-  </div>
+<div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <div class="navbar-lewagon-flex">
+        <%= link_to t('.services'), services_path, class: "navbar-brand padding margin" %>
+        <%= link_to t('.products'), products_path, class: "navbar-brand padding" %>
+        <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding" %>
+      </div>
+      <%= image_tag "TONIC_logo.png", class: "logo" %>
+      <div class="navbar-lewagon-flex-two">
+        <%= link_to t('.about'), root_path, class: "navbar-brand padding" %>
+        <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding" %>
+          <% if params[:locale] == "en" || params[:locale].nil? %>
+            <%= link_to root_path(locale: "gr"),  class:"greek" do %>
+              <% image_tag("greek_flag", width: 28) %>
+            <% end %>
+          <% else %>
+            <%= link_to root_path(locale: "en"),  class:"english" do %>
+              <% image_tag("english_flag", width: 28) %>
+            <% end %>
+          <% end %>
+      </div>
+    </div>
 </div>
