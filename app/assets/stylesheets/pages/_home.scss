@@ -3,3 +3,35 @@
   margin: 0;
   padding: 0;
 }
+
+.title {
+  font-style: italic;
+  padding: 3em;
+}
+.about_page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pics_shop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.shop_pic {
+  width: 700px;
+}
+
+.about_article {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about_text {
+  width: 57vw;
+  margin: 113px 0;
+  font-size: larger;
+}
