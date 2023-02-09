@@ -12,30 +12,28 @@ export default class extends Controller {
     const navigation = this.navigationTarget;
     const homepage = this.homepageTarget;
 
-    let animation = gsap.timeline({
-      scrollTrigger: {
+    let animation = gsap.timeline();
+      ScrollTrigger.create({
         trigger: homepage,
         start: "top",
         end: "1% top",
         markers: true,
         scrub: 1,
-      }
-    });
+        animation: animation
+      });
 
-    animation.to(navigation, {
+      animation.to(navigation, {
       duration: 1,
       y:15,
     })
-//
-    //ScrollTrigger.create({
-    //  trigger: homepage,
-    //  start: "top top",
-    //  markers: { startColor: "black", endColor: "black" },
-    //  scrub: 1,
-    //  animation: animation
-    //  })
 
-  // gsap.to(navigation, { duration: 1, y: 500, opacity: 1 });
-  // gsap.to(homepage, { duration: 1, y: 500, opacity: 1 });
+    ScrollTrigger.create({
+      trigger: homepage,
+      start: "1% top",
+      end: "bottom",
+      toggleClass: { targets: navigation, className: "white_back" },
+      markers: true,
+      scrub: 1,
+    });
   }
 }

@@ -75,3 +75,17 @@
 p {
   margin-bottom: 0;
 }
+
+.white_back {
+  background-color: white;
+  animation-name: graduate_color;
+}
+
+@keyframes graduate_color {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
