@@ -15,8 +15,8 @@ export default class extends Controller {
     let animation = gsap.timeline({
       scrollTrigger: {
         trigger: homepage,
-        start: "10% top",
-        end: "top",
+        start: "top",
+        end: "1% top",
         markers: true,
         scrub: 1,
       }
@@ -24,7 +24,7 @@ export default class extends Controller {
 
     animation.to(navigation, {
       duration: 1,
-      y:10,
+      y:15,
     })
 //
     //ScrollTrigger.create({
