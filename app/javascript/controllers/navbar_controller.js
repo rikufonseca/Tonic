@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import  LocomotiveScroll  from 'locomotive-scroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,10 +13,11 @@ export default class extends Controller {
     const navigation = this.navigationTarget;
     const homepage = this.homepageTarget;
 
+
     let animation = gsap.timeline();
       ScrollTrigger.create({
         trigger: homepage,
-        start: "top",
+        start: "-10% top",
         end: "1% top",
         markers: true,
         scrub: 1,
@@ -29,11 +31,17 @@ export default class extends Controller {
 
     ScrollTrigger.create({
       trigger: homepage,
-      start: "1% top",
-      end: "bottom",
+      start: "-10% top",
+      end: "center",
       toggleClass: { targets: navigation, className: "white_back" },
       markers: true,
       scrub: 1,
     });
+
+    const scroll = new LocomotiveScroll({
+       el: homepage,
+       smooth: true,
+    });
+
   }
 }

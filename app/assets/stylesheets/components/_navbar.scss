@@ -6,6 +6,7 @@
 
 .navbar-lewagon {
   top: 15px;
+  z-index: 300;
 }
 
 .background {
@@ -79,11 +80,15 @@ p {
 .white_back {
   background-color: white;
   animation-name: graduate_color;
+  transition: all 1s linear;
 }
 
 @keyframes graduate_color {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
