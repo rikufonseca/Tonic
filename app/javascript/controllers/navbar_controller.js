@@ -1,62 +1,39 @@
 import { Controller } from "@hotwired/stimulus";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import  LocomotiveScroll  from 'locomotive-scroll';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default class extends Controller {
-  static targets = ["navigation", "homepage", "upbar"];
+  static targets = ["navigation", "homepage", "upbar", "textbar"];
 
   connect() {
 
     const navigation = this.navigationTarget;
     const homepage = this.homepageTarget;
     const upbar = this.upbarTarget;
+    const textbar = this.textbarTarget;
 
+    function updatePosition() {
+      let rect = homepage.getBoundingClientRect();
+      var top = rect.top;
+      console.log(top);
+      if(top <= 0){
+        navigation.classList.add("show");
+        navigation.classList.add("move-down");
+        upbar.classList.add("move-down-call");
+        textbar.classList.add("show-call");
+      } else {
+        navigation.classList.remove("show");
+        navigation.classList.remove("move-down");
+        upbar.classList.remove("move-down-call");
+        textbar.classList.remove("show-call");
+      }
+    }
 
-    let animation = gsap.timeline();
-      ScrollTrigger.create({
-        trigger: homepage,
-        start: "-10% top",
-        end: "1% top",
-        markers: true,
-        scrub: 1,
-        animation: animation
-      });
+    window.addEventListener("scroll", updatePosition);
 
-      animation.to(navigation, {
-      duration: 1,
-      y:15,
-    })
-
-    ScrollTrigger.create({
-      trigger: homepage,
-      start: "-10% top",
-      end: "center",
-      toggleClass: { targets: navigation, className: "white_back" },
-      markers: true,
-      scrub: 1,
-    });
-
-    let upto = gsap.timeline();
-
-    ScrollTrigger.create({
-      trigger: homepage,
-      start: "-20% top",
-      end: "center",
-      toggleClass: { targets: upbar, className: "white_up" },
-      markers: true,
-      scrub: 1,
-      animation: upto,
-    });
-
-    upto.fromTo(upbar, { attr: { y2: 60 }, duration: 0.3, ease: "linear" }, { attr: { y1: 300 }, duration: 0.30, ease: "linear" }, "<")
-
-    const scroll = new LocomotiveScroll({
-       el: homepage,
-       smooth: true,
-    });
+   // new LocomotiveScroll({
+   //    el: homepage,
+   //    smooth: true,
+   // });
 
   }
 }

@@ -47,7 +47,6 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
-gem 'greensock-rails', '~> 1.20', '>= 1.20.4.0'
 
 # Use Sass to process CSS
 gem "sassc-rails"
