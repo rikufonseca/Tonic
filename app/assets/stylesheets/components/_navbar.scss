@@ -1,9 +1,16 @@
-.navbar-lewagon {
+.navbar-lewagon, .booking_bar {
   justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+}
+
+.navbar-lewagon {
+  top: 15px;
+  z-index: 300;
 }
 
 .background {
-  background: white;
+  background: #FBFBFB;
 }
 
 .navbar-lewagon-flex {
@@ -30,7 +37,8 @@
   position: relative;
   top: -2px;
   right: 12px;
-  padding: 0 12px
+  padding: 0 12px;
+  margin-right: 13px;
 }
 
 .logo {
@@ -53,4 +61,42 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  background-attachment: fixed;
+}
+
+.booking_bar {
+  margin-bottom: 0;
+  font-style: italic;
+  text-align: center;
+  padding: 3px;
+  border-bottom: 1px solid black;
+  z-index: 200;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.white_back {
+  background-color: white;
+  animation-name: graduate_color;
+  transition: all 1s linear;
+}
+
+@keyframes graduate_color {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.white_up {
+  background-color: white;
+  animation-name: graduate_color;
+  transition: all 1s linear;
 }

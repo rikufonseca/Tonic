@@ -1,5 +1,9 @@
-<div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div data-controller="navbar">
+  <div class="booking_bar" data-navbar-target="upbar">
+    <p class="booking_bar"> For booking or any questions, please contact us  <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
+  </div>
+  <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" data-navbar-target="navigation">
       <div class="navbar-lewagon-flex">
         <%= link_to t('.services'), services_path, class: "navbar-brand padding margin" %>
         <%= link_to t('.products'), products_path, class: "navbar-brand padding" %>
@@ -20,4 +24,4 @@
           <% end %>
       </div>
     </div>
-</div>
+  </div>
