@@ -70,7 +70,7 @@
   text-align: center;
   padding: 3px;
   border-bottom: 1px solid black;
-  display: none;
+  z-index: 200;
 }
 
 p {
@@ -93,4 +93,10 @@ p {
   100% {
     opacity: 1;
   }
+}
+
+.white_up {
+  background-color: white;
+  animation-name: graduate_color;
+  transition: all 1s linear;
 }

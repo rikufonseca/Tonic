@@ -1,6 +1,6 @@
 <div data-controller="navbar">
-  <div class="booking_bar">
-    <p> For booking or any questions, please contact us  <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
+  <div class="booking_bar" data-navbar-target="upbar">
+    <p class="booking_bar"> For booking or any questions, please contact us  <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
   </div>
   <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" data-navbar-target="navigation">
