@@ -7,6 +7,9 @@
 .navbar-lewagon {
   top: 15px;
   z-index: 300;
+  padding-top: 0;
+  height: 104px;
+  padding-bottom: 15px;
 }
 
 .background {
@@ -116,4 +119,37 @@ p {
   100% {
     opacity: 1;
   }
+}
+
+.nav-tel {
+  display: none;
+}
+
+@media only screen and (min-width:279px) and (max-width:900px) {
+  .booking_bar {
+    top: -52px;
+  }
+
+  .logo {
+    width: 160px;
+    margin-top: 2px;
+  }
+
+  .home-page {
+    background-size: contain;
+    background-attachment: fixed !important;
+    background-image: url(home_back_mobile.png);
+    height: 69vh;
+  }
+
+  .nav-tel {
+    display: block;
+  }
+
+  .nav-comp {
+    display: none;
+  }
+
+
+
 }
