@@ -16,12 +16,12 @@ export default class extends Controller {
       var top = rect.top;
       console.log(top);
       if(top <= 0){
-        navigation.classList.add("show");
+        navigation.classList.add("seen");
         navigation.classList.add("move-down");
         upbar.classList.add("move-down-call");
         textbar.classList.add("show-call");
       } else {
-        navigation.classList.remove("show");
+        navigation.classList.remove("seen");
         navigation.classList.remove("move-down");
         upbar.classList.remove("move-down-call");
         textbar.classList.remove("show-call");

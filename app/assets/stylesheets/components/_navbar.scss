@@ -87,7 +87,7 @@ p {
   transition: all 0.5s linear;
 }
 
-.show {
+.seen {
   background-color: rgb(255, 255, 255);
 }
 
@@ -127,12 +127,12 @@ p {
 
 @media only screen and (min-width:279px) and (max-width:900px) {
   .booking_bar {
-    top: -52px;
+    top: -53px;
   }
 
   .logo {
     width: 160px;
-    margin-top: 2px;
+    margin-top: 13px;
   }
 
   .home-page {
@@ -140,6 +140,7 @@ p {
     background-attachment: fixed !important;
     background-image: url(home_back_mobile.png);
     height: 69vh;
+    width: 100vw;
   }
 
   .nav-tel {
@@ -152,6 +153,32 @@ p {
 
   .collapse:not(.show) {
     display: block;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .dropdown-toggle {
+    margin-right: 5px;
+  }
+
+  .dropdown-menu.show {
+    top: -53px;
+    right: -26px;
+    height: 181px;
+    background-color: transparent;
+    border: none;
+    transform: translate3d(19px, 88px, 0px) !important;
+    inset: 0px 221px auto auto !important;
+    width:71vw;
+  }
+
+  .navbar-lewagon {
+    top: 8px;
+    height: 100px;
   }
 
 }
