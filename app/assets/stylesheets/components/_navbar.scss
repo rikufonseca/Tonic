@@ -159,6 +159,8 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    position: fixed;
+    width: 100vw;
   }
 
   .dropdown-toggle {
@@ -166,19 +168,33 @@ p {
   }
 
   .dropdown-menu.show {
-    top: -53px;
-    right: -26px;
-    height: 181px;
     background-color: transparent;
     border: none;
     transform: translate3d(19px, 88px, 0px) !important;
-    inset: 0px 221px auto auto !important;
-    width:71vw;
+    width:100vw;
   }
 
-  .navbar-lewagon {
-    top: 8px;
-    height: 100px;
+  .navbar-lewagon-flex {
+    justify-content: space-evenly;
+    width: unset;
+    align-items: center;
   }
+
+  .margin {
+    margin-left: unset;
+  }
+
+  .padding {
+    padding: unset;
+  }
+
+  .padd {
+    padding: 12px 33px;
+  }
+
+
+
+
+
 
 }
