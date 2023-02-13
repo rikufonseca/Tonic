@@ -31,12 +31,16 @@
     <div class="booking_bar" data-navbar-target="upbar">
       <p class="opacity" data-navbar-target="textbar"> For booking or any questions, please contact us  <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
     </div>
-    <%= image_tag "TONIC_logo.png", class: "logo" %>
-    <ul class="navbar-nav me-auto">
-      <li class="nav-item dropdown">
-        <%= image_tag "menu.png", class: "dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
+    <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
+    <div></div>
+    <div>
+      <%= image_tag "TONIC_logo.png", class: "logo" %>
+    </div>
+    <div>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item dropdown">
+          <%= image_tag "menu.png", class: "dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" data-navbar-target="navigation">
               <div class="navbar-lewagon-flex">
                 <%= link_to t('.services'), services_path, class: "navbar-brand padding margin dropdown-items" %>
@@ -58,7 +62,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
+    </div>
   </div>
