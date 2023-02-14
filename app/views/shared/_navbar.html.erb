@@ -33,39 +33,40 @@
     </div>
     <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
       <div class="flex">
-      <div style="width: 30px">
-        <% if params[:locale] == "en" || params[:locale].nil? %>
-          <%= link_to root_path(locale: "gr"),  class:"greek" do %>
-          <% image_tag("greek_flag", width: 28) %>
+        <div style="width: 30px">
+          <% if params[:locale] == "en" || params[:locale].nil? %>
+            <%= link_to root_path(locale: "gr"),  class:"greek" do %>
+            <% image_tag("greek_flag", width: 28) %>
+            <% end %>
+          <% else %>
+            <%= link_to root_path(locale: "en"),  class:"english" do %>
+              <% image_tag("english_flag", width: 28) %>
+            <% end %>
           <% end %>
-        <% else %>
-          <%= link_to root_path(locale: "en"),  class:"english" do %>
-            <% image_tag("english_flag", width: 28) %>
-          <% end %>
-        <% end %>
-      </div>
-      <div>
-        <%= image_tag "TONIC_logo.png", class: "logo" %>
-      </div>
-      <div>
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item dropdown">
-            <%= image_tag "menu.png", class: "dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <div data-navbar-target="navigation">
-                <div class="navbar-lewagon-flex">
-                  <%= link_to t('.services'), services_path, class: "navbar-brand padding margin dropdown-items" %>
-                  <%= link_to t('.products'), products_path, class: "navbar-brand padding dropdown-items" %>
-                  <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding dropdown-items" %>
-                </div>
-                <div class="navbar-lewagon-flex padd">
-                  <%= link_to t('.about'), root_path, class: "navbar-brand padding" %>
-                  <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding" %>
+        </div>
+        <div>
+          <%= image_tag "TONIC_logo.png", class: "logo" %>
+        </div>
+        <div>
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+              <%= image_tag "menu.png", class: "dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <div data-navbar-target="navigation">
+                  <div class="navbar-lewagon-flex">
+                    <%= link_to t('.services'), services_path, class: "navbar-brand padding margin dropdown-items" %>
+                    <%= link_to t('.products'), products_path, class: "navbar-brand padding dropdown-items" %>
+                    <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding dropdown-items" %>
+                  </div>
+                  <div class="navbar-lewagon-flex padd">
+                    <%= link_to t('.about'), root_path, class: "navbar-brand padding" %>
+                    <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding" %>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

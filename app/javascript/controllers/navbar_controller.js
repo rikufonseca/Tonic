@@ -30,10 +30,10 @@ export default class extends Controller {
 
     window.addEventListener("scroll", updatePosition);
 
-   // new LocomotiveScroll({
-   //    el: homepage,
-   //    smooth: true,
-   // });
+  //  new LocomotiveScroll({
+  //     el: homepage,
+  //     smooth: true,
+  //  });
 
   }
 }
