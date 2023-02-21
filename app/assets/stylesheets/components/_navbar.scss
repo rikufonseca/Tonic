@@ -122,6 +122,21 @@ p {
   }
 }
 
+.fade-out {
+  opacity: 0;
+  animation: showout 1s linear;
+  transition: all 1s linear;
+}
+
+@keyframes showout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 #nav-tel {
   display: none;
 }
