@@ -64,6 +64,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -125,7 +126,7 @@ p {
   display: none;
 }
 
-@media only screen and (min-width:279px) and (max-width:900px) {
+@media only screen and (min-width:279px) and (max-width:1000px) {
   .booking_bar {
     top: -53px;
   }
@@ -136,11 +137,11 @@ p {
   }
 
   .home-page {
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed !important;
     background-image: url(home_back_mobile.png);
-    height: 69vh;
     width: 100vw;
+    background-position: center;
   }
 
   #nav-tel {
