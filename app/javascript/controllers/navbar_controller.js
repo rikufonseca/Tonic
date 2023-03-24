@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["navigation", "homepage", "upbar", "textbar", "navtel"];
+  static targets = ["navigation", "homepage", "upbar", "textbar", "navtel", "logo"];
 
   connect() {
 
@@ -9,6 +9,9 @@ export default class extends Controller {
     const homepage = this.homepageTarget;
     const upbar = this.upbarTarget;
     const textbar = this.textbarTarget;
+    const navtel = this.navtelTarget;
+    const logo = this.logoTarget;
+    console.log(logo);
 
     if (window.matchMedia("(min-width:1000px)").matches) {
       function updatePosition() {
@@ -36,8 +39,12 @@ export default class extends Controller {
         let rect = homepage.getBoundingClientRect();
         var top = rect.top;
         console.log(top);
-        if (top <= 177) {
-          console.log("now");
+        if (top <= 203) {
+          if (navtel.classList.contains("show-call")){
+              navtel.style.top = "96px";
+              navtel.classList.add("seen");
+              logo.style.marginTop = "-128px"
+          console.log("now");}
 
         }
       }
