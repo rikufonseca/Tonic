@@ -76,7 +76,7 @@
   padding: 2px;
   border-bottom: 1px solid black;
   z-index: 200;
-  top: -28px;
+  top: -53px;
 }
 
 p {
@@ -92,8 +92,21 @@ p {
   background-color: rgb(255, 255, 255);
 }
 
+.back_color_tel {
+  background-color: rgba(180, 171, 176, 0);
+  transition: all 0.5s linear;
+}
+
+.seen_tel {
+  background-color: rgb(180, 171, 176);
+}
+
 .move-down {
   top: 29px;
+  transition: all 0.5s linear;
+}
+
+.move-down-tel {
   transition: all 0.5s linear;
 }
 
@@ -142,9 +155,6 @@ p {
 }
 
 @media only screen and (min-width:279px) and (max-width:1000px) {
-  .booking_bar {
-    top: -53px;
-  }
 
   .logo {
     width: 160px;
@@ -191,9 +201,10 @@ p {
   }
 
   .navbar-lewagon-flex {
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: unset;
     align-items: center;
+    padding: 10px 28px;
   }
 
   .margin {
@@ -205,12 +216,16 @@ p {
   }
 
   .padd {
-    padding: 12px 33px;
+    padding: 12px 0px;
   }
 
-
-
-
-
+  .menu {
+    position: fixed;
+    width: 100vw;
+    top: 138px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2px 22px;
+  }
 
 }

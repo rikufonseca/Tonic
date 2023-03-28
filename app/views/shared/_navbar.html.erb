@@ -28,11 +28,11 @@
     </div>
   </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent nav-tel">
-    <div class="booking_bar" data-navbar-target="upbar">
-      <p class="opacity" data-navbar-target="textbar"> For booking or any questions, please contact us  <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
+    <div class="booking_bar seen_tel" data-navbar-target="upbar">
+      <p class="opacity" data-navbar-target="textbar"> For booking or any questions, please contact us <br> <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
     </div>
     <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
-      <div class="flex">
+      <div class="flex back_color_tel" data-navbar-target="navigation">
         <div style="width: 30px">
           <% if params[:locale] == "en" || params[:locale].nil? %>
             <%= link_to root_path(locale: "gr"),  class:"greek" do %>
@@ -45,7 +45,7 @@
           <% end %>
         </div>
         <div>
-          <%= image_tag "TONIC_logo.png", class: "logo", data: { narbar_target: "logo" } %>
+          <%= image_tag "TONIC_logo.png", data: { navbar_target: "logo" }, class: "logo" %>
         </div>
         <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" } %>
       </div>
@@ -56,8 +56,20 @@
           <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding dropdown-items" %>
         </div>
         <div class="navbar-lewagon-flex padd">
+          <div style="width: 30px">
+            <% if params[:locale] == "en" || params[:locale].nil? %>
+              <%= link_to root_path(locale: "gr"),  class:"greek" do %>
+              <% image_tag("greek_flag", width: 28) %>
+              <% end %>
+            <% else %>
+              <%= link_to root_path(locale: "en"),  class:"english" do %>
+                <% image_tag("english_flag", width: 28) %>
+              <% end %>
+            <% end %>
+          </div>
           <%= link_to t('.about'), root_path, class: "navbar-brand padding" %>
           <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding" %>
+          <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" } %>
         </div>
       </div>
     </div>
