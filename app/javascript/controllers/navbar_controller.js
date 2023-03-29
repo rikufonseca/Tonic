@@ -43,12 +43,12 @@ export default class extends Controller {
 
         if (top <= 203 && navtel.classList.contains("show-call")){
           navtel.style.top = "0px";
-          navtel.classList.add("seen");
+          navtel.classList.add("seen_tel");
           logo.style.marginTop = "-138px"
           console.log("not ok")
         } else if (top <= 97 && !navtel.classList.contains("show-call")){
           navigation[1].classList.add("seen_tel");
-          navigation[1].style.top = "53px";
+          navigation[1].style.top = "25px";
           navigation[1].classList.add("move-down-tel");
           upbar[1].classList.add("move-down-call");
           textbar[1].classList.add("show-call");
