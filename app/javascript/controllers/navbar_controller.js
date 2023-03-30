@@ -8,16 +8,14 @@ export default class extends Controller {
     const navigation = this.navigationTargets;
     const homepage = this.homepageTarget;
     const upbar = this.upbarTargets;
-    console.log(upbar);
     const textbar = this.textbarTargets;
-    console.log(textbar);
     const navtel = this.navtelTarget;
     const logo = this.logoTarget;
 
     if( window.matchMedia("(min-width:1000px)").matches){
       function updatePosition() {
         let rect = homepage.getBoundingClientRect();
-        var top = rect.top;
+        const top = rect.top;
 
         if(top <= 0){
           navigation[0].classList.add("seen");
@@ -39,16 +37,17 @@ export default class extends Controller {
       function updatePositionWithMenuOpen() {
         let rect = homepage.getBoundingClientRect();
         const top = rect.top;
-        console.log(top);
+    //    console.log(top);
 
         if (top <= 203 && navtel.classList.contains("show-call")){
-          navtel.style.top = "0px";
+          navtel.style.top = "-33px";
           navtel.classList.add("seen_tel");
-          logo.style.marginTop = "-138px"
+          logo.style.marginTop = "-159px"
           console.log("not ok")
         } else if (top <= 97 && !navtel.classList.contains("show-call")){
           navigation[1].classList.add("seen_tel");
           navigation[1].style.top = "25px";
+          navtel.style.top = '25px';
           navigation[1].classList.add("move-down-tel");
           upbar[1].classList.add("move-down-call");
           textbar[1].classList.add("show-call");
@@ -69,13 +68,32 @@ export default class extends Controller {
 
   displayMenu() {
     const navtel = this.navtelTarget;
+    const navigation = this.navigationTargets;
+    let rectNav = navigation[1].getBoundingClientRect();
+    const topNav = rectNav.top;
+    console.log(topNav);
 
-    if(navtel.classList.contains("show-call") ) {
-      navtel.classList.add("fade-out");
-      navtel.classList.remove("show-call");
+    if(topNav === 0){
+      if(navtel.classList.contains("show-call")) {
+        navtel.classList.add("fade-out");
+        navtel.classList.remove("show-call");
+        navtel.style.top = '0px';
+      } else {
+        navtel.style.top = '137px';
+        navtel.classList.add("show-call");
+        navtel.classList.remove("fade-out");
+      }
     } else {
-      navtel.classList.add("show-call");
-      navtel.classList.remove("fade-out");
+      navtel.style.backgroundColor = "#ded0c7"
+      if (navtel.classList.contains("show-call")) {
+        navtel.classList.add("fade-out");
+        navtel.classList.remove("show-call");
+        navtel.style.top = '25px';
+      } else {
+        navtel.style.top = '137px';
+        navtel.classList.add("show-call");
+        navtel.classList.remove("fade-out");
+      }
     }
   }
 }
