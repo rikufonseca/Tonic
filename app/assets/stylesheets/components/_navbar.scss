@@ -7,6 +7,9 @@
 .navbar-lewagon {
   top: 15px;
   z-index: 300;
+  padding-top: 0;
+  height: 104px;
+  padding-bottom: 15px;
 }
 
 .background {
@@ -48,7 +51,7 @@
 
 .padding {
   padding: 0 10px;
-  font-size: 17px;
+  font-size: 18px;
   font-style: italic;
 }
 
@@ -61,42 +64,182 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  background-position: center;
   background-attachment: fixed;
 }
 
 .booking_bar {
+  background-color: #FBFBFB;
   margin-bottom: 0;
   font-style: italic;
   text-align: center;
-  padding: 3px;
+  padding: 2px;
   border-bottom: 1px solid black;
   z-index: 200;
+  top: -53px;
 }
 
 p {
   margin-bottom: 0;
 }
 
-.white_back {
-  background-color: white;
-  animation-name: graduate_color;
-  transition: all 1s linear;
+.back_color {
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.5s linear;
 }
 
-@keyframes graduate_color {
+.seen {
+  background-color: rgb(255, 255, 255);
+}
+
+.back_color_tel {
+  background-color: rgba(222, 208, 199, 0);
+  transition: all 0.5s linear;
+}
+
+.seen_tel {
+  background-color: rgb(222, 208, 199);
+}
+
+.move-down {
+  top: 29px;
+  transition: all 0.5s linear;
+}
+
+.move-down-tel {
+  transition: all 0.5s linear;
+}
+
+.move-down-call {
+  top: 0px;
+  transition: all 0.5s linear;
+  transition-delay: 15ms;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.show-call {
+  opacity: 1;
+  animation: showup 1s linear;
+  transition: all 2s linear;
+}
+
+@keyframes showup {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
   }
   100% {
     opacity: 1;
   }
 }
 
-.white_up {
-  background-color: white;
-  animation-name: graduate_color;
+.fade-out {
+  opacity: 0;
+  animation: showout 1s linear;
   transition: all 1s linear;
+}
+
+@keyframes showout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#nav-tel {
+  display: none;
+}
+
+.menu_tel {
+  margin: 7px 7px 0 0;
+}
+
+@media only screen and (min-width:279px) and (max-width:1000px) {
+
+  .logo {
+    width: 160px;
+    margin-top: 13px;
+  }
+
+  .home-page {
+    background-size: cover;
+    background-attachment: fixed !important;
+    background-image: url(home_back_mobile.png);
+    width: 100vw;
+    background-position: center;
+  }
+
+  #nav-tel {
+    display: block;
+  }
+
+  .nav-comp {
+    display: none;
+  }
+
+  .collapse:not(.show) {
+    display: block;
+  }
+
+  .flex {
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    width: 100vw;
+  }
+
+  .dropdown-toggle {
+    margin-right: 5px;
+  }
+
+  .dropdown-menu.show {
+    background-color: transparent;
+    border: none;
+    transform: translate3d(19px, 88px, 0px) !important;
+    width:100vw;
+  }
+
+  .navbar-lewagon-flex {
+    justify-content: space-between;
+    width: unset;
+    align-items: center;
+    padding: 10px 28px;
+  }
+
+  .margin {
+    margin-left: unset;
+  }
+
+  .padding {
+    padding: unset;
+  }
+
+  .padd {
+    padding: 12px 0px;
+  }
+
+  .menu {
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2px 22px;
+  }
+
+  .booking_bar {
+    border-bottom: 1px solid #af8f7b;
+    padding: 0;
+  }
+
+  .greek, .english {
+    margin-right: unset;
+  }
+
 }

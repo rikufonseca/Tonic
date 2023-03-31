@@ -20,11 +20,6 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.shop_pic {
-  width: 700px;
-  height: 466.63px;
-}
-
 .about_article {
   text-align: center;
   display: flex;
@@ -36,4 +31,44 @@
   width: 57vw;
   margin: 113px 0;
   font-size: larger;
+}
+
+.frame_one, .frame_two {
+  width: 45vw;
+  height: 29vw;
+}
+
+.frame_one {
+  background-image: url("SHOP_TONIC_PICTURE.png");
+  background-size: cover;
+}
+
+.frame_two {
+  background-image:url("SHOP_TONIC_PICTURE_2.png");
+  background-size: cover;
+}
+
+@media only screen and (min-width:279px) and (max-width:900px) {
+  .shop_pic {
+    width: 90vw;
+    height: auto;
+  }
+
+  .pics_shop {
+    grid-template-columns: none;
+  }
+
+  .title {
+    padding: 2rem;
+    margin-bottom: 0;
+  }
+
+  .frame_one, .frame_two {
+    width: 85vw;
+    height: 56vw;
+  }
+
+  .about_text {
+    margin: 61px 0;
+  }
 }

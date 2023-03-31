@@ -32,3 +32,14 @@ a {
 .facebook, .insta {
   width: 46px;
 }
+
+@media only screen and (min-width:279px) and (max-width:1000px) {
+  .footer {
+    background-color: rgb(222, 208, 199);
+    padding: 24px 0;
+  }
+
+  .icon {
+    margin-right: 21px;
+  }
+}
