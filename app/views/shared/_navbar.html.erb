@@ -16,11 +16,11 @@
           <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding" %>
             <% if params[:locale] == "en" || params[:locale].nil? %>
               <%= link_to root_path(locale: "gr"),  class:"greek" do %>
-                <% image_tag("greek_flag", width: 28) %>
+                <% image_tag("greek_flag.png", width: 28) %>
               <% end %>
             <% else %>
               <%= link_to root_path(locale: "en"),  class:"english" do %>
-                <% image_tag("english_flag", width: 28) %>
+                <% image_tag("english_flag.png", width: 28) %>
               <% end %>
             <% end %>
         </div>
@@ -49,11 +49,11 @@
           <div style="width: 30px" class="opacity">
             <% if params[:locale] == "en" || params[:locale].nil? %>
               <%= link_to root_path(locale: "gr"),  class:"greek" do %>
-              <% image_tag("greek_flag", width: 28) %>
+              <% image_tag("greek_flag.png", width: 28) %>
               <% end %>
             <% else %>
               <%= link_to root_path(locale: "en"),  class:"english" do %>
-                <% image_tag("english_flag", width: 28) %>
+                <% image_tag("english_flag.png", width: 28) %>
               <% end %>
             <% end %>
           </div>
@@ -64,11 +64,11 @@
         <div style="text-align: center">
             <% if params[:locale] == "en" || params[:locale].nil? %>
               <%= link_to root_path(locale: "gr") do %>
-              <% image_tag("greek_flag", width: 28) %>
+              <% image_tag("greek_flag.png", width: 28) %>
               <% end %>
             <% else %>
               <%= link_to root_path(locale: "en") do %>
-                <% image_tag("english_flag", width: 28) %>
+                <% image_tag("english_flag.png", width: 28) %>
               <% end %>
             <% end %>
         </div>
