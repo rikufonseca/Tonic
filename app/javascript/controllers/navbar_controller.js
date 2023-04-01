@@ -68,7 +68,7 @@ export default class extends Controller {
           } else {
             navigation[1].style.opacity = "1"
             navigation[1].style.top = "0px";
-            navtel.style.top = "137px";
+            navtel.style.top = "117px";
             navtel.style.backgroundColor = "rgba(222, 208, 199,0)"
           }
           console.log("else")
@@ -97,7 +97,7 @@ export default class extends Controller {
         console.log("in")
       } else {
         console.log("in-2")
-        navtel.style.top = '137px';
+        navtel.style.top = '117px';
         navtel.classList.remove("fade-out");
         navtel.classList.add("show-call");
       }
