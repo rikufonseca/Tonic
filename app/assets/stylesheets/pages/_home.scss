@@ -73,7 +73,8 @@
   }
 
   .about_page {
-    overflow: auto;
-    height: 100vh;
+    height: auto;
+    padding-top: 100vh;
+    margin: -100vh;
   }
 }

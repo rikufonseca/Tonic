@@ -70,15 +70,10 @@
 
   .home-page-tel {
     background-image: url("tel-home.jpg");
-    width: 100vw;
+   // width: 100vw;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
   }
 
 .booking_bar {
@@ -185,10 +180,6 @@ p {
   .nav-comp {
     display: none;
   }
-
- // .collapse:not(.show) {
- //   display: block;
- // }
 
   .flex {
     opacity: 1;
