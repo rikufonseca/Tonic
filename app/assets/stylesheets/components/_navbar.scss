@@ -71,11 +71,14 @@
   .home-page-tel {
     background-image: url("tel-home.jpg");
     width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover !important;
-    height: 100vh !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
   }
 
 .booking_bar {
