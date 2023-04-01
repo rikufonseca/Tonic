@@ -68,6 +68,16 @@
   background-attachment: fixed !important;
 }
 
+  .home-page-tel {
+    background-image: url("tel-home.jpg");
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    height: 100vh !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+  }
+
 .booking_bar {
   background-color: #FBFBFB;
   margin-bottom: 0;
@@ -163,11 +173,6 @@ p {
   .logo {
     width: 160px;
     margin-top: 13px;
-  }
-
-  .home-page {
-    background-image: url("tel-home.jpg");
-    width: 100vw;
   }
 
   #nav-tel {
