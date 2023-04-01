@@ -62,9 +62,9 @@
 .home-page {
   background-image: url("home_background.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover !important;
   height: 100vh;
-  background-position: center;
+  background-position: center !important;
   background-attachment: fixed !important;
 }
 
@@ -167,6 +167,8 @@ p {
 
   .home-page {
     background-image: url("tel-home.jpg");
+    height: 25vh;
+    width: 100vw;
   }
 
   #nav-tel {
