@@ -4,10 +4,6 @@
   padding: 0;
 }
 
-body {
-  height: 100vh;
-}
-
 .title {
   font-style: italic;
   padding: 3em;
@@ -74,11 +70,5 @@ body {
 
   .about_text {
     margin: 61px 0;
-  }
-
-  .about_page {
-    height: auto;
-    padding-top: 100vh;
-    margin: -100vh;
   }
 }
