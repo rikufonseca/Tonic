@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["navigation", "homepage", "upbar", "textbar", "navtel", "logo" ];
+  static targets = ["navigation", "homepage", "upbar", "textbar", "navtel", "logo"];
 
   connect() {
 
@@ -10,6 +10,7 @@ export default class extends Controller {
     const upbar = this.upbarTargets;
     const textbar = this.textbarTargets;
     const navtel = this.navtelTarget;
+
 
     if( window.matchMedia("(min-width:1000px)").matches){
       function updatePosition() {
