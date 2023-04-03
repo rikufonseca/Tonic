@@ -1,10 +1,9 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["navigation", "homepage", "upbar", "textbar", "navtel", "logo" ];
+  static targets = ["navigation", "homepage", "upbar", "textbar", "navtel", "logo", "greekflag", "englishflag"];
 
   connect() {
-
     const navigation = this.navigationTargets;
     const homepage = this.homepageTarget;
     const upbar = this.upbarTargets;
@@ -78,7 +77,8 @@ export default class extends Controller {
     }
   }
 
-  displayMenu() {
+  displayMenu(event) {
+    event.preventDefault();
     const navtel = this.navtelTarget;
     const navigation = this.navigationTargets;
     const homepage = this.homepageTarget;

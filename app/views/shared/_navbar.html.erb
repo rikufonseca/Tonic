@@ -47,27 +47,27 @@
       <div class="navbar-lewagon-flex padd">
         <div style="width: 30px" class="opacity">
           <% if params[:locale] == "en" || params[:locale].nil? %>
-            <%= link_to root_path(locale: "gr"),  class:"greek" do %>
-            <% image_tag("greek_flag.png", width: 28) %>
+            <%= link_to root_path(locale: "gr"),  class:"greek", data: { locale: "gr" } do %>
+              <% image_tag "greek_flag.png", { width: 28, data: {navbar_target: 'greekflag'} } %>
             <% end %>
           <% else %>
-            <%= link_to root_path(locale: "en"),  class:"english" do %>
-              <% image_tag("english_flag.png", width: 28) %>
+            <%= link_to root_path(locale: "en"),  class:"english", data: { locale: "en" }  do %>
+              <% image_tag "english_flag.png", { width: 28, data: {navbar_target: 'englishflag'} } %>
             <% end %>
           <% end %>
         </div>
-        <%= link_to t('.about'), root_path, class: "navbar-brand padding" %>
+        <%= link_to t('.about'), root_path + href="#about_link", class: "navbar-brand padding" %>
         <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding" %>
         <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" }, class: "opacity" %>
       </div>
       <div style="text-align: center">
           <% if params[:locale] == "en" || params[:locale].nil? %>
-            <%= link_to root_path(locale: "gr") do %>
-            <% image_tag("greek_flag.png", width: 28) %>
+            <%= link_to root_path(locale: "gr"), data: { locale: "gr" } do %>
+            <% image_tag "greek_flag.png", { width: 28, data: {navbar_target: 'greekflag'} } %>
             <% end %>
           <% else %>
-            <%= link_to root_path(locale: "en") do %>
-              <% image_tag("english_flag.png", width: 28) %>
+            <%= link_to root_path(locale: "en"), data: { locale: "en" }  do %>
+              <% image_tag "english_flag.png", { width: 28, data: {navbar_target: 'englishflag'} } %>
             <% end %>
           <% end %>
       </div>
