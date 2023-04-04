@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_03_181511) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_03_180222) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,8 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_03_181511) do
     t.string "last_name"
     t.string "phone_number"
     t.string "email"
-    t.string "category_gr"
-    t.string "category_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -79,6 +77,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_03_181511) do
     t.string "category_gr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "categories"
+    t.bigint "contact_id", null: false
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "sub_categories"
+    t.index ["contact_id"], name: "index_messages_on_contact_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -120,4 +128,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_03_181511) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "messages", "contacts"
 end

@@ -1,0 +1,21 @@
+<div class="middle">
+  <h1 class="doubleline"> New message from  <%= @contact.first_name %> <%= @contact.last_name %> </h1>
+
+  <p class="line"> Category: </p>
+  <%= simple_format(@message.categories) %>
+
+  <p class="line"> Message: </p>
+  <%= simple_format(@message.content) %>
+
+  <p class="line">
+    Answer to the message:
+  </p>
+  <p>
+    <%= link_to @contact.email, "#" %>
+  </p>
+    <% if @contact.phone_number %>
+      <p class="line"> or call: </p>
+      <%= @contact.first_name %> au <%= @contact.phone_number %>
+    <% end %>
+  </p>
+</div>

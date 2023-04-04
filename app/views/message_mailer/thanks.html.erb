@@ -1,0 +1,31 @@
+<style>
+  .middle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .doubleline, .line {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
+
+  .doubleline {
+    text-decoration-style: double;
+  }
+
+  a, .doubleline, .line {
+    color: #c12849;
+  }
+</style>
+
+<div class="middle">
+  <h2 class="doubleline"> Many thanks for your interest in Tonic </h2>
+
+  <div>
+    <p> Your message: <%= simple_format(@message.content) %> has been sent. </p>
+    <p> We will answer to you as soon as possible. </p>
+     <p> thanks. Have a great day! </p>
+  </div>
+</div>

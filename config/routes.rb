@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     resources :jewelries, only: %i[index show]
     resources :products, only: %i[index show]
     resources :services, only: %i[index show]
-    resources :contacts, only: %i[create new]
+    get "contacts", to: "messages#new"
+    resources :messages, only: :create
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
