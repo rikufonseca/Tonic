@@ -6,11 +6,6 @@ class MessageMailer < ApplicationMailer
   #   en.contact_mailer.thank-you.subject
   #
   def incoming
-    p ''
-    p ''
-    p params
-    p ''
-    p ''
     @message = params[:message]
     @contact = @message.contact
     mail(to: "fonsecarika@gmail.com", subject: "New message from Tonic website")

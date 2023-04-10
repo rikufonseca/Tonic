@@ -45,8 +45,9 @@ gem "bootsnap", require: false
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
-gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
+gem 'letter_opener', group: :development
+
 
 # Use Sass to process CSS
 gem "sassc-rails"
