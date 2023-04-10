@@ -2,7 +2,9 @@
   <h1 class="doubleline"> New message from  <%= @contact.first_name %> <%= @contact.last_name %> </h1>
 
   <p class="line"> Category: </p>
-  <%= simple_format(@message.categories) %>
+  <% @message.categories.each do |cat| %>
+    <p><%= cat %></p>
+  <% end %>
 
   <p class="line"> Message: </p>
   <%= simple_format(@message.content) %>
