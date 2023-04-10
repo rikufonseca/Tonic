@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_03_180222) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_10_124319) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -80,12 +80,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_03_180222) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string "categories"
     t.bigint "contact_id", null: false
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "sub_categories"
+    t.string "categories", default: [], array: true
+    t.string "sub_categories", default: [], array: true
     t.index ["contact_id"], name: "index_messages_on_contact_id"
   end
 
