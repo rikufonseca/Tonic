@@ -1,5 +1,5 @@
 class Message < ApplicationRecord
-  after_create :send_incoming_mail
+  # after_create :send_incoming_mail
 
   belongs_to :contact
   accepts_nested_attributes_for :contact
