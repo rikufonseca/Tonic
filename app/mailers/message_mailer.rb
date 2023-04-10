@@ -8,7 +8,7 @@ class MessageMailer < ApplicationMailer
   def incoming
     @message = params[:message]
     @contact = @message.contact
-    mail(to: "fonsecarika@gmail.com", subject: "New message from Tonic website")
+    mail(to: "contact@tonic-society.com", subject: "New message from Tonic website")
   end
 
   def thanks
