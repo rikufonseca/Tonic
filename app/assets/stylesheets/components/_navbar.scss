@@ -158,6 +158,25 @@ p {
   margin: 7px 7px 0 0;
 }
 
+.line {
+  position: absolute;
+  top: 125px;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  width: 100vw;
+  animation: lineH 2s 1s normal linear;
+}
+
+@keyframes lineH {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
 @media only screen and (min-width:279px) and (max-width:1000px) {
 
   section.parallax .home-page-tel {

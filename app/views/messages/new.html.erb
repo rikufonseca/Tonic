@@ -1,3 +1,15 @@
+<section class="parallax icons">
+  <div class="vertical">
+  <p class="follow"> follow us on </p>
+    <a href="#" target="_blank" class='middle'>
+      <%= image_tag "icons8-facebook-128.png", width: "94", class: "glow-effect" %>
+    </a>
+    <a href="#" target="_blank" class='middle'>
+      <%= image_tag "icons8-instagram-128.png", width: "94", class: "glow-effect" %>
+    </a>
+  </div>
+  <div class="line line-two"></div>
+</section>
 <%= form_with model: @message do |form| %>
       <%= form.fields_for :contact do |contact_form| %>
         <%= contact_form.label :first_name, "First name*", required: true %>

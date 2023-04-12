@@ -1,0 +1,36 @@
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('neon-tonic-contact.png');
+  background-repeat: no-repeat;
+  background-size: auto 152vw;
+  background-position-x: -85px;
+  background-position-y: 149px;
+}
+
+.vertical {
+  flex-direction: column;
+  display: flex;
+}
+
+.facebook_contact .insta_contact {
+  width: 92px;
+}
+
+.middle {
+  text-align: center;
+}
+
+.follow {
+  font-family: 'Dancing Script', 'cursive';
+  font-size: xx-large;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  padding: 14px;
+}
