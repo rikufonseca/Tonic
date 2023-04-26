@@ -97,7 +97,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_124319) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "time"
   end
 
   create_table "services", force: :cascade do |t|

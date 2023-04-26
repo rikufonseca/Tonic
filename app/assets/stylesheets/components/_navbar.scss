@@ -177,12 +177,17 @@ p {
   }
 }
 
+.display-menu {
+  opacity: 1;
+  top: 117px !important;
+}
+
 @media only screen and (min-width:279px) and (max-width:1000px) {
 
   section.parallax .home-page-tel {
     background-image: url("tel-home.jpg");
     position: fixed !important;
-    top: 0 !important;
+    top: 0;
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
