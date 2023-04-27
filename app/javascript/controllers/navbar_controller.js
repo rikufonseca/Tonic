@@ -90,15 +90,17 @@ export default class extends Controller {
 
     if((topNav === 0) && (top >= 267)){
       navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
-      if(navtel.classList.contains("show-call")){
+      if(navtel.classList.contains("show-call") || navtel.classList.contains("display-menu")){
         navtel.classList.add("fade-out");
         navtel.classList.remove("show-call");
+        navtel.classList.remove("display-menu");
         navtel.style.top = '0px';
         console.log("in")
       } else {
         console.log("in-2")
         navtel.style.top = '117px';
         navtel.classList.remove("fade-out");
+        navtel.classList.remove("display-menu");
         navtel.classList.add("show-call");
       }
     } else {
