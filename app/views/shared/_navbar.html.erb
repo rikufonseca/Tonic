@@ -31,7 +31,7 @@
     <div class="booking_bar seen_tel" data-navbar-target="upbar">
       <p class="opacity" data-navbar-target="textbar"> <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
     </div>
-    <div class="flex back_color_tel" data-navbar-target="navigation">
+    <div class="flex back_color_tel <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
       <div style="width: 36px"></div>
       <%= image_tag "TONIC_logo.png", data: { navbar_target: "logo" }, class: "logo" %>
       <div>
@@ -63,11 +63,11 @@
       <div style="text-align: center">
           <% if params[:locale] == "en" || params[:locale].nil? %>
             <%= link_to root_path(locale: "gr", language: true), data: { locale: "gr" } do %>
-            <% image_tag "greek_flag.png", { width: 28, data: {navbar_target: 'greekflag', action: "click->navbar#changeLanguage"} } %>
+            <% image_tag "greek_flag.png", width: 28 %>
             <% end %>
           <% else %>
             <%= link_to root_path(locale: "en", language: true), data: { locale: "en" }  do %>
-              <% image_tag "english_flag.png", { width: 28, data: {navbar_target: 'englishflag', action: "click->navbar#changeLanguage"} } %>
+              <% image_tag "english_flag.png", width: 28 %>
             <% end %>
           <% end %>
       </div>
@@ -77,8 +77,5 @@
         <div class="home-page-tel">
         </div>
       </section>
-    <% end %>
-    <% if current_page?(contacts_path(locale:params[:locale])) %>
-      <div class="line"></div>
     <% end %>
   </div>

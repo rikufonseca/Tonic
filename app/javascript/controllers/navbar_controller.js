@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["navigation", "homepage", "upbar", "textbar", "navtel", "logo", "greekflag", "englishflag"];
+  static targets = ["navigation", "homepage", "upbar", "textbar", "navtel", "logo"];
 
   connect() {
     const navigation = this.navigationTargets;

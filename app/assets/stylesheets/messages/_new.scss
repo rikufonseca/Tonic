@@ -1,17 +1,11 @@
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('neon-tonic-contact.png');
-  background-repeat: no-repeat;
-  background-size: auto 152vw;
-  background-position-x: -85px;
-  background-position-y: 149px;
-}
-
 .vertical {
   flex-direction: column;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
 }
 
 .facebook_contact .insta_contact {
@@ -33,4 +27,242 @@
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   padding: 14px;
+}
+
+.line-box {
+  height: 76.3%;
+  width: 100%;
+  position: fixed;
+  top: 15.5vh;
+}
+
+.line {
+  position: relative;
+  top: 0;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  width: 100vw;
+  animation: lineH 2s 1s normal linear;
+}
+
+@keyframes lineH {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.line-two {
+  position: relative;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  width: 100vw;
+  top: 76.3vh;
+  animation: lineH2 2s 1s normal linear;
+}
+
+@keyframes lineH2 {
+  0% {
+    left: 100%;
+    width: 0%;
+  }
+
+  100% {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.line-three {
+  position: relative;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 16.2vh;
+  transform: rotate(-45deg);
+  transform-origin: left;
+  animation: lineH3 2s 1s linear forwards;
+}
+
+@keyframes lineH3 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+.line-four {
+  position: relative;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 18.4vh;
+  transform: rotate(-45deg);
+  transform-origin: left;
+  animation: lineH4 2s 1s linear forwards;
+}
+
+@keyframes lineH4 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 57.5%;
+  }
+}
+
+.line-five {
+  position: relative;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 20.8vh;
+  transform: rotate(-45deg);
+  transform-origin: left;
+  animation: lineH5 2s 1s linear forwards;
+}
+
+@keyframes lineH5 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 64.9%;
+  }
+}
+
+.line-six {
+  position: relative;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 22.9vh;
+  transform: rotate(-45deg);
+  transform-origin: left;
+  animation: lineH6 2s 1s linear forwards;
+}
+
+@keyframes lineH6 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 72%;
+  }
+}
+
+.line-seven {
+  position: relative;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 25vh;
+  transform: rotate(-45deg);
+  transform-origin: left;
+  animation: lineH7 2s 1s linear forwards;
+}
+
+@keyframes lineH7 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 78.9%;
+  }
+}
+
+.line-height {
+  position: relative;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 27.3vh;
+  transform: rotate(-45deg);
+  transform-origin: left;
+  animation: lineH8 2s 1s linear forwards;
+}
+
+@keyframes lineH8 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 86.3%;
+  }
+}
+
+.line-nine {
+  position: fixed;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 630px;
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: right;
+  animation: lineH3 2s 1s linear forwards;
+}
+
+.line-ten {
+  position: fixed;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 610px;
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: right;
+  animation: lineH4 2s 1s linear forwards;
+}
+
+.line-eleven {
+  position: fixed;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 590px;
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: right;
+  animation: lineH5 2s 1s linear forwards;
+}
+
+.line-twelve {
+  position: fixed;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 570px;
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: right;
+  animation: lineH6 2s 1s linear forwards;
+}
+
+.line-thirteen {
+  position: fixed;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 550px;
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: right;
+  animation: lineH7 2s 1s linear forwards;
+}
+
+.line-fourteen {
+  position: fixed;
+  height: 1.2px;
+  background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
+  top: 530px;
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: right;
+  animation: lineH8 2s 1s linear forwards;
+}
+
+.glow-effect {
+  width: 43%;
+  height: auto;
 }
