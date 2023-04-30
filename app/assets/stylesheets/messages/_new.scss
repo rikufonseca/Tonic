@@ -36,6 +36,12 @@
   top: 15.5vh;
 }
 
+.fixed-it {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
 .line-three {
   position: absolute;
   height: 1.2px;
@@ -222,7 +228,33 @@
   animation: lineH8 2s 1s linear forwards;
 }
 
+.pad-form {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-page-contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ded0c7;
+}
+
 .glow-effect {
   width: 43%;
   height: auto;
+}
+
+.cats {
+  margin-top: 13px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-checkbox {
+  padding: 8px;
 }

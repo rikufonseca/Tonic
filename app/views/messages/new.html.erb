@@ -8,7 +8,7 @@
         <%= image_tag "icons8-instagram-128.png", class: "glow-effect" %>
       </a>
     </div>
-    <div style="position: fixed; height: 100vh; width: 100vw">
+    <div class="fixed-it">
     <div class="line-box">
       <div class="line-three"></div>
       <div class="line-four"></div>
@@ -27,8 +27,8 @@
   </section>
 </div>
 <section>
-  <div class="about_page" data-navbar-target="pageup">
-    <%= form_with model: @message do |form| %>
+  <div class="about-page-contact" data-navbar-target="pageup">
+    <%= form_with model: @message, html: { class: "pad-form"} do |form| %>
       <%= form.fields_for :contact do |contact_form| %>
         <%= contact_form.label :first_name, "First name*", required: true %>
         <%= contact_form.text_field :first_name %>

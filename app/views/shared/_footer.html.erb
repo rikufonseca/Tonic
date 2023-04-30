@@ -1,3 +1,4 @@
+  <% unless current_page?(contacts_path(locale:params[:locale])) %>
     <div class="footer">
       <div class="icon">
         <a href="#" target="_blank">
@@ -15,5 +16,6 @@
         </div>
       </div>
     </div>
+  <% end %>
   <section>
 </div>
