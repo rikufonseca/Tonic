@@ -104,7 +104,7 @@ export default class extends Controller {
    // console.log(topNav);
       if((topNav === 0) && (top >= 267)){
         if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts" ) {
-          navtel.style.backgroundColor = "rgba(224, 224, 224,1)";
+          navtel.style.backgroundColor = "rgba(235, 234, 234,1)";
           console.log("opacity-1")
         } else {
           navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
