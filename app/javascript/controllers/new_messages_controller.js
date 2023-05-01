@@ -4,14 +4,12 @@ export default class extends Controller {
   static targets = ["categories"];
 
   connect(){
-    categories = this.categoriesTargets;
+    this.categories = this.categoriesTargets;
 
-    console.log(categories);
   }
 
   select(){
-    categories = this.categoriesTargets;
+    this.categories = this.categoriesTargets;
 
-    console.log(categories);
   }
 }
