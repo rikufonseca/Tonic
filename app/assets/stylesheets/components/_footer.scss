@@ -38,13 +38,15 @@ a {
 }
 
 .last-section {
-//  background-image: url("app/assets/images/tonic-map.jpg");
+  background-image: url("tonic-map.jpg");
   width: 100% !important;
   height: 100% !important;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  z-index: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .index {
@@ -52,15 +54,8 @@ a {
 }
 
 .box {
-  display: block;
-  position: absolute;
-  top: 22%;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
   width: 80vw;
   height: 60vh;
-  z-index: 1001;
   background: rgba(222, 222, 222, .6);
   padding: 41px 23px;
   border-radius: 12px;

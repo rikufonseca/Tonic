@@ -1,10 +1,17 @@
+.parallax {
+  width: 100%;
+  position: relative;
+}
+
+.index {
+  z-index: 1;
+}
+
 .vertical {
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  width: 100vw;
   height: 100vh;
 }
 
@@ -30,23 +37,14 @@
 }
 
 .line-box {
-  height: 100vh;
   width: 100%;
-  position: relative;
-  top: 15.5vh;
-}
-
-.fixed-it {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
 }
 
 .line-three {
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 16.2vh;
+  top: 27.2vh;
   transform: rotate(-45deg);
   transform-origin: left;
   animation: lineH3 2s 1s linear forwards;
@@ -66,7 +64,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 18.4vh;
+  top: 29.4vh;
   transform: rotate(-45deg);
   transform-origin: left;
   animation: lineH4 2s 1s linear forwards;
@@ -86,7 +84,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 20.8vh;
+  top: 31.6vh;
   transform: rotate(-45deg);
   transform-origin: left;
   animation: lineH5 2s 1s linear forwards;
@@ -106,7 +104,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 22.9vh;
+  top: 33.9vh;
   transform: rotate(-45deg);
   transform-origin: left;
   animation: lineH6 2s 1s linear forwards;
@@ -126,7 +124,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 25vh;
+  top: 36.1vh;
   transform: rotate(-45deg);
   transform-origin: left;
   animation: lineH7 2s 1s linear forwards;
@@ -146,7 +144,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 27.3vh;
+  top: 38.3vh;
   transform: rotate(-45deg);
   transform-origin: left;
   animation: lineH8 2s 1s linear forwards;
@@ -166,7 +164,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 75.5vh;
+  top: 84.5vh;
   right: 0;
   transform: rotate(-45deg);
   transform-origin: right;
@@ -177,7 +175,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 73vh;
+  top: 82vh;
   right: 0;
   transform: rotate(-45deg);
   transform-origin: right;
@@ -188,7 +186,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 70.5vh;
+  top: 79.5vh;
   right: 0;
   transform: rotate(-45deg);
   transform-origin: right;
@@ -199,7 +197,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 68.2vh;
+  top: 77.2vh;
   right: 0;
   transform: rotate(-45deg);
   transform-origin: right;
@@ -210,7 +208,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 66vh;
+  top: 75vh;
   right: 0;
   transform: rotate(-45deg);
   transform-origin: right;
@@ -221,7 +219,7 @@
   position: absolute;
   height: 1.2px;
   background: linear-gradient(90deg, rgba(33, 106, 255, 1) 0%, rgba(193, 37, 255, 1) 100%);
-  top: 63.6vh;
+  top: 72.6vh;
   right: 0;
   transform: rotate(-45deg);
   transform-origin: right;
