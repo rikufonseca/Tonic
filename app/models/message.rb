@@ -7,10 +7,10 @@ class Message < ApplicationRecord
   validates :content, :categories, presence: true
 
   SUB_CATEGORIES_EN = ["Products", "Jewellery", "Nails Design", "Nails Artist", "Jewelry Artist"]
-  CATEGORIES_EN = ["Question", "Complains", "Work with us"]
+  CATEGORIES_EN = ["Question", "Complain", "Work with us"]
 
   SUB_CATEGORIES_GR = ["Προϊόντα", "Κοσμήματα", "Σχεδιασμός νυχιών", "Τεχνίτρια-ης νυχιών", "Καλλιτέχνης κοσμημάτων"]
-  CATEGORIES_GR = ["Ερώτηση", "Παράπονα", "Εργαστείτε μαζί μας"]
+  CATEGORIES_GR = ["Ερώτηση", "Παράπονo", "Εργαστείτε μαζί μας"]
 
   private
 

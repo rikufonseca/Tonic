@@ -48,7 +48,7 @@
         <% end %>
       </div>
       <%= form.label :content, "Your message *" %>
-      <%= form.text_area :content, required: true %>
+      <%= form.text_area :content, required: true, rows: 7, cols: 40 %>
       <div class="submit">
         <%= form.submit "Envoyer", class: "envoyer" %>
       </div>
