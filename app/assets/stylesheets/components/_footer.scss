@@ -38,13 +38,13 @@ a {
 }
 
 .last-section {
-  background: url("tonic-map.jpg");
+  background-image: url("tonic-map.jpg");
   width: 100% !important;
   height: 100% !important;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  z-index: 0;
+  z-index: 0 !important;
 }
 
 .index {
