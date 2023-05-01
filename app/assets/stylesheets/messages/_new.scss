@@ -229,7 +229,8 @@
 }
 
 .pad-form {
-  padding: 80px;
+  width: 83vw;
+  padding: 17vw 0 15vw 0;
   display: flex;
   flex-direction: column;
 }
@@ -266,5 +267,7 @@
 }
 
 .envoyer {
-  padding: 3px 23px;
+  padding: 4px 23px;
+  appearance: none;
+  border: 0.1px solid #626161
 }
