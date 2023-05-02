@@ -16,9 +16,11 @@
         </div>
       </div>
     </div>
+    <section class="add-section"> </section>
   <% end %>
   <% if current_page?(contacts_path(locale:params[:locale])) %>
-      <section class="last-section parallax">
+      <section class="parallax height">
+        <div class="last-section">
         <div class="box">
           <h5 class="title-contact"> the address </h5>
           <p class="font">  <%= t(".address") %> </p>
