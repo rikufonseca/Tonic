@@ -1,19 +1,49 @@
-.parallax {
-  width: 100%;
-  position: relative;
-  height: 100vh;
-}
-
-.index {
-  z-index: 1;
-}
-
 .vertical {
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.last-section {
+  background-image: url("tonic-map.png");
+  height: 100% !important;
+  width: 100% !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed !important;
+  top: 0;
+  left: 0 !important;
+  background-size: cover;
+}
+
+.box {
+  width: 80vw;
+  background: rgba(231, 225, 225, 0.6);
+  padding: 41px 23px;
+  border-radius: 12px;
+  box-shadow: .5px 4px 20px rgba(0, 0, 0, .5);
+  margin-top: 16vh;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+.box-in-the-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-white {
+  background-color: #f4f4f4;
+}
+
+.frame-one {
+  z-index: 1;
+}
+.frame-two {
+  z-index: 2;
 }
 
 .facebook_contact .insta_contact {
