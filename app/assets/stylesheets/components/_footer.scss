@@ -2,6 +2,11 @@
   background-color: #b4abb0;
 }
 
+.parallax-without-height {
+  width: 100%;
+  position: relative;
+}
+
 .no-display {
   display: unset;
 }
@@ -38,12 +43,11 @@ a {
 }
 
 .last-section {
-  // background-image: url("tonic-map-skoufa-27.png");
-  width: 100% !important;
-  height: 100% !important;
+  background-image: url("tonic-map.png");
+  height: 100vh !important;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,12 +60,11 @@ a {
 
 .box {
   width: 80vw;
-  height: 50vh;
   background: rgba(231, 225, 225, 0.6);
   padding: 41px 23px;
   border-radius: 12px;
   box-shadow: .5px 4px 20px rgba(0, 0, 0, .5);
-  margin-top: 18vh;
+  margin-top: 16vh;
   text-align: center;
 }
 
