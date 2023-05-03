@@ -1,6 +1,6 @@
-  <section class="height background-white frame-one">
+  <section class="background-white frame-one">
     <div class="vertical icons back-first-parallax">
-    <p class="follow"> follow us on </p>
+    <p class="follow"> <%= t(".follow") %> </p>
       <a href="#" target="_blank" class='middle'>
         <%= image_tag "icons8-facebook-128.png", class: "glow-effect" %>
       </a>
@@ -23,20 +23,20 @@
       <div class="line-fourteen"></div>
     </div>
   </section>
-  <section class="height frame-two">
+  <section class="frame-two">
     <div class="about-page-contact" data-navbar-target="pageup">
       <%= form_with model: @message, html: { class: "pad-form"} do |form| %>
         <%= form.fields_for :contact do |contact_form| %>
-          <%= contact_form.label :first_name, "First name*", required: true %>
+          <%= contact_form.label :first_name, t(".name"), required: true %>
           <%= contact_form.text_field :first_name %>
-          <%= contact_form.label :last_name, "Last name *", required: true %>
+          <%= contact_form.label :last_name, t(".surname"), required: true %>
           <%= contact_form.text_field :last_name %>
-          <%= contact_form.label :email, "Email *" %>
+          <%= contact_form.label :email, t(".mail") %>
           <%= contact_form.text_field :email, required: true %>
-          <%= contact_form.label :phone_number, "Phone number" %>
+          <%= contact_form.label :phone_number, t(".phone") %>
           <%= contact_form.text_field :phone_number %>
         <% end %>
-        <%= form.label :categories, "Select a category *", class: "cats" %>
+        <%= form.label :categories, t(".cats"), class: "cats" %>
         <div class="categories" data-controller="new-messages">
           <%= form.collection_check_boxes(:categories, @categories, :to_s, :to_s, include_hidden: false, required: true) do |b| %>
             <%= b.label class:"label-checkbox", data: {new_messages_target: "categories"}, action: "change->new-messages#select" do %>
@@ -44,23 +44,23 @@
             <%end%>
           <% end %>
         </div>
-        <%= form.label :content, "Your message *" %>
+        <%= form.label :content, t(".message") %>
         <%= form.text_area :content, required: true, rows: 7, cols: 40 %>
         <div class="submit">
-          <%= form.submit "Envoyer", class: "envoyer" %>
+          <%= form.submit t(".send"), class: "envoyer" %>
         </div>
       <% end %>
     </div>
   </section>
-  <section class="height box-in-the-center">
+  <section class="frame-three box-in-the-center">
     <div class="last-section"> </div>
     <div class="box">
-      <h5 class="title-contact"> the address </h5>
+      <h5 class="title-contact"> <%= t(".title") %> </h5>
       <p class="font">  <%= t(".address") %> </p>
-      <a href="https://goo.gl/maps/6FMpm7rWVBh5NCRQ6" class="font"> get the direction on google map </a>
-      <h5 class="marge-up title-contact"> phone number </h5>
+      <a href="https://goo.gl/maps/6FMpm7rWVBh5NCRQ6" class="font"> <%= t(".map") %> </a>
+      <h5 class="marge-up title-contact"> <%= t(".phone") %> </h5>
       <a href="tel:+30 693 471 3555" class="font"> +30 693 471 3555 </a>
-      <h5 class="marge-up title-contact"> email </h5>
+      <h5 class="marge-up title-contact"> <%= t(".mail") %> </h5>
       <a href="mailto:contact@tonic-society.com" class="font"> contact@tonic-society.com </a>
     </div>
   </section>
