@@ -1,5 +1,5 @@
-  <section class="parallax">
-    <div class="vertical icons">
+  <section class="parallax height">
+    <div class="vertical icons back-first-parallax">
     <p class="follow"> follow us on </p>
       <a href="#" target="_blank" class='middle'>
         <%= image_tag "icons8-facebook-128.png", class: "glow-effect" %>
@@ -8,24 +8,22 @@
         <%= image_tag "icons8-instagram-128.png", class: "glow-effect" %>
       </a>
     </div>
-    <div class="fixed-it">
-      <div class="line-box">
-        <div class="line-three"></div>
-        <div class="line-four"></div>
-        <div class="line-five"></div>
-        <div class="line-six"></div>
-        <div class="line-seven"></div>
-        <div class="line-height"></div>
-        <div class="line-nine"></div>
-        <div class="line-ten"></div>
-        <div class="line-eleven"></div>
-        <div class="line-twelve"></div>
-        <div class="line-thirteen"></div>
-        <div class="line-fourteen"></div>
-      </div>
+    <div class="line-box">
+      <div class="line-three"></div>
+      <div class="line-four"></div>
+      <div class="line-five"></div>
+      <div class="line-six"></div>
+      <div class="line-seven"></div>
+      <div class="line-height"></div>
+      <div class="line-nine"></div>
+      <div class="line-ten"></div>
+      <div class="line-eleven"></div>
+      <div class="line-twelve"></div>
+      <div class="line-thirteen"></div>
+      <div class="line-fourteen"></div>
     </div>
   </section>
-  <section>
+  <section class="parallax index">
     <div class="about-page-contact" data-navbar-target="pageup">
       <%= form_with model: @message, html: { class: "pad-form"} do |form| %>
         <%= form.fields_for :contact do |contact_form| %>
