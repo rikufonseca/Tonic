@@ -2,6 +2,11 @@
   background-color: #b4abb0;
 }
 
+.parallax-without-height {
+  width: 100%;
+  position: relative;
+}
+
 .no-display {
   display: unset;
 }
