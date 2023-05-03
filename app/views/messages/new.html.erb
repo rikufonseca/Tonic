@@ -23,7 +23,7 @@
       <div class="line-fourteen"></div>
     </div>
   </section>
-  <section class="parallax-without-height index">
+  <section class="parallax">
     <div class="about-page-contact" data-navbar-target="pageup">
       <%= form_with model: @message, html: { class: "pad-form"} do |form| %>
         <%= form.fields_for :contact do |contact_form| %>
@@ -50,5 +50,17 @@
           <%= form.submit "Envoyer", class: "envoyer" %>
         </div>
       <% end %>
+    </div>
+  </section>
+  <section class="parallax">
+    <div class="last-section">
+    <div class="box">
+      <h5 class="title-contact"> the address </h5>
+      <p class="font">  <%= t(".address") %> </p>
+      <a href="https://goo.gl/maps/6FMpm7rWVBh5NCRQ6" class="font"> get the direction on google map </a>
+      <h5 class="marge-up title-contact"> phone number </h5>
+      <a href="tel:+30 693 471 3555" class="font"> +30 693 471 3555 </a>
+      <h5 class="marge-up title-contact"> email </h5>
+      <a href="mailto:contact@tonic-society.com" class="font"> contact@tonic-society.com </a>
     </div>
   </section>
