@@ -124,20 +124,20 @@ p {
   opacity: 0;
 }
 
-.show-call {
-  opacity: 1;
-  animation: showup 1s linear;
-  transition: all 2s linear;
-}
-
-@keyframes showup {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+//.show-call {
+//  opacity: 1;
+//  animation: showup 1s linear;
+//  transition: all 2s linear;
+//}
+//
+//@keyframes showup {
+//  0% {
+//    opacity: 0;
+//  }
+//  100% {
+//    opacity: 1;
+//  }
+//}
 
 .fade-out {
   opacity: 0;
@@ -160,11 +160,6 @@ p {
 
 .menu_tel {
   margin: 7px 7px 0 0;
-}
-
-.display-menu {
-  opacity: 1;
-  top: 117px !important;
 }
 
 @media only screen and (min-width:279px) and (max-width:1000px) {
