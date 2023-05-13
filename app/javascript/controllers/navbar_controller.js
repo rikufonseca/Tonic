@@ -103,15 +103,13 @@ export default class extends Controller {
         } else {
           navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
         }
-        if(navtel.classList.contains("show-call") || navtel.classList.contains("display-menu")){
+        if(navtel.classList.contains("show-call")){
           navtel.classList.add("fade-out");
           navtel.classList.remove("show-call");
-          navtel.classList.remove("display-menu");
           navtel.style.top = '0px';
         } else {
           navtel.style.top = '112px';
           navtel.classList.remove("fade-out");
-          navtel.classList.remove("display-menu");
           navtel.classList.add("show-call");
         }
       } else {
