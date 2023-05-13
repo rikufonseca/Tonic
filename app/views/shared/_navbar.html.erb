@@ -38,36 +38,26 @@
         <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" }, class: "menu_tel" %>
       </div>
     </div>
-    <div data-navbar-target="navtel" class="menu opacity back_color <%= "display-menu" if params[:language].present? %>">
+    <div data-navbar-target="navtel" class="menu opacity back_color">
       <div class="navbar-lewagon-flex">
         <%= link_to t('.services'), services_path, class: "navbar-brand padding margin dropdown-items" %>
         <%= link_to t('.products'), products_path, class: "navbar-brand padding dropdown-items" %>
         <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding dropdown-items" %>
       </div>
       <div class="navbar-lewagon-flex padd">
-        <div style="width: 30px" class="opacity">
-          <% if params[:locale] == "en" || params[:locale].nil? %>
-            <%= link_to root_path(locale: "gr"),  class:"greek", data: { locale: "gr" } do %>
-              <% image_tag "greek_flag.png", { width: 28, data: {navbar_target: 'greekflag', } } %>
-            <% end %>
-          <% else %>
-            <%= link_to root_path(locale: "en"),  class:"english", data: { locale: "en" }  do %>
-              <% image_tag "english_flag.png", { width: 28, data: {navbar_target: 'englishflag'} } %>
-            <% end %>
-          <% end %>
-        </div>
+        <div style="width: 30px; opacity: 0"></div>
         <%= link_to t('.about'), root_path + href="#about_link", class: "navbar-brand padding" %>
         <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding" %>
-        <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" }, class: "opacity" %>
+        <%= image_tag "menu.png", height: 30, width: 30, style: "opacity: 0", data: { action: "click->navbar#displayMenu" } %>
       </div>
       <div style="text-align: center">
           <% if params[:locale] == "en" || params[:locale].nil? %>
-            <%= link_to root_path(locale: "gr", language: true), data: { locale: "gr" } do %>
-            <% image_tag "greek_flag.png", width: 28 %>
+            <%= link_to url_for(locale: "gr", language: true), data: { turbolinks_action: "replace" } do %>
+            <% image_tag "greek_flag.png", width: 28, data: {action: "click->navbar#stayOpen", prevent_default: true } %>
             <% end %>
           <% else %>
-            <%= link_to root_path(locale: "en", language: true), data: { locale: "en" }  do %>
-              <% image_tag "english_flag.png", width: 28 %>
+            <%= link_to url_for(locale: "en", language: true), data: { turbolinks_action: "replace" } do %>
+              <% image_tag "english_flag.png", width: 28, data: {action: "click->navbar#stayOpen", prevent_default: true } %>
             <% end %>
           <% end %>
       </div>
