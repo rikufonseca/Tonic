@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
-  scope '(:locale)', locale: /gr|en/ do
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/, path: '' do
     root to: "pages#home"
     resources :jewelries, only: %i[index show]
     resources :products, only: %i[index show]

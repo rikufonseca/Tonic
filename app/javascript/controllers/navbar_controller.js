@@ -45,15 +45,15 @@ export default class extends Controller {
         });
         rects.forEach((rect) => {
           const top = rect.top;
-          console.log(top)
+        //  console.log(top)
           if (top <= 203 && navtel.classList.contains("show-call")){
             navtel.style.top = "-33px";
-            navtel.style.backgroundColor = "rgb(222, 208, 199)"
+            navtel.style.backgroundColor = "rgb(222, 208, 199)";
             upbar[1].classList.remove("move-down-call");
             navtel.classList.add("seen_tel");
             navigation[1].style.opacity = "0";
             navigation[1].style.top = "0px";
-          } else if (top <= 97 && !navtel.classList.contains("show-call")){
+          } else if ((top <= 97 && !navtel.classList.contains("show-call"))) {
             navigation[1].classList.add("seen_tel");
             navigation[1].style.top = "25px";
             navtel.style.top = '25px';
@@ -98,20 +98,18 @@ export default class extends Controller {
       const topNav = rectNav.top;
 
       if((topNav === 0) && (top >= 267)){
-        if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts" ) {
+        if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts") {
           navtel.style.backgroundColor = "rgba(244, 244, 244,1)";
         } else {
           navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
         }
-        if(navtel.classList.contains("show-call") || navtel.classList.contains("display-menu")){
+        if(navtel.classList.contains("show-call")){
           navtel.classList.add("fade-out");
           navtel.classList.remove("show-call");
-          navtel.classList.remove("display-menu");
           navtel.style.top = '0px';
         } else {
           navtel.style.top = '112px';
           navtel.classList.remove("fade-out");
-          navtel.classList.remove("display-menu");
           navtel.classList.add("show-call");
         }
       } else {
@@ -129,5 +127,15 @@ export default class extends Controller {
         }
       }
     })
+  }
+
+  changeLanguage(event){
+    event.preventDefault();
+    const arg = event.currentTarget.getAttribute('data-arg');
+    console.log('Argument:', arg);
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set("locale", arg );
+    window.history.pushState(null, null, currentUrl.toString());
+    location.reload();
   }
 }
