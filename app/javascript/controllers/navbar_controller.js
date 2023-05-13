@@ -140,4 +140,10 @@ export default class extends Controller {
       }
     })
   }
+
+  stayOpen(){
+    const navtel = this.navtelTarget;
+    navtel.style.top = "112px";
+    navtel.style.opacity = "1";
+  }
 }
