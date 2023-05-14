@@ -20,13 +20,11 @@ export default class extends Controller {
         rects.forEach((rect) => {
           const top = rect.top;
           if(top <= 0){
-            console.log("one connect")
             navigation[0].classList.add("seen");
             navigation[0].classList.add("move-down");
             upbar[0].classList.add("move-down-call");
             textbar[0].classList.add("show-call");
           } else {
-            console.log("two connect")
             navigation[0].classList.remove("seen");
             navigation[0].classList.remove("move-down");
             upbar[0].classList.remove("move-down-call");
@@ -50,14 +48,12 @@ export default class extends Controller {
           const top = rect.top;
           console.log(top)
           if (top <= 203 && navtel.style.opacity === "1"){
-            console.log("one")
             navtel.style.top = "-33px";
             upbar[1].classList.remove("move-down-call");
             navtel.style.backgroundColor = "rgba(222, 208, 199, 1)";
             navigation[1].style.opacity = "0";
             navigation[1].style.top = "0px";
           } else if (top <= 97 && navtel.classList.contains("opacity")){
-            console.log("two")
             navigation[1].classList.add("seen_tel");
             navigation[1].style.top = "25px";
             navtel.style.top = '25px';
@@ -65,7 +61,6 @@ export default class extends Controller {
             upbar[1].classList.add("move-down-call");
             textbar[1].classList.add("show-call");
           } else {
-            console.log("four")
               if(navtel.style.opacity === "1"){
                 console.log("edo")
                 navtel.style.backgroundColor = "rgba(222, 208, 199,0)"
@@ -90,6 +85,8 @@ export default class extends Controller {
 
   displayMenu(event) {
     event.preventDefault();
+    const links = this.element.querySelectorAll('a');
+    console.log(links);
     const navtel = this.navtelTarget;
     const navigation = this.navigationTargets;
     const pageup = this.pageupTargets;
@@ -116,12 +113,14 @@ export default class extends Controller {
           navtel.style.top = '112px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
+          links.forEach(link => { link.style.pointerEvents = "auto" })
         } else {
           console.log("112px part two")
           navtel.style.opacity = "0";
           navtel.style.top = '0px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.add("opacity");
+          links.forEach(link => { link.style.pointerEvents = "none" })
         }
       } else {
         console.log("137px")
@@ -132,11 +131,14 @@ export default class extends Controller {
           navtel.style.opacity = "0";
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.add("opacity");
+          links.forEach(link => { link.style.pointerEvents = "none" })
         } else {
           navtel.style.top = '137px';
           navtel.style.opacity = "1";
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
+          links.forEach(link => { link.style.pointerEvents = "auto" })
+
         }
       }
     })
