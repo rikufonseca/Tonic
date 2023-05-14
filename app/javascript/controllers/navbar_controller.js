@@ -48,12 +48,14 @@ export default class extends Controller {
           const top = rect.top;
           console.log(top)
           if (top <= 203 && navtel.style.opacity === "1"){
+            navtel.classList.remove("display-menu");
             navtel.style.top = "-33px";
             upbar[1].classList.remove("move-down-call");
             navtel.style.backgroundColor = "rgba(222, 208, 199, 1)";
             navigation[1].style.opacity = "0";
             navigation[1].style.top = "0px";
           } else if (top <= 97 && navtel.classList.contains("opacity")){
+            navtel.classList.remove("display-menu");
             navigation[1].classList.add("seen_tel");
             navigation[1].style.top = "25px";
             navtel.style.top = '25px';
@@ -62,7 +64,7 @@ export default class extends Controller {
             textbar[1].classList.add("show-call");
           } else {
               if(navtel.style.opacity === "1"){
-                console.log("edo")
+                navtel.classList.remove("display-menu");
                 navtel.style.backgroundColor = "rgba(222, 208, 199,0)"
                 upbar[1].classList.remove("move-down-call");
                 navtel.style.top = "-15px";
@@ -70,6 +72,7 @@ export default class extends Controller {
                 navigation[1].style.top = "0px";
                 navtel.style.top = "112px";
               }
+              navtel.classList.remove("display-menu");
               upbar[1].classList.remove("move-down-call");
               navtel.style.top = "-15px";
               navigation[1].style.opacity = "1"
@@ -108,14 +111,14 @@ export default class extends Controller {
           navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
         }
         if(navtel.classList.contains("opacity")){
-          console.log("112px part one")
+          navtel.classList.remove("display-menu");
           navtel.style.opacity = "1";
           navtel.style.top = '112px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
           links.forEach(link => { link.style.pointerEvents = "auto" })
         } else {
-          console.log("112px part two")
+          navtel.classList.remove("display-menu");
           navtel.style.opacity = "0";
           navtel.style.top = '0px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
@@ -126,6 +129,7 @@ export default class extends Controller {
         console.log("137px")
         navtel.style.backgroundColor = "#ded0c7"
         if (navtel.classList.contains("show-call")) {
+          navtel.classList.remove("display-menu");
           navtel.style.top = '-15px';
           navtel.classList.add("seen_tel");
           navtel.style.opacity = "0";
@@ -133,6 +137,7 @@ export default class extends Controller {
           navtel.classList.add("opacity");
           links.forEach(link => { link.style.pointerEvents = "none" })
         } else {
+          navtel.classList.remove("display-menu");
           navtel.style.top = '137px';
           navtel.style.opacity = "1";
           navtel.style.transition = "opacity 1s linear, top 1s linear";
@@ -142,11 +147,5 @@ export default class extends Controller {
         }
       }
     })
-  }
-
-  stayOpen(){
-    const navtel = this.navtelTarget;
-    navtel.classList.add("display-menu")
-    navtel.style.opacity = "1";
   }
 }

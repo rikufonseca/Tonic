@@ -38,7 +38,8 @@
         <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" }, class: "menu_tel" %>
       </div>
     </div>
-    <div data-navbar-target="navtel" class="menu opacity back_color">
+
+    <div data-navbar-target="navtel" class="menu opacity back_color <%= "display-menu" if params[:language].present? %>">
       <div class="navbar-lewagon-flex">
         <%= link_to t('.services'), services_path, class: "navbar-brand padding margin dropdown-items" %>
         <%= link_to t('.products'), products_path, class: "navbar-brand padding dropdown-items" %>
@@ -53,11 +54,11 @@
       <div style="text-align: center">
           <% if params[:locale] == "en" || params[:locale].nil? %>
             <%= link_to url_for(locale: "gr", language: true), data: { turbolinks_action: "replace" } do %>
-            <% image_tag "greek_flag.png", width: 28, data: {action: "click->navbar#stayOpen", prevent_default: true } %>
+            <% image_tag "greek_flag.png", width: 28, data: { prevent_default: true } %>
             <% end %>
           <% else %>
             <%= link_to url_for(locale: "en", language: true), data: { turbolinks_action: "replace" } do %>
-              <% image_tag "english_flag.png", width: 28, data: {action: "click->navbar#stayOpen", prevent_default: true } %>
+              <% image_tag "english_flag.png", width: 28, data: { prevent_default: true } %>
             <% end %>
           <% end %>
       </div>
