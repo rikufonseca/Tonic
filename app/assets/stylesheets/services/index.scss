@@ -1,0 +1,43 @@
+.all-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  top: 141px;
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 15vw;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
+
+.underline-title {
+  font-size: 1.75rem;
+  padding: 2.7rem;
+  padding-bottom: 15px;
+  border-bottom: #e5b99d solid;
+  border-bottom-width: 3.1px;
+}
+
+.box-one {
+  width: 268px;
+}
+
+.sub-title {
+  padding-top: 1px;
+}
