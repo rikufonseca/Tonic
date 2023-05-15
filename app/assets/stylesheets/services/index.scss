@@ -1,11 +1,19 @@
 .all-frame {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100vw;
   top: 141px;
+}
+
+.inside-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #e5b99d47;
+  width: 90vw;
 }
 
 .inline {

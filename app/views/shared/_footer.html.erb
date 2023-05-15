@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <section class="add-section"> </section>
+    <section class="add-section <%= "section-off" if current_page?(services_path(locale:params[:locale])) %>"> </section>
   <% end %>
   </section>
 </div>

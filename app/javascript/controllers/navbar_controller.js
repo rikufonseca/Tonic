@@ -87,13 +87,27 @@ export default class extends Controller {
   }
 
   displayMenu(event) {
+    console.log("in")
     event.preventDefault();
     const links = this.element.querySelectorAll('a');
-    console.log(links);
     const navtel = this.navtelTarget;
     const navigation = this.navigationTargets;
     const pageup = this.pageupTargets;
+    const upbar = this.upbarTargets;
+    const textbar = this.textbarTargets;
+    console.log(upbar)
     const rects = []
+
+    if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
+      navtel.classList.add("seen_tel");
+      upbar[1].classList.add("move-down-call");
+      navtel.style.opacity = "1";
+      navtel.style.top = '25px';
+      navtel.style.transition = "opacity 1s linear, top 1s linear";
+      navtel.classList.remove("display-menu");
+      textbar[1].classList.add("show-call");
+    }
+
     pageup.forEach((page) => {
       const rect = page.getBoundingClientRect();
       rects.push(rect)
@@ -102,6 +116,7 @@ export default class extends Controller {
       const top = rect.top;
       let rectNav = navigation[1].getBoundingClientRect();
       const topNav = rectNav.top;
+      console.log(topNav)
 
       if ((topNav === 0) && (top >= 267)) {
         console.log("112px")
@@ -111,6 +126,7 @@ export default class extends Controller {
           navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
         }
         if(navtel.classList.contains("opacity")){
+          console.log("in-one")
           navtel.classList.remove("display-menu");
           navtel.style.opacity = "1";
           navtel.style.top = '112px';
@@ -118,6 +134,7 @@ export default class extends Controller {
           navtel.classList.remove("opacity");
           links.forEach(link => { link.style.pointerEvents = "auto" })
         } else {
+          console.log("in-two")
           navtel.classList.remove("display-menu");
           navtel.style.opacity = "0";
           navtel.style.top = '0px';
@@ -129,6 +146,7 @@ export default class extends Controller {
         console.log("137px")
         navtel.style.backgroundColor = "#ded0c7"
         if (navtel.classList.contains("show-call")) {
+          console.log("in-three")
           navtel.classList.remove("display-menu");
           navtel.style.top = '-15px';
           navtel.classList.add("seen_tel");
@@ -137,6 +155,7 @@ export default class extends Controller {
           navtel.classList.add("opacity");
           links.forEach(link => { link.style.pointerEvents = "none" })
         } else {
+          console.log("in-four")
           navtel.classList.remove("display-menu");
           navtel.style.top = '137px';
           navtel.style.opacity = "1";
