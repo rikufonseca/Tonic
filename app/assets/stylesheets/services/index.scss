@@ -1,3 +1,7 @@
+h5 {
+  margin-bottom: 25px;
+}
+
 .all-frame {
   display: flex;
   justify-content: center;
@@ -12,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid #e5b99d47;
+  background-color: white;
   width: 90vw;
 }
 
@@ -20,13 +24,29 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 15vw;
+  width: 19vw;
+  margin-bottom: 4px;
+}
+
+.text {
+  text-align: start;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 10px;
+  padding: 29px;
+  gap: 19px;
+}
+
+.border-light-pink {
+  border-bottom: 9px solid #e5b99d47;
+  width: 90vw;
+  text-align: center;
+}
+
+.upper-line-pink {
+  border-top: 9px solid #e5b99d47;
 }
 
 .grid-item {
@@ -36,10 +56,8 @@
 
 .underline-title {
   font-size: 1.75rem;
-  padding: 2.7rem;
-  padding-bottom: 15px;
-  border-bottom: #e5b99d solid;
-  border-bottom-width: 3.1px;
+  margin-bottom: unset;
+  padding: 3px;
 }
 
 .box-one {
@@ -48,4 +66,8 @@
 
 .sub-title {
   padding-top: 1px;
+}
+
+.add-space {
+  margin-bottom: 39px;
 }

@@ -19,12 +19,16 @@ export default class extends Controller {
         });
         rects.forEach((rect) => {
           const top = rect.top;
-          if(top < 0){
+          console.log(top)
+          if(top <= 108){
+            console.log("start here")
+            console.log("in here")
             navigation[0].classList.add("seen");
             navigation[0].classList.add("move-down");
             upbar[0].classList.add("move-down-call");
             textbar[0].classList.add("show-call");
           } else {
+            console.log("in there")
             navigation[0].classList.remove("seen");
             navigation[0].classList.remove("move-down");
             upbar[0].classList.remove("move-down-call");

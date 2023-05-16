@@ -99,6 +99,7 @@ p {
 
 .display-color-white {
   background-color: rgba(244, 244, 244, 1);
+  top: 0;
 }
 
 .seen_tel {
@@ -169,6 +170,10 @@ p {
 
 .menu-open a {
   pointer-events: none;
+}
+
+.display-color-light-pink {
+  background-color: #e5b99d47;
 }
 
 @media only screen and (min-width:279px) and (max-width:1000px) {
@@ -260,6 +265,11 @@ p {
 
   .greek, .english {
     margin-right: unset;
+  }
+
+  .display-color-white {
+    background-color: rgba(244, 244, 244, 1);
+    top: unset;
   }
 
 }
