@@ -83,3 +83,18 @@ h5 {
 .margin-frame {
   margin-bottom: 13rem;
 }
+
+@media only screen and (min-width:279px) and (max-width:1000px) {
+
+.grid-container {
+  grid-template-columns: auto;
+}
+
+.inline {
+  width: 70vw
+}
+
+.get-widther, .get-widther-tel {
+  width: 81vw;
+}
+}
