@@ -7,6 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Seeds start"
 User.destroy_all if Rails.env.development?
+Services.destroy_all if Rails.env.development?
+
 
 User.create!(
   email: "fonsecarika@gmail.com", password: "1234567890!6", admin: true
