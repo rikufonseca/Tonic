@@ -85,7 +85,14 @@ h5 {
 }
 
 @media only screen and (min-width:279px) and (max-width:1000px) {
-  .grid-container {  grid-template-columns: auto;}.inline {  width: 70vw}
+
+  .grid-container {
+    grid-template-columns: auto;
+  }
+
+  .inline {
+    width: 70vw
+  }
 
   .get-widther, .get-widther-tel {
     width: 81vw;
@@ -94,6 +101,7 @@ h5 {
   .padding-out-tel {
     padding: 0;
   }
+
   .marge-down {
     margin-bottom: 24px;
   }
