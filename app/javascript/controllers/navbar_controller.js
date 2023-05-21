@@ -118,7 +118,7 @@ export default class extends Controller {
     // }
 
     menuLinks.forEach((link) => {
-      link.classList.remove('d-none');
+      link.classList.toggle('d-none');
     })
 
     pageup.forEach((page) => {
