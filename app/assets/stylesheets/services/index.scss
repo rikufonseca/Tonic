@@ -1,0 +1,108 @@
+h5 {
+  margin-bottom: 25px;
+}
+
+.all-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  top: 141px;
+}
+
+.inside-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 90vw;
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 19vw;
+  margin-bottom: 4px;
+}
+
+.get-widther {
+  width: 22vw;
+}
+
+.text {
+  text-align: start;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 29px;
+  gap: 19px;
+}
+
+.border-light-pink {
+  border-bottom: 9px solid #e5b99d47;
+  width: 90vw;
+  text-align: center;
+}
+
+.upper-line-pink {
+  border-top: 9px solid #e5b99d47;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
+
+.underline-title {
+  font-size: 1.75rem;
+  margin-bottom: unset;
+  padding: 3px;
+}
+
+.box-one {
+  width: 268px;
+}
+
+.sub-title {
+  padding-top: 1px;
+}
+
+.add-space {
+  margin-bottom: 39px;
+}
+
+.space-between-text {
+  margin-bottom: 0px;
+}
+
+.margin-frame {
+  margin-bottom: 13rem;
+}
+
+@media only screen and (min-width:279px) and (max-width:1000px) {
+
+  .grid-container {
+    grid-template-columns: auto;
+  }
+
+  .inline {
+    width: 70vw
+  }
+
+  .get-widther, .get-widther-tel {
+    width: 81vw;
+  }
+
+  .padding-out-tel {
+    padding: 0;
+  }
+
+  .marge-down {
+    margin-bottom: 24px;
+  }
+}

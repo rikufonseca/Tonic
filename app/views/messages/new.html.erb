@@ -1,6 +1,6 @@
   <section class="background-white frame-one">
     <div class="vertical icons back-first-parallax">
-    <p class="follow"> <%= t(".follow") %> </p>
+    <p class="follow <%= "font-for-greek" if params[:locale] == "gr" %>"> <%= t(".follow") %> </p>
       <a href="#" target="_blank" class='middle'>
         <%= image_tag "icons8-facebook-128.png", class: "glow-effect" %>
       </a>
@@ -55,10 +55,10 @@
   <section class="frame-three box-in-the-center">
     <div class="last-section"> </div>
     <div class="box">
-      <h5 class="title-contact"> <%= t(".title") %> </h5>
-      <p class="font">  <%= t(".address") %> </p>
-      <a href="https://goo.gl/maps/6FMpm7rWVBh5NCRQ6" class="font"> <%= t(".map") %> </a>
-      <h5 class="marge-up title-contact"> <%= t(".phone") %> </h5>
+      <h5 class="title-contact <%= "font-for-greek" if params[:locale] == "gr" %>"> <%= t(".title") %> </h5>
+      <p class="font <%= "font-for-greek" if params[:locale] == "gr" %>">  <%= t(".address") %> </p>
+      <a href="https://goo.gl/maps/6FMpm7rWVBh5NCRQ6" class="font <%= "font-for-greek" if params[:locale] == "gr" %>"> <%= t(".map") %> </a>
+      <h5 class="marge-up title-contact <%= "font-for-greek" if params[:locale] == "gr" %>"> <%= t(".phone") %> </h5>
       <a href="tel:+30 693 471 3555" class="font"> +30 693 471 3555 </a>
       <h5 class="marge-up title-contact"> <%= t(".mail") %> </h5>
       <a href="mailto:contact@tonic-society.com" class="font"> contact@tonic-society.com </a>

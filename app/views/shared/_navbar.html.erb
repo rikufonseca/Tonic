@@ -1,10 +1,10 @@
-<div data-controller="navbar">
+<div data-controller="navbar" class="<%= "display-color-light-pink" if current_page?(services_path(locale:params[:locale])) %>">
   <div class="nav-comp">
     <div class="booking_bar" data-navbar-target="upbar">
       <p class="opacity" data-navbar-target="textbar"> For booking or any questions, please contact us  <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
     </div>
     <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
-      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon back_color" data-navbar-target="navigation">
+      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon back_color <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
         <div class="navbar-lewagon-flex">
           <%= link_to t('.services'), services_path, class: "navbar-brand padding margin" %>
           <%= link_to t('.products'), products_path, class: "navbar-brand padding" %>
@@ -28,7 +28,7 @@
     </div>
   </div>
   <div id="nav-tel">
-    <div class="booking_bar seen_tel" data-navbar-target="upbar">
+    <div class="booking_bar <%= "seen_tel" unless current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="upbar">
       <p class="opacity" data-navbar-target="textbar"> <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
     </div>
     <div class="flex back_color_tel <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
@@ -38,7 +38,8 @@
         <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" }, class: "menu_tel" %>
       </div>
     </div>
-    <div data-navbar-target="navtel" class="menu opacity back_color">
+
+    <div data-navbar-target="navtel" class="menu opacity back_color <%= "display-menu" if params[:language].present? %>">
       <div class="navbar-lewagon-flex">
         <%= link_to t('.services'), services_path, class: "navbar-brand padding margin dropdown-items" %>
         <%= link_to t('.products'), products_path, class: "navbar-brand padding dropdown-items" %>
@@ -53,11 +54,11 @@
       <div style="text-align: center">
           <% if params[:locale] == "en" || params[:locale].nil? %>
             <%= link_to url_for(locale: "gr", language: true), data: { turbolinks_action: "replace" } do %>
-            <% image_tag "greek_flag.png", width: 28, data: {action: "click->navbar#stayOpen", prevent_default: true } %>
+            <% image_tag "greek_flag.png", width: 28, data: { prevent_default: true } %>
             <% end %>
           <% else %>
             <%= link_to url_for(locale: "en", language: true), data: { turbolinks_action: "replace" } do %>
-              <% image_tag "english_flag.png", width: 28, data: {action: "click->navbar#stayOpen", prevent_default: true } %>
+              <% image_tag "english_flag.png", width: 28, data: { prevent_default: true } %>
             <% end %>
           <% end %>
       </div>
