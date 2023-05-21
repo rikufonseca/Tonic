@@ -33,9 +33,7 @@
     </div>
     <div class="flex back_color_tel <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
       <div style="width: 36px"></div>
-      <%= link_to root_path do %>
-        <%= image_tag "TONIC_logo.png", data: { navbar_target: "logo" }, class: "logo" %>
-      <% end %>
+      <%= image_tag "TONIC_logo.png", data: { navbar_target: "logo" }, class: "logo" %>
       <div>
         <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" }, class: "menu_tel" %>
       </div>

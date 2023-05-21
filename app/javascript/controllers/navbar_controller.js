@@ -107,15 +107,15 @@ export default class extends Controller {
     // console.log(upbar)
     const rects = []
 
-    // if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
-    //   navtel.classList.add("seen_tel");
-    //   upbar[1].classList.add("move-down-call");
-    //   navtel.style.opacity = "1";
-    //   navtel.style.top = '25px';
-    //   navtel.style.transition = "opacity 1s linear, top 1s linear";
-    //   navtel.classList.remove("display-menu");
-    //   textbar[1].classList.add("show-call");
-    // }
+     if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
+       navtel.classList.add("seen_tel");
+       upbar[1].classList.add("move-down-call");
+       navtel.style.opacity = "1";
+       navtel.style.top = '25px';
+       navtel.style.transition = "opacity 1s linear, top 1s linear";
+       navtel.classList.remove("display-menu");
+       textbar[1].classList.add("show-call");
+     }
 
     menuLinks.forEach((link) => {
       link.classList.toggle('d-none');
@@ -145,7 +145,6 @@ export default class extends Controller {
           navtel.style.top = '112px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
-          links.forEach(link => { link.style.pointerEvents = "auto" })
         } else {
       //    console.log("in-two")
           navtel.classList.remove("display-menu");
@@ -153,7 +152,6 @@ export default class extends Controller {
           navtel.style.top = '0px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.add("opacity");
-          links.forEach(link => { link.style.pointerEvents = "none" })
         }
       } else {
     //    console.log("137px")
@@ -166,7 +164,6 @@ export default class extends Controller {
           navtel.style.opacity = "0";
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.add("opacity");
-          links.forEach(link => { link.style.pointerEvents = "none" })
         } else {
       //    console.log("in-four")
           navtel.classList.remove("display-menu");
@@ -174,8 +171,6 @@ export default class extends Controller {
           navtel.style.opacity = "1";
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
-          links.forEach(link => { link.style.pointerEvents = "auto" })
-
         }
       }
     })
