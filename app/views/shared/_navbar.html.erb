@@ -43,26 +43,28 @@
 
     <div data-navbar-target="navtel" class="menu opacity back_color <%= "display-menu" if params[:language].present? %>">
       <div class="navbar-lewagon-flex">
-        <%= link_to t('.services'), services_path, class: "navbar-brand padding margin dropdown-items d-none", data: { navbar_target: "menuLink" } %>
-        <%= link_to t('.products'), products_path, class: "navbar-brand padding dropdown-items d-none", data: { navbar_target: "menuLink" } %>
-        <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding dropdown-items d-none", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.services'), services_path, class: "navbar-brand padding margin dropdown-items #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.products'), products_path, class: "navbar-brand padding dropdown-items #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding dropdown-items #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
       </div>
       <div class="navbar-lewagon-flex padd">
         <div style="width: 30px; opacity: 0"></div>
-        <%= link_to t('.about'), root_path + href="#about_link", class: "navbar-brand padding d-none", data: { navbar_target: "menuLink" } %>
-        <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding d-none", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.about'), root_path + href="#about_link", class: "navbar-brand padding #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
         <%= image_tag "menu.png", height: 30, width: 30, style: "opacity: 0", data: { action: "click->navbar#displayMenu" } %>
       </div>
       <div style="text-align: center">
           <% if params[:locale] == "en" || params[:locale].nil? %>
-            <%= link_to url_for(locale: "gr", language: true), class: "d-none", data: { turbolinks_action: "replace", navbar_target: "menuLink" } do %>
+            <%= link_to url_for(locale: "gr", language: true), class: "#{params[:language].present? ? '' : 'd-none'}", data: { turbolinks_action: "replace", navbar_target: "menuLink" } do %>
             <% image_tag "greek_flag.png", width: 28, data: { prevent_default: true } %>
             <% end %>
           <% else %>
-            <%= link_to url_for(locale: "en", language: true), class: "d-none", data: { turbolinks_action: "replace", navbar_target: "menuLink" } do %>
+            <%= link_to url_for(locale: "en", language: true), class: "#{params[:language].present? ? '' : 'd-none'}", data: { turbolinks_action: "replace", navbar_target: "menuLink" } do %>
               <% image_tag "english_flag.png", width: 28, data: { prevent_default: true } %>
             <% end %>
           <% end %>
       </div>
     </div>
   </div>
+
+  <% console %>
