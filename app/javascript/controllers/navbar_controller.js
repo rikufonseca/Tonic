@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["navigation", "pageup", "upbar", "textbar", "navtel", "logo"];
+  static targets = ["navigation", "pageup", "upbar", "textbar", "navtel", "logo", "menuLink"];
 
   connect() {
     const navigation = this.navigationTargets;
@@ -103,18 +103,23 @@ export default class extends Controller {
     const pageup = this.pageupTargets;
     const upbar = this.upbarTargets;
     const textbar = this.textbarTargets;
-    console.log(upbar)
+    const menuLinks = this.menuLinkTargets;
+    // console.log(upbar)
     const rects = []
 
-    if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
-      navtel.classList.add("seen_tel");
-      upbar[1].classList.add("move-down-call");
-      navtel.style.opacity = "1";
-      navtel.style.top = '25px';
-      navtel.style.transition = "opacity 1s linear, top 1s linear";
-      navtel.classList.remove("display-menu");
-      textbar[1].classList.add("show-call");
-    }
+    // if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
+    //   navtel.classList.add("seen_tel");
+    //   upbar[1].classList.add("move-down-call");
+    //   navtel.style.opacity = "1";
+    //   navtel.style.top = '25px';
+    //   navtel.style.transition = "opacity 1s linear, top 1s linear";
+    //   navtel.classList.remove("display-menu");
+    //   textbar[1].classList.add("show-call");
+    // }
+
+    menuLinks.forEach((link) => {
+      link.classList.remove('d-none');
+    })
 
     pageup.forEach((page) => {
       const rect = page.getBoundingClientRect();
