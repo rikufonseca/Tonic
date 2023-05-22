@@ -95,7 +95,7 @@ export default class extends Controller {
   }
 
   displayMenu(event) {
-  //  console.log("in")
+   console.log("in")
     event.preventDefault();
     const links = this.element.querySelectorAll('a');
     const navtel = this.navtelTarget;
@@ -118,7 +118,7 @@ export default class extends Controller {
      }
 
     menuLinks.forEach((link) => {
-      link.classList.toggle('d-none');
+      link.classList.remove('d-none');
     })
 
     pageup.forEach((page) => {
@@ -132,21 +132,21 @@ export default class extends Controller {
     //  console.log(topNav)
 
       if ((topNav === 0) && (top >= 267)) {
-      //  console.log("112px")
+        //  console.log("112px")
         if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts" ) {
           navtel.style.backgroundColor = "rgba(244, 244, 244,1)";
         } else {
           navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
         }
         if(navtel.classList.contains("opacity")){
-      //    console.log("in-one")
+           console.log("in-one")
           navtel.classList.remove("display-menu");
           navtel.style.opacity = "1";
           navtel.style.top = '112px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
         } else {
-      //    console.log("in-two")
+           console.log("in-two")
           navtel.classList.remove("display-menu");
           navtel.style.opacity = "0";
           navtel.style.top = '0px';
