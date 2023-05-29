@@ -67,7 +67,11 @@ export default class extends Controller {
       if (top <= 203 && navtel.style.opacity === "1"){
         // console.log("in-one");
         navtel.classList.remove("display-menu");
-        navtel.style.top = "-33px";
+        if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
+          navtel.style.top = "-1px";
+        } else {
+          navtel.style.top = "-33px";
+        }
         upbar[1].classList.remove("move-down-call");
         navtel.style.backgroundColor = "#f0e4dc";
         navigation[1].style.opacity = "0";
@@ -92,13 +96,13 @@ export default class extends Controller {
           navigation[1].style.top = "0px";
           navtel.style.top = "112px";
         }
-      // console.log("in-four");
+        // console.log("in-four");
         navtel.classList.remove("display-menu");
         upbar[1].classList.remove("move-down-call");
         navtel.style.top = "-15px";
         navigation[1].style.opacity = "1"
         navigation[1].style.top = "0px";
-        navtel.style.top = "112px";
+        navtel.style.top = "112px"; 
         navigation[1].classList.remove("seen_tel");
       }
     })
@@ -151,14 +155,14 @@ export default class extends Controller {
         }
 
         if(navtel.classList.contains("opacity")){
-          //  console.log("in-one")
+           console.log("in-one")
           navtel.classList.remove("display-menu");
           navtel.style.opacity = "1";
           navtel.style.top = '112px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
         } else {
-          //  console.log("in-two")
+           console.log("in-two")
           navtel.classList.remove("display-menu");
           navtel.style.opacity = "0";
           navtel.style.top = '0px';
@@ -169,20 +173,24 @@ export default class extends Controller {
     //    console.log("137px")
         // navtel.style.backgroundColor = "#ded0c7"
         if (navtel.classList.contains("show-call")) {
-        //  console.log("in-three")
+         console.log("in-three")
           navtel.classList.remove("display-menu");
           navtel.style.top = '-15px';
           navtel.classList.add("seen_tel");
           navtel.style.opacity = "0";
           navtel.style.transition = "opacity 1s linear, top 1s linear";
+          upbar[1].style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.add("opacity");
+          navtel.classList.remove("show-call");
+          upbar[1].classList.remove("move-down-call");
         } else {
-        //  console.log("in-four")
+         console.log("in-four")
           navtel.classList.remove("display-menu");
           navtel.style.top = '137px';
           navtel.style.opacity = "1";
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
+          navtel.classList.add("show-call");
         }
       }
     })
