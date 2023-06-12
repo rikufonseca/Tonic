@@ -6,6 +6,7 @@ en:
       jewelries: "Jewelries"
       about: "About"
       contact: "Contact"
+      for_booking: "For booking or any questions, please contact us"
 
     footer:
       address: "Skoufa 27, 10673 Athens, Kolonaki"
@@ -41,8 +42,8 @@ en:
       strength: "STRENGTHENED MANICURE"
       strength_exp: "reinforced base on the natural nail for damaged or worn nails with a longer-lasting result"
       gel: "GEL - ACRYGEL"
-      enhanced: "ENHANCED YOUR NATURAL"
-      elongation: "ELONGATION"
+      enhanced: "NATURAL ENHANCER"
+      elongation: "EXTENSION"
       maintenance: "MAINTENANCE"
       pedi: "PEDICURES"
       strength_ped: "STRENGTHENED PEDICURE"
@@ -54,6 +55,7 @@ en:
       remove_semi: "REMOVAL SEMI -PERMANENT"
       reconstruction: "ONE NAIL RECONSTRUCTION"
       eyebrows: "EYEBROWS"
-      eyebrows_exp: "wax or thread"
+      eyebrows_exp: "thread"
       lip: "UPPER LIP"
       thread: "thread"
+      from: "from"

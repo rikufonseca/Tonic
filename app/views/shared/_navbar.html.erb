@@ -1,7 +1,8 @@
 <div data-controller="navbar" class="<%= "display-color-light-pink" if current_page?(services_path(locale:params[:locale])) %>">
   <div class="nav-comp">
     <div class="booking_bar" data-navbar-target="upbar">
-      <p class="opacity" data-navbar-target="textbar"> For booking or any questions, please contact us  <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
+      <p class="opacity" data-navbar-target="textbar"> <%= t('.for_booking') %>
+       <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
     </div>
     <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
       <div class="navbar navbar-expand-sm navbar-light navbar-lewagon back_color <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
