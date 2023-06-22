@@ -12,17 +12,13 @@
 .title {
   font-style: italic;
   padding: 3em;
+  margin-bottom: 0;
 }
 .about_page {
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: #f4f4f4;
-}
-
-.pics_shop {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .about_article {
@@ -34,8 +30,15 @@
 
 .about_text {
   width: 57vw;
-  margin: 113px 0;
+  margin: 0 0 48px 0;
   font-size: larger;
+}
+
+.pics_shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .frame_one, .frame_two {
@@ -72,13 +75,8 @@
     height: auto;
   }
 
-  .pics_shop {
-    grid-template-columns: none;
-  }
-
   .title {
     padding: 2rem;
-    margin-bottom: 0;
   }
 
   .frame_one, .frame_two {
@@ -87,7 +85,6 @@
   }
 
   .about_text {
-    margin: 0 0 48px 0;
     width: 77vw;
   }
 }
