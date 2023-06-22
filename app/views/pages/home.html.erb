@@ -8,9 +8,13 @@
         <div class="pics_shop">
           <div class="frame_one">
           </div>
+          <p class="style-sentence <%= "font-for-greek" if params[:locale] == "gr" %>">
+            <%= t('.intertitle') %>
+          </p>
           <div class="frame_two">
           </div>
         </div>
+        <h5 class="title"> <%= t('.undertitle') %> </h5>
         <p class="about_text">
           <%= t('.text') %>
         </p>

@@ -1,11 +1,11 @@
 en:
   shared:
     navbar:
-      services: "Services"
-      products: "Products"
-      jewelries: "Jewelries"
-      about: "About"
-      contact: "Contact"
+      services: "Nail menu"
+      products: "Nail care"
+      jewelries: "Jewelry"
+      about: "Who we are?"
+      contact: "Contact us"
       for_booking: "For booking or any questions, please contact us"
 
     footer:
@@ -13,14 +13,16 @@ en:
 
   pages:
     home:
-      about: "ABOUT"
-      text: "Beauty stimulates an aesthetic feeling within us, pleasing to the eye, creating a sense of admiration. At Tonic society, we are specialized in enhancing hands and feet elegance given that they are a triumph of complex engineering among all parts of the human body. Both hands and feet set us apart from every other creature on the planet. We are therefore focused on looking after your nails to bring out the best equilibrium, symmetry and color fitting your mood and personality.
-      The beauty of your gestures is our main concern. This is why we have selected the finest jewelry to enhance your grace, lift your mood and make you feel attractive, confident and beautiful as you are. We are not pampering your nails and vending jewelry, our priority is to make your movements the most attractive. Our priority is you."
+      about: "WHO WE ARE?"
+      text: "Immerse yourself in the harmonious fusion of luxury, nail art, and jewelry at Tonic. Step onto the bustling streets of Athens, open the doors of Tonic, and embark on an extraordinary journey into the realm of a truly unique luxury Nail Salon experience. Our team of professionals, seasoned in the art of pampering, will lavish you with soothing beauty products and indulgent foot or hand massages.
+      To add a final touch of elegance, we've carefully selected French tunes to serenade your senses. From Paris, with Love, the melodic strains envelop you, completing the atmosphere of refined luxury"
+      intertitle: "At Tonic, we believe in creating an unparalleled Nail Salon experience, where every detail is meticulously crafted to provide you with a moment of pure indulgence."
+      undertitle: "AT TONIC, LUXURY, NAIL ART, AND JEWELRY GO HAND IN HAND"
 
   messages:
     new:
       address: "Skoufa 27, 10673 Athens, Kolonaki"
-      follow: "join us on"
+      follow: "follow us"
       name: "First name*"
       surname: "Last name *"
       mail: "Email *"

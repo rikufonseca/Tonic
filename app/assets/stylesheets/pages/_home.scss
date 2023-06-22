@@ -53,6 +53,13 @@
   background-size: cover;
 }
 
+.style-sentence {
+  width: 85vw;
+  margin: 34px 0;
+  font-family: 'Dancing Script', 'cursive';
+  font-size: 20px;
+}
+
 @media only screen and (min-width:279px) and (max-width:900px) {
   .height {
     position: relative;
@@ -80,6 +87,7 @@
   }
 
   .about_text {
-    margin: 61px 0;
+    margin: 0 0 48px 0;
+    width: 77vw;
   }
 }
