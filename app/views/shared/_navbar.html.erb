@@ -2,7 +2,7 @@
   <div class="nav-comp">
     <div class="booking_bar" data-navbar-target="upbar">
       <p class="opacity" data-navbar-target="textbar"> <%= t('.for_booking') %>
-       <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
+       <a href="tel:+30 693 471 3555"> +30 211 001 5271 </a> <p>
     </div>
     <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
       <div class="navbar navbar-expand-sm navbar-light navbar-lewagon back_color <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
@@ -30,7 +30,7 @@
   </div>
   <div id="nav-tel">
     <div class="booking_bar <%= "seen_tel" unless current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="upbar">
-      <p class="opacity" data-navbar-target="textbar"> <a href="tel:+30 693 471 3555"> +30 693 471 3555 </a> <p>
+      <p class="opacity" data-navbar-target="textbar"> <a href="tel:+30 693 471 3555"> +30 211 001 5271 </a> <p>
     </div>
     <div class="flex back_color_tel <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
       <div style="width: 36px"></div>

@@ -1,5 +1,5 @@
   <% unless current_page?(contacts_path(locale:params[:locale])) %>
-    <div class="footer">
+    <div class="footer <%= "fixed-down" if current_page?( products_path) || current_page?(jewelries_path) %>">
       <div class="icon">
         <a href="#" target="_blank">
           <%= image_tag "icons8-facebook-128.png", class: "facebook" %>
@@ -11,12 +11,12 @@
       <div class="contact-footer">
         <div class="p-footer">
           <p>  <%= t(".address") %> </p>
-          <a href="tel:+30 693 471 3555"> 693 471 3555 </a>
+          <a href="tel:+30 693 471 3555"> +30 211 001 5271 </a>
           <a href="mailto:contact@tonic-society.com"> contact@tonic-society.com </a>
         </div>
       </div>
     </div>
-    <section class="add-section <%= "section-off" if current_page?(services_path(locale:params[:locale])) %>"> </section>
+    <section class="<%= "section-off" if current_page?(services_path(locale:params[:locale])) %>"> </section>
   <% end %>
   </section>
 </div>

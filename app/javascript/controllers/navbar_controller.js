@@ -102,14 +102,14 @@ export default class extends Controller {
         navtel.style.top = "-15px";
         navigation[1].style.opacity = "1"
         navigation[1].style.top = "0px";
-        navtel.style.top = "112px"; 
+        navtel.style.top = "112px";
         navigation[1].classList.remove("seen_tel");
       }
     })
   }
 
   displayMenu(event) {
-  //  console.log("in")
+    console.log("in")
     event.preventDefault();
     const links = this.element.querySelectorAll('a');
     const navtel = this.navtelTarget;
@@ -121,15 +121,15 @@ export default class extends Controller {
     // console.log(upbar)
     const rects = []
 
-     if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
-       navtel.classList.add("seen_tel");
-       upbar[1].classList.add("move-down-call");
-       navtel.style.opacity = "1";
-       navtel.style.top = '25px';
-       navtel.style.transition = "opacity 1s linear, top 1s linear";
-       navtel.classList.remove("display-menu");
-       textbar[1].classList.add("show-call");
-     }
+    if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
+      navtel.classList.add("seen_tel");
+      upbar[1].classList.add("move-down-call");
+      navtel.style.opacity = "1";
+      navtel.style.top = '25px';
+      navtel.style.transition = "opacity 1s linear, top 1s linear";
+      navtel.classList.remove("display-menu");
+      textbar[1].classList.add("show-call");
+    }
 
     menuLinks.forEach((link) => {
       link.classList.remove('d-none');
@@ -144,8 +144,7 @@ export default class extends Controller {
       const top = rect.top;
       let rectNav = navigation[1].getBoundingClientRect();
       const topNav = rectNav.top;
-    //  console.log(topNav)
-
+      //  console.log(topNav)
       if ((topNav === 0) && (top >= 267)) {
         //  console.log("112px")
         if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts" ) {

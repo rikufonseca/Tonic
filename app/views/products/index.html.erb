@@ -1,19 +1,26 @@
-<div>hello</div>
-<ul>
-  <% @products.each do |product| %>
-    <% if params[:locale] == "en" || params[:locale].nil? %>
-      <%= simple_format(product.name_en) %>
-      <%= simple_format(product.description_en) %>
-      <%= product.price %>
-    <% else %>
-      <%= simple_format(a_exhib.name_gr) %>
-      <%= simple_format(product.description_gr) %>
-      <%= product.price %>
+<div data-navbar-target="pageup">
+  <% if false %>
+  <div></div>
+  <ul>
+    <% @products.each do |product| %>
+      <% if params[:locale] == "en" || params[:locale].nil? %>
+        <%= simple_format(product.name_en) %>
+        <%= simple_format(product.description_en) %>
+        <%= product.price %>
+      <% else %>
+        <%= simple_format(a_exhib.name_gr) %>
+        <%= simple_format(product.description_gr) %>
+        <%= product.price %>
+      <% end %>
+      <% if product.photo.attached? %>
+        <div class="product-image">
+          <%= cl_image_tag product.photo.key, width: 800, crop: :fill %>
+        </div>
+      <% end %>
     <% end %>
-    <% if product.photo.attached? %>
-      <div class="product-image">
-        <%= cl_image_tag product.photo.key, width: 800, crop: :fill %>
-      </div>
-    <% end %>
+  </ul>
   <% end %>
-</ul>
+  <div class="coming-soon">
+    <h2> COMING SOON </h2>
+  </div>
+</div>
