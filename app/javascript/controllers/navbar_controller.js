@@ -145,14 +145,14 @@ export default class extends Controller {
       let rectNav = navigation[1].getBoundingClientRect();
       const topNav = rectNav.top;
       //  console.log(topNav)
+      if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts") {
+        navtel.style.backgroundColor = "rgba(244, 244, 244,1)";
+      } else {
+        navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
+      }
+
       if ((topNav === 0) && (top >= 267)) {
         //  console.log("112px")
-        if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts" ) {
-          navtel.style.backgroundColor = "rgba(244, 244, 244,1)";
-        } else {
-          navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
-        }
-
         if(navtel.classList.contains("opacity")){
            console.log("in-one")
           navtel.classList.remove("display-menu");
@@ -187,6 +187,11 @@ export default class extends Controller {
           navtel.classList.remove("display-menu");
           navtel.style.top = '137px';
           navtel.style.opacity = "1";
+          if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts") {
+            navtel.style.backgroundColor = "rgba(244, 244, 244,1)";
+          } else {
+          navtel.style.backgroundColor = "#f0e4dc";
+          }
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
           navtel.classList.add("show-call");
