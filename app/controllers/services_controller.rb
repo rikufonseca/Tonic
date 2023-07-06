@@ -31,7 +31,7 @@ class ServicesController < ApplicationController
       image: "https://www.tonic-society.com/assets/home_background-7176d7033963e50dc91ecc3c193c764a2afb3d0a2164caa6f6bf2037348ca2fc.png",
       description: request.original_url.include?("gr") ? gr_desc : en_desc,
       site_name: "Tonic - Nails & Jewelry",
-      alternate: { "en" => "https://tonic-society.com/en", "gr" => "https://tonic-society.com/gr" }
+      alternate: { "en" => "https://tonic-society.com/en/services", "gr" => "https://tonic-society.com/gr/services" }
     }
   end
 end
