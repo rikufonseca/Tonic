@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def new
-    set_meta_tags
+    set_contact_meta_tags
 
     if params[:locale] == "en" || params[:locale].nil?
       @categories = Message::CATEGORIES_EN
@@ -38,7 +38,7 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:content, categories: [], sub_categories: [], contact_attributes: [:first_name, :last_name, :email, :phone_number])
   end
 
-  def set_meta_tags
+  def set_contact_meta_tags
     en_desc = "Tonic - Contact Us with our form or call us here is our phone number"
     gr_desc = "xsdfghjgklyjreraz"
 
