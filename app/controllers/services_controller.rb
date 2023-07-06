@@ -16,9 +16,6 @@ class ServicesController < ApplicationController
     )
   end
 
-  def show
-  end
-
   private
 
   def og_index_params

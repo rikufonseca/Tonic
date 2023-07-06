@@ -3,7 +3,4 @@ class JewelriesController < ApplicationController
 
   def index
   end
-
-  def show
-  end
 end
