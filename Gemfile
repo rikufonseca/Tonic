@@ -48,6 +48,9 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem "cloudinary"
 gem 'letter_opener', group: :development
 
+# SEO
+gem "meta-tags"
+
 
 # Use Sass to process CSS
 gem "sassc-rails"
