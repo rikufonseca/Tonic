@@ -4,14 +4,10 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /gr|en/ do
     root to: "pages#home"
-    resources :jewelries, only: %i[index show]
-    resources :products, only: %i[index show]
-    resources :services, only: %i[index show]
+    resources :jewelries, only: :index
+    resources :products, only: :index
+    resources :services, only: :index
     get "contacts", to: "messages#new"
     resources :messages, only: :create
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
