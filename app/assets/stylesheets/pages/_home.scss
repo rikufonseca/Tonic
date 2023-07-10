@@ -43,16 +43,16 @@
 
 .frame_one, .frame_two {
   width: 45vw;
-  height: 29vw;
+  height: 45vw;
 }
 
 .frame_one {
- // background-image: url("SHOP_TONIC_PICTURE.png");
+  background-image: url("SHOP_TONIC_PICTURE.jpg");
   background-size: cover;
 }
 
 .frame_two {
-//  background-image:url("SHOP_TONIC_PICTURE_2.png");
+  background-image:url("SHOP_TONIC_PICTURE_2.jpg");
   background-size: cover;
 }
 
@@ -81,8 +81,12 @@
 
   .frame_one, .frame_two {
     width: 85vw;
-    height: 56vw;
+    height: 85vw;
   }
+
+
+
+
 
   .about_text {
     width: 77vw;
