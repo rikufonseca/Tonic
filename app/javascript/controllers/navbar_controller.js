@@ -65,7 +65,7 @@ export default class extends Controller {
       // console.log(top);
 
       if (top <= 203 && navtel.style.opacity === "1"){
-        // console.log("in-one");
+         console.log("in-one");
         navtel.classList.remove("display-menu");
         if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
           navtel.style.top = "-1px";
@@ -77,7 +77,7 @@ export default class extends Controller {
         navigation[1].style.opacity = "0";
         navigation[1].style.top = "0px";
       } else if (top <= 97 && navtel.classList.contains("opacity")){
-        // console.log("in-two");
+         console.log("in-two");
         navtel.classList.remove("display-menu");
         navigation[1].classList.add("seen_tel");
         navigation[1].style.top = "25px";
@@ -85,9 +85,10 @@ export default class extends Controller {
         navigation[1].classList.add("move-down-tel");
         upbar[1].classList.add("move-down-call");
         textbar[1].classList.add("show-call");
+        // put the button here in js
       } else {
         if(navtel.style.opacity === "1"){
-          // console.log("in-three");
+           console.log("in-three");
           navtel.classList.remove("display-menu");
           navtel.style.backgroundColor = "rgba(222, 208, 199,0)"
           upbar[1].classList.remove("move-down-call");
@@ -96,7 +97,7 @@ export default class extends Controller {
           navigation[1].style.top = "0px";
           navtel.style.top = "112px";
         }
-        // console.log("in-four");
+         console.log("in-four");
         navtel.classList.remove("display-menu");
         upbar[1].classList.remove("move-down-call");
         navtel.style.top = "-15px";
@@ -118,7 +119,7 @@ export default class extends Controller {
     const upbar = this.upbarTargets;
     const textbar = this.textbarTargets;
     const menuLinks = this.menuLinkTargets;
-    // console.log(upbar)
+     console.log(upbar)
     const rects = []
 
     if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
@@ -152,16 +153,16 @@ export default class extends Controller {
       }
 
       if ((topNav === 0) && (top >= 267)) {
-        //  console.log("112px")
+          console.log("112px")
         if(navtel.classList.contains("opacity")){
-           console.log("in-one")
+           console.log("in-one-one")
           navtel.classList.remove("display-menu");
           navtel.style.opacity = "1";
           navtel.style.top = '112px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
         } else {
-           console.log("in-two")
+           console.log("in-two-two")
           navtel.classList.remove("display-menu");
           navtel.style.opacity = "0";
           navtel.style.top = '0px';
@@ -169,10 +170,10 @@ export default class extends Controller {
           navtel.classList.add("opacity");
         }
       } else {
-    //    console.log("137px")
-        // navtel.style.backgroundColor = "#ded0c7"
+        console.log("137px")
+         navtel.style.backgroundColor = "#ded0c7"
         if (navtel.classList.contains("show-call")) {
-         console.log("in-three")
+         console.log("in-three-three")
           navtel.classList.remove("display-menu");
           navtel.style.top = '-15px';
           navtel.classList.add("seen_tel");
@@ -183,7 +184,7 @@ export default class extends Controller {
           navtel.classList.remove("show-call");
           upbar[1].classList.remove("move-down-call");
         } else {
-         console.log("in-four")
+         console.log("in-four-four")
           navtel.classList.remove("display-menu");
           navtel.style.top = '137px';
           navtel.style.opacity = "1";

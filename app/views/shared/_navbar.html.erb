@@ -32,11 +32,13 @@
     <div class="booking_bar <%= "seen_tel" unless current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="upbar">
       <p class="opacity" data-navbar-target="textbar"> <a href="tel:+30 211 001 5271"> +30 211 001 5271 </a> <p>
     </div>
-    <div class="flex back_color_tel <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
-      <div style="width: 36px"></div>
-      <%= image_tag "TONIC_logo.png", data: { navbar_target: "logo" }, class: "logo" %>
-      <div>
-        <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" }, class: "menu_tel" %>
+    <div class="button-down">
+      <div class="flex back_color_tel <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
+        <div style="width: 36px"></div>
+        <%= image_tag "TONIC_logo.png", data: { navbar_target: "logo" }, class: "logo" %>
+        <div>
+          <%= image_tag "menu.png", height: 30, width: 30, data: { action: "click->navbar#displayMenu" }, class: "menu_tel" %>
+        </div>
       </div>
     </div>
 
@@ -50,6 +52,11 @@
         <div style="width: 30px; opacity: 0"></div>
         <%= link_to t('.about'), root_path + href="#about_link", class: "navbar-brand padding #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
         <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
+        <div style="width: 30px; opacity: 0"></div>
+      </div>
+      <div class="navbar-lewagon-flex">
+        <div style="width: 30px; opacity: 0"></div>
+        <%= link_to t('.book now'), "https://widget.treatwell.gr/place/100049725/menu/", class: "book-link" %>
         <%= image_tag "menu.png", height: 30, width: 30, style: "opacity: 0", data: { action: "click->navbar#displayMenu" } %>
       </div>
       <div style="text-align: center">

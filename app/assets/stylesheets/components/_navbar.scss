@@ -237,7 +237,7 @@ p {
     justify-content: space-between;
     width: unset;
     align-items: center;
-    padding: 10px 28px;
+    padding: 0px 28px;
   }
 
   .margin {
@@ -274,6 +274,11 @@ p {
   .display-color-white {
     background-color: rgba(244, 244, 244, 1);
     top: unset;
+  }
+
+  .book-link {
+    padding-top: 12px;
+    font-size: 18px;
   }
 
 }
