@@ -2,18 +2,16 @@ class ServicesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    en_desc = "Nails - Manucure and pedicure menu, for men & women"
-    gr_desc = "xsdfghjgklyjreraz"
-
     en_title = "Nails Menu"
-    gr_title = ""
+    gr_title = "Μενού"
 
     set_meta_tags(
       title: request.original_url.include?("gr") ? en_title : gr_title,
-      description: request.original_url.include?("gr") ? gr_desc : en_desc,
       reverse: true,
       og: og_index_params
     )
+
+    @services = Service.all
   end
 
   private
