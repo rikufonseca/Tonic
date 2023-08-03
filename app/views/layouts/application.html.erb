@@ -4,8 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= display_meta_tags site: "Tonic - Nails & Jewelry", 
-      keywords: request.original_url.include?("gr") ? "" : "tonic, luxury, nails, jewelry, kolonaki, athens, greece" 
+    <%= display_meta_tags site: "Tonic - Nails & Jewelry in Kolonaki, Athens", 
+      keywords: request.original_url.include?("gr") ? "" : "tonic, luxury, nails, jewelry, kolonaki, athens, greece",
+      icon: image_tag("favicon.png"), type: "image/png" 
     %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>

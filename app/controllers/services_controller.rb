@@ -12,7 +12,8 @@ class ServicesController < ApplicationController
       title: request.original_url.include?("gr") ? en_title : gr_title,
       description: request.original_url.include?("gr") ? gr_desc : en_desc,
       reverse: true,
-      og: og_index_params
+      og: og_index_params,
+      canonical: "https://tonic-society.com/services"
     )
   end
 
