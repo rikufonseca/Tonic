@@ -49,7 +49,8 @@ class MessagesController < ApplicationController
       title: request.original_url.include?("gr") ? en_title : gr_title,
       description: request.original_url.include?("gr") ? gr_desc : en_desc,
       reverse: true,
-      og: og_new_params
+      og: og_new_params,
+      canonical: "https://tonic-society.com"
     )
   end
 

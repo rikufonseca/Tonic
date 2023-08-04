@@ -8,7 +8,8 @@ class ServicesController < ApplicationController
     set_meta_tags(
       title: request.original_url.include?("gr") ? en_title : gr_title,
       reverse: true,
-      og: og_index_params
+      og: og_index_params,
+      canonical: "https://tonic-society.com/services"
     )
 
     @services = Service.all
