@@ -13,7 +13,8 @@ class PagesController < ApplicationController
       title: request.original_url.include?("gr") ? en_title : gr_title,
       description: request.original_url.include?("gr") ? gr_desc : en_desc,
       reverse: true,
-      og: og_params
+      og: og_params,
+      canonical: "https://tonic-society.com"
     )
   end
 
