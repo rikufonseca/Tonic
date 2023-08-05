@@ -90,6 +90,8 @@ Service.create!(name_gr: "ΗΜΙΜΟΝΙΜΟ",
                 name_en: "SEMI-PERMANENT",
                 sub_name_gr: "ΕΝΙΣΧΥΜΕΝΗ ΜΑΝΙΚΙΟΥΡ",
                 sub_name_en: "STRENGTHENED MANICURE",
+                description_gr: "Ενισχυμένη βάση στο φυσικό νύχι για ταλαιπωρημένα ή φθαρμένα νύχια με μεγαλύτερη διάρκεια αποτελέσματος",
+                description_en: "reinforced base on the natural nail for damaged or worn nails with a longer-lasting result",
                 price: "27",
                 category_en: "MANICURES",
                 category_gr: "ΜΑΝΙΚΙΟΥΡ",
@@ -100,6 +102,8 @@ Service.create!(name_gr: "ΤΖΕΛ - ΑΚΡΥΤΖΕΛ",
                 name_en: "GEL - ACRYGEL",
                 sub_name_gr: "ΦΥΣΙΚΗ ΕΝΙΣΧΥΣΗ ΤΖΕΛ",
                 sub_name_en: "NATURAL ENHANCER",
+                description_gr: "Λεπτή στρώση Τζέλ στο φυσικό νύχι",
+                description_en: "Thin Gel's layer on the natural nail",
                 price: "30",
                 category_en: "MANICURES",
                 category_gr: "ΜΑΝΙΚΙΟΥΡ",
@@ -108,8 +112,8 @@ Service.create!(name_gr: "ΤΖΕΛ - ΑΚΡΥΤΖΕΛ",
 
 Service.create!(name_gr: "ΤΖΕΛ - ΑΚΡΥΤΖΕΛ",
                 name_en: "GEL - ACRYGEL",
-                sub_name_gr: "ΕΠΙΜΗΚΥΝΣΗ",
-                sub_name_en: "EXTENSION",
+                sub_name_gr: "ΤΟΠΟΘΕΤΗΣΗ",
+                sub_name_en: "POSE",
                 price: "55",
                 category_en: "MANICURES",
                 category_gr: "ΜΑΝΙΚΙΟΥΡ",
@@ -200,10 +204,88 @@ Service.create!(name_gr: "ΗΜΙΜΟΝΙΜΟ",
                 name_en: "SEMI-PERMANENT",
                 sub_name_gr: "ΘΕΡΑΠΕΥΤΙΚΟ",
                 sub_name_en: "THERAPEUTIC",
+                description_gr: "Για άκρες που αντιμετωπίζουν προβλήματα σκλήρυνσης καλών μυκητίασεων. Αμεσα ανακούφιση, αντιμετώπιση αισθητικών και δερματολογικών προβλημάτων",
+                description_en: "For edges that face problems of callus hardening and fungal infections. For immediate relief, treatment of aesthetic and dermatological problems",
                 price: "35",
                 category_en: "PEDICURES",
                 category_gr: "ΠΕΝΤΙΚΙΟΥΡ",
                 sub_category_en: "NAIL POLISH",
                 sub_category_gr: "ΜΕ ΒΕΡΝΙΚΙ")
+
+Service.create!(sub_name_gr: "ΜΑΝΙΚΙΟΥΡ",
+                sub_name_en: "MANICURE",
+                price: "13",
+                category_en: "MEN",
+                category_gr: "ΑΝΔΡΕΣ")
+
+Service.create!(sub_name_gr: "ΠΕΝΤΙΚΙΟΥΡ",
+                sub_name_en: "PEDICURE",
+                price: "20",
+                category_en: "MEN",
+                category_gr: "ΑΝΔΡΕΣ")
+
+Service.create!(sub_name_gr: "ΘΕΡΑΠΕΥΤΙΚΟ",
+                sub_name_en: "THERAPEUTIC",
+                price: "35",
+                category_en: "MEN",
+                category_gr: "ΑΝΔΡΕΣ")
+
+Service.create!(sub_name_gr: "ΘΕΡΑΠΕΥΤΙΚΟ",
+                sub_name_en: "THERAPEUTIC",
+                price: "35",
+                category_en: "MEN",
+                category_gr: "ΑΝΔΡΕΣ")
+
+Service.create!(sub_name_gr: "ΓΑΛΛΙΚΟ",
+                sub_name_en: "FRENCH",
+                price: "3",
+                category_en: "NAILS ART",
+                category_gr: "NAILS ART")
+
+Service.create!(sub_name_gr: "ΣΧΕΔΙΑ",
+                sub_name_en: "DESIGNS",
+                price: "3",
+                category_en: "NAILS ART",
+                category_gr: "NAILS ART")
+
+Service.create!(sub_name_gr: "ΑΦΑΙΡΕΣΗ ΤΖΕΛ - ΑΚΡΥΤΖΕΛ",
+                sub_name_en: "REMOVAL GEL - PERMANENT",
+                price: "10",
+                category_en: "EXTRA",
+                category_gr: "ΕΞΤΡΑ")
+
+Service.create!(sub_name_gr: "ΑΦΑΙΡΕΣΗ ΗΜΙΜΟΝΙΜΟΥ",
+                sub_name_en: "REMOVAL SEMI-PERMANENT",
+                price: "7",
+                category_en: "EXTRA",
+                category_gr: "ΕΞΤΡΑ")
+
+Service.create!(sub_name_gr: "ΕΠΙΜΗΚΥΝΣΗ ΕΝΟΣ ΝΥΧΙΟΥ",
+                sub_name_en: "ONE NAIL RECONSTRUCTION",
+                price: "5",
+                category_en: "EXTRA",
+                category_gr: "ΕΞΤΡΑ")
+
+Service.create!(sub_name_gr: "ΕΠΙΜΗΚΥΝΣΗ ΕΝΟΣ ΝΥΧΙΟΥ",
+                sub_name_en: "ONE NAIL RECONSTRUCTION",
+                price: "5",
+                category_en: "EXTRA",
+                category_gr: "ΕΞΤΡΑ")
+
+Service.create!(sub_name_gr: "ΦΡΥΔΙΑ",
+                sub_name_en: "EYEBROWS",
+                description_en: "thread",
+                description_gr: "κλωστή",
+                price: "12",
+                category_en: "EXTRA",
+                category_gr: "ΕΞΤΡΑ")
+
+Service.create!(sub_name_gr: "ΑΝΩ ΧΕΙΛΟΣ",
+                sub_name_en: "UPPER LIP",
+                description_en: "thread",
+                description_gr: "κλωστή",
+                price: "12",
+                category_en: "EXTRA",
+                category_gr: "ΕΞΤΡΑ")
 
 puts "Seeds successfully finished !"
