@@ -1,8 +1,8 @@
-  <% @services.each do |service| %>
-    <%= service.category_en %>
-  <% end %>
   <div class="all-frame margin-frame" data-navbar-target="pageup">
     <div class="inside-box">
+      <% @services.each do |service| %>
+        <%= service.category_en %>
+      <% end %>
       <div class="border-light-pink">
         <h3 class="underline-title"> <%= t('.mano') %> </h3>
       </div>
