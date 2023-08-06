@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_05_125818) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_06_121540) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -89,6 +89,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_05_125818) do
     t.index ["contact_id"], name: "index_messages_on_contact_id"
   end
 
+  create_table "options", force: :cascade do |t|
+    t.bigint "service_sub_category_id"
+    t.string "title_en"
+    t.string "title_gr"
+    t.string "description_en"
+    t.string "description_gr"
+    t.integer "price"
+    t.index ["service_sub_category_id"], name: "index_options_on_service_sub_category_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name_gr"
     t.string "name_en"
@@ -97,24 +107,42 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_05_125818) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "time"
+  end
+
+  create_table "service_categories", force: :cascade do |t|
+    t.string "title_en"
+    t.string "title_gr"
+  end
+
+  create_table "service_options", force: :cascade do |t|
+    t.bigint "option_id"
+    t.bigint "service_id"
+    t.index ["option_id"], name: "index_service_options_on_option_id"
+    t.index ["service_id"], name: "index_service_options_on_service_id"
+  end
+
+  create_table "service_sub_categories", force: :cascade do |t|
+    t.string "title_en"
+    t.string "title_gr"
   end
 
   create_table "services", force: :cascade do |t|
-    t.string "name_gr"
-    t.string "name_en"
+    t.string "title_gr"
+    t.string "title_en"
     t.integer "price"
-    t.string "category_en"
-    t.string "category_gr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "time"
-    t.string "sub_category_en"
-    t.string "sub_category_gr"
-    t.string "sub_name_gr"
-    t.string "sub_name_en"
+    t.string "sub_title_gr"
+    t.string "sub_title_en"
     t.text "description_gr"
     t.text "description_en"
+    t.string "genre_en"
+    t.string "genre_gr"
+    t.bigint "service_category_id"
+    t.bigint "service_sub_category_id"
+    t.index ["service_category_id"], name: "index_services_on_service_category_id"
+    t.index ["service_sub_category_id"], name: "index_services_on_service_sub_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -133,4 +161,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_05_125818) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "messages", "contacts"
+  add_foreign_key "options", "service_sub_categories"
+  add_foreign_key "service_options", "options"
+  add_foreign_key "service_options", "services"
 end

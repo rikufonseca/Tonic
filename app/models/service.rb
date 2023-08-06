@@ -1,4 +1,5 @@
 class Service < ApplicationRecord
   has_one_attached :photo
-  validates :sub_name_gr, :sub_name_en, :category_en, :category_gr, :price, presence: true
+  validates :title_gr, :title_en, :price, presence: true
+  validates :title_en, :title_gr, uniqueness: true
 end

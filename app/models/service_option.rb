@@ -1,0 +1,2 @@
+class ServiceOption < ApplicationRecord
+end
