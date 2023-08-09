@@ -288,4 +288,5 @@ Service.create!(sub_name_gr: "ΑΝΩ ΧΕΙΛΟΣ",
                 category_en: "EXTRA",
                 category_gr: "ΕΞΤΡΑ")
 
+puts "all services done"
 puts "Seeds successfully finished !"

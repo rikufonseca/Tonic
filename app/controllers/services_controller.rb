@@ -12,7 +12,8 @@ class ServicesController < ApplicationController
       canonical: "https://tonic-society.com/services"
     )
 
-    @services = Service.all
+    @services_manicure_en = Service.where(category_en: "MANICURES").group_by(&:name_en)
+    @services_manicure_gr = Service.where(category_gr: "ΜΑΝΙΚΙΟΥΡ").group_by(&:name_gr)
   end
 
   private
