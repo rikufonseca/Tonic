@@ -230,12 +230,6 @@ Service.create!(sub_name_gr: "ΘΕΡΑΠΕΥΤΙΚΟ",
                 category_en: "MEN",
                 category_gr: "ΑΝΔΡΕΣ")
 
-Service.create!(sub_name_gr: "ΘΕΡΑΠΕΥΤΙΚΟ",
-                sub_name_en: "THERAPEUTIC",
-                price: "35",
-                category_en: "MEN",
-                category_gr: "ΑΝΔΡΕΣ")
-
 Service.create!(sub_name_gr: "ΓΑΛΛΙΚΟ",
                 sub_name_en: "FRENCH",
                 price: "3",

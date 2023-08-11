@@ -8,14 +8,18 @@
       </div>
       <div class="grid-container">
         <div class="grid-item">
+          <% count = 0 %>
           <% @services_manicure_en.each do | name_en, service_group | %>
-            <h5 class="marge"><%= name_en %></h5>
+              <h5 class="marge" <% if count == 0 %> style="margin-top: 36px;"<% end %>>
+                <%= name_en %>
+              </h5>
+              <% count += 1 %>
             <% service_group.each do |service| %>
               <div class="inline">
                 <p class="text"> <%= service.sub_name_en %> </p>
                 <p> € <%= service.price %> </p>
               </div>
-              <%= service.description_en %>
+              <p class="left-aligned"> <%= service.description_en %> </p>
             <% end %>
           <% end %>
         </div>
@@ -28,48 +32,20 @@
       </div>
       <div class="grid-container">
         <div class="grid-item">
-          <h5> <%= t('.basic') %> </h5>
-          <div class="inline">
-            <p class="text"> <%= t('.shape') %> </p>
-            <p> € 10 </p>
-          </div>
-          <div class="inline add-space">
-            <p class="text"> ULTIMATE PEDICURE </p>
-            <p> € 20 </p>
-          </div>
-          <h5> <%= t('.lasting') %> </h5>
-          <div class="inline">
-            <p class="text"> <%= t('.shape') %> </p>
-            <p> € 13 </p>
-          </div>
-          <div class="inline">
-            <p class="text"> ULTIMATE PEDICURE </p>
-            <p> € 23 </p>
-          </div>
-        </div>
-        <div class="grid-item">
-          <h5> <%= t('.semi') %> </h5>
-          <div class="inline">
-            <p class="text"> <%= t('.shape') %> </p>
-            <p> € 17 </p>
-          </div>
-          <div class="inline">
-            <p class="text"> ULTIMATE PEDICURE </p>
-            <p> € 25 </p>
-          </div>
-          <div class="inline">
-            <p class="text"> <%= t('.strength_ped') %>  </p>
-            <p> € 30 </p>
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="inline">
-            <h5 class="text space-between-text"> <%= t('.therapeutic') %> </h5>
-            <p> <%= t('.from') %> € 35 </p>
-          </div>
-          <div>
-            <p class="text inline"> <%= t('.therapeutic_exp') %> </p>
-          </div>
+          <% count = 0 %>
+          <% @services_pedicure_en.each do | name_en, service_group | %>
+              <h5 class="marge" <% if count == 0 %> style="margin-top: 36px;"<% end %>>
+                <%= name_en %>
+              </h5>
+              <% count += 1 %>
+            <% service_group.each do |service| %>
+              <div class="inline">
+                <p class="text"> <%= service.sub_name_en %> </p>
+                <p> € <%= service.price %> </p>
+              </div>
+              <p class="left-aligned"> <%= service.description_en %> </p>
+            <% end %>
+          <% end %>
         </div>
       </div>
       <div class="border-light-pink upper-line-pink">
@@ -77,22 +53,20 @@
       </div>
       <div class="grid-container">
         <div class="grid-item padding-out-tel">
-          <div class="inline">
-            <p class="text"> <%= t('.manomen') %></p>
-            <p> € 13 </p>
-          </div>
-        </div>
-        <div class="grid-item padding-out-tel">
-          <div class="inline">
-            <p class="text">  <%= t('.pedimen') %> </p>
-            <p> € 20 </p>
-          </div>
-        </div>
-        <div class="grid-item padding-out-tel">
-          <div class="inline">
-            <p class="text"> <%= t('.therapeutic') %> </p>
-            <p> <%= t('.from') %> € 35 </p>
-          </div>
+        <% count = 0 %>
+          <% @services_men_en.each do | name_en, service_group | %>
+              <h5 class="marge" <% if count == 0 %> style="margin-top: 36px;"<% end %>>
+                <%= name_en %>
+              </h5>
+              <% count += 1 %>
+            <% service_group.each do |service| %>
+              <div class="inline">
+                <p class="text"> <%= service.sub_name_en %> </p>
+                <p> € <%= service.price %> </p>
+              </div>
+              <p class="left-aligned"> <%= service.description_en %> </p>
+            <% end %>
+          <% end %>
         </div>
       </div>
       <div class="border-light-pink upper-line-pink">

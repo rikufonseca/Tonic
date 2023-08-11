@@ -14,6 +14,12 @@ class ServicesController < ApplicationController
 
     @services_manicure_en = Service.where(category_en: "MANICURES").group_by(&:name_en)
     @services_manicure_gr = Service.where(category_gr: "ΜΑΝΙΚΙΟΥΡ").group_by(&:name_gr)
+    @services_pedicure_en = Service.where(category_en: "PEDICURES").group_by(&:name_en)
+    @services_pedicure_gr = Service.where(category_gr: "ΠΕΝΤΙΚΙΟΥΡ").group_by(&:name_gr)
+    @services_men_en = Service.where(category_en: "MEN").group_by(&:name_en)
+    @services_men_gr = Service.where(category_gr: "ΑΝΔΡΕΣ").group_by(&:name_gr)
+    @services_art_en = Service.where(category_en: " NAILS ART").group_by(&:name_en)
+    @services_art_gr = Service.where(category_gr: " NAILS ART").group_by(&:name_gr)
   end
 
   private
