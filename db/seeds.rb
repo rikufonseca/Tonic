@@ -240,7 +240,8 @@ Service.create!(sub_name_gr: "ΣΧΕΔΙΑ",
                 sub_name_en: "DESIGNS",
                 price: "3",
                 category_en: "NAILS ART",
-                category_gr: "NAILS ART")
+                category_gr: "NAILS ART",
+                description_en: "Start at ")
 
 Service.create!(sub_name_gr: "ΑΦΑΙΡΕΣΗ ΤΖΕΛ - ΑΚΡΥΤΖΕΛ",
                 sub_name_en: "REMOVAL GEL - PERMANENT",
