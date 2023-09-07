@@ -88,10 +88,15 @@ h5 {
 
   .grid-container {
     grid-template-columns: auto;
+    padding: 0 26px 26px;
+  }
+
+  .grid-item {
+    padding: 0;
   }
 
   .inline {
-    width: 70vw
+    width: 77vw;
   }
 
   .get-widther, .get-widther-tel {
@@ -104,5 +109,13 @@ h5 {
 
   .marge-down {
     margin-bottom: 24px;
+  }
+
+  .marge {
+    margin-top: 49px;
+  }
+
+  .left-aligned {
+    text-align: left;
   }
 }
