@@ -9,18 +9,22 @@
       <div class="grid-container">
         <div class="grid-item">
           <% last_name = nil %>
-          <% @services[:services_manicure_en].each do |service| %>
-            <% if last_name != service.name_en %>
-              <% last_name = service.name_en %>
-              <h5 class="marge" <%= 'style="margin-top: 36px;"' if last_name == @services[:services_manicure_en].first.name_en %>>
-                <%= service.name_en %>
+          <% grouped_services = @services[:services_manicure_en].group_by { |service| service.name_en } %>
+
+          <% grouped_services.each do |name_en, services| %>
+            <% if last_name != name_en %>
+              <% last_name = name_en %>
+              <h5 class="marge" <%= 'style="margin-top: 36px;"' if last_name == grouped_services.keys.first %>>
+                <%= name_en %>
               </h5>
             <% end %>
-            <div class="inline">
-              <p class="text"> <%= service.sub_name_en %> </p>
-              <p> € <%= service.price %> </p>
-            </div>
-            <p class="left-aligned"> <%= service.description_en %> </p>
+            <% services.each do |service| %>
+              <div class="inline">
+                <p class="text"> <%= service.sub_name_en %> </p>
+                <p> € <%= service.price %> </p>
+              </div>
+              <p class="left-aligned"> <%= service.description_en %> </p>
+            <% end %>
           <% end %>
         </div>
       </div>
@@ -32,36 +36,46 @@
       </div>
       <div class="grid-container">
         <div class="grid-item">
-          <% count = 0 %>
-          <% @services[:services_pedicure_en].each do | service | %>
-              <h5 class="marge" <% if count == 0 %> style="margin-top: 36px;"<% end %>>
-                <%= service.name_en %>
+          <% last_name = nil %>
+          <% grouped_services = @services[:services_pedicure_en].group_by { |service| service.name_en } %>
+          <% grouped_services.each do |name_en, services| %>
+            <% if last_name != name_en %>
+              <% last_name = name_en %>
+              <h5 class="marge" <%= 'style="margin-top: 36px;"' if last_name == grouped_services.keys.first %>>
+                <%= name_en %>
               </h5>
-              <% count += 1 %>
+            <% end %>
+            <% services.each do |service| %>
               <div class="inline">
                 <p class="text"> <%= service.sub_name_en %> </p>
                 <p> € <%= service.price %> </p>
               </div>
               <p class="left-aligned"> <%= service.description_en %> </p>
+            <% end %>
           <% end %>
         </div>
       </div>
       <div class="border-light-pink upper-line-pink">
         <h3 class="underline-title"> <%= t('.men') %></h3>
       </div>
-      <div class="grid-container">
+      <div class="grid-container pad_all">
         <div class="grid-item padding-out-tel">
-        <% count = 0 %>
-          <% @services[:services_men_en].each do | service | %>
-              <h5 class="marge" <% if count == 0 %> style="margin-top: 36px;"<% end %>>
-                <%= service.name_en %>
+          <% last_name = nil %>
+          <% grouped_services = @services[:services_men_en].group_by { |service| service.name_en } %>
+          <% grouped_services.each do |name_en, services| %>
+            <% if last_name != name_en %>
+              <% last_name = name_en %>
+              <h5 class="marge" <%= 'style="margin-top: 36px;"' if last_name == grouped_services.keys.first %>>
+                <%= name_en %>
               </h5>
-              <% count += 1 %>
+            <% end %>
+            <% services.each do |service| %>
               <div class="inline">
                 <p class="text"> <%= service.sub_name_en %> </p>
                 <p> € <%= service.price %> </p>
               </div>
               <p class="left-aligned"> <%= service.description_en %> </p>
+            <% end %>
           <% end %>
         </div>
       </div>
@@ -70,11 +84,21 @@
       </div>
       <div class="grid-container pad_all">
         <div class="grid-item padding-out-tel">
-          <% @services[:services_art_en].each do | service | %>
+          <% last_name = nil %>
+          <% grouped_services = @services[:services_art_en].group_by { |service| service.name_en } %>
+          <% grouped_services.each do |name_en, services| %>
+            <% if last_name != name_en %>
+              <% last_name = name_en %>
+              <h5 class="marge" <%= 'style="margin-top: 36px;"' if last_name == grouped_services.keys.first %>>
+                <%= name_en %>
+              </h5>
+            <% end %>
+            <% services.each do |service| %>
               <div class="inline">
                 <p class="text"> <%= service.sub_name_en %> </p>
-                <p> <%= service.description_en %> € <%= service.price %> </p>
+                <p> <%= service.description_en %> € <%= service.price %></p>
               </div>
+            <% end %>
           <% end %>
         </div>
       </div>
@@ -83,13 +107,24 @@
       </div>
       <div class="grid-container pad_all">
         <div class="grid-item padding-out-tel">
-          <% @services[:services_extra_en].each do | service | %>
-            <div class="inline">
-              <p class="text"> <%= service.sub_name_en %> </p>
-              <p> <%= service.description_en %> € <%= service.price %> </p>
-            </div>
+          <% last_name = nil %>
+          <% grouped_services = @services[:services_extra_en].group_by { |service| service.name_en } %>
+          <% grouped_services.each do |name_en, services| %>
+            <% if last_name != name_en %>
+              <% last_name = name_en %>
+              <h5 class="marge" <%= 'style="margin-top: 36px;"' if last_name == grouped_services.keys.first %>>
+                <%= name_en %>
+              </h5>
+            <% end %>
+            <% services.each do |service| %>
+              <div class="inline">
+                <p class="text"> <%= service.sub_name_en %> </p>
+                <p> <%= service.description_en %> € <%= service.price %></p>
+              </div>
+            <% end %>
           <% end %>
         </div>
+      </div>
       </div>
     </div>
   </div>
