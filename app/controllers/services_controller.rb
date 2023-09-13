@@ -12,24 +12,32 @@ class ServicesController < ApplicationController
       canonical: "https://tonic-society.com/services"
     )
 
-    @services_manicure_en = Service.where(category_en: "MANICURES").group_by(&:name_en)
-    @services_manicure_gr = Service.where(category_gr: "ΜΑΝΙΚΙΟΥΡ").group_by(&:name_gr)
-    @services_pedicure_en = Service.where(category_en: "PEDICURES").group_by(&:name_en)
-    @services_pedicure_gr = Service.where(category_gr: "ΠΕΝΤΙΚΙΟΥΡ").group_by(&:name_gr)
-    @services_men_en = Service.where(category_en: "MEN").group_by(&:name_en)
-    @services_men_gr = Service.where(category_gr: "ΑΝΔΡΕΣ").group_by(&:name_gr)
-    @services_art_en = Service.where(category_en: "NAILS ART").group_by(&:sub_name_en)
-    @services_art_gr = Service.where(category_gr: "NAILS ART").group_by(&:sub_name_gr)
+    categories = {
+      manicure: { en: "MANICURES", gr: "ΜΑΝΙΚΙΟΥΡ" },
+      pedicure: { en: "PEDICURES", gr: "ΠΕΝΤΙΚΙΟΥΡ" },
+      men: { en: "MEN", gr: "ΑΝΔΡΕΣ" },
+      art: { en: "NAILS ART", gr: "NAILS ART" },
+      extra: { en: "EXTRA", gr: "ΕΞΤΡΑ" }
+    }
+
+    @services = {}
+
+    categories.each do |category, translations|
+      translations.each do |lang, translation|
+        key = "services_#{category}_#{lang}".to_sym
+        @services[key] = Service.where("category_#{lang}": translation).group("id, name_#{lang}").select("id, name_#{lang}, sub_name_#{lang}, description_#{lang}, price")
+      end
+    end
   end
 
   private
 
   def og_index_params
     en_desc = "Nails - Manucure and pedicure menu, for men & women"
-    gr_desc = "xsdfghjgklyjreraz"
+    gr_desc = "Νύχια - Μενού Μανικιούρ και πεντικιούρ, για άνδρες & γυναίκες"
 
     en_title = "Tonic - Nails Menu"
-    gr_title = ""
+    gr_title = "Tonic - Νύχια Μενού"
 
     {
       title: request.original_url.include?("gr") ? gr_title : en_title,
