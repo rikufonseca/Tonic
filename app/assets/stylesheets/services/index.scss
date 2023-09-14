@@ -20,11 +20,16 @@ h5 {
   width: 90vw;
 }
 
+.left-aligned {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
 .inline {
   display: flex;
+  width: 77vw;
   flex-direction: row;
   justify-content: space-between;
-  width: 19vw;
   margin-bottom: 4px;
 }
 
@@ -84,6 +89,9 @@ h5 {
   margin-bottom: 13rem;
 }
 
+.marge {
+  margin: 25px 0 25px 0;
+}
 @media only screen and (min-width:279px) and (max-width:1000px) {
 
   .grid-container {
@@ -93,10 +101,6 @@ h5 {
 
   .grid-item {
     padding: 0;
-  }
-
-  .inline {
-    width: 77vw;
   }
 
   .get-widther, .get-widther-tel {
@@ -113,10 +117,6 @@ h5 {
 
   .marge {
     margin-top: 49px;
-  }
-
-  .left-aligned {
-    text-align: left;
   }
 
   .pad_all {
