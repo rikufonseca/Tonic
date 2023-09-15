@@ -119,7 +119,6 @@ export default class extends Controller {
     const upbar = this.upbarTargets;
     const textbar = this.textbarTargets;
     const menuLinks = this.menuLinkTargets;
-     console.log(upbar)
     const rects = []
 
     if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
@@ -185,9 +184,13 @@ export default class extends Controller {
           upbar[1].classList.remove("move-down-call");
         } else {
          console.log("in-four-four")
-          navtel.classList.remove("display-menu");
-          navtel.style.top = '137px';
-          navtel.style.opacity = "1";
+          if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
+            textbar[1].style.top = "-20px";
+          } else {
+            navtel.classList.remove("display-menu");
+            navtel.style.top = '137px';
+            navtel.style.opacity = "1";
+          }
           if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts") {
             navtel.style.backgroundColor = "rgba(244, 244, 244,1)";
           } else {
