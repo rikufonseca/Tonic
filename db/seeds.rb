@@ -16,12 +16,12 @@ puts ""
 
 puts "creating users..."
 User.create!(
-  email: "fonsecarika@gmail.com", password: "1234567890!6", admin: true
+  email: "fonsecarik@gmail.com", password: "1234567890!6", admin: true
 )
 puts "Boss created"
 
 User.create!(
-  email: "loris.reynauda@gmail.com", password: "azerty", admin: true
+  email: "loris.reynau@gmail.com", password: "azerty", admin: true
 )
 puts "Loris created"
 puts ""
