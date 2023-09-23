@@ -4,6 +4,10 @@
   width: 100vw;
 }
 
+.new_color {
+  color: rgb(130, 108, 52);
+}
+
 .navbar-lewagon {
   top: 15px;
   z-index: 300;
@@ -73,12 +77,12 @@
 }
 
 .booking_bar {
-  background-color: #FBFBFB;
+  background-color: rgb(246, 243, 240);
   margin-bottom: 0;
   font-style: italic;
   text-align: center;
   padding: 2px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #826c34;
   z-index: 200;
   top: -53px;
 }
@@ -93,7 +97,7 @@ p {
 }
 
 .seen {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(246, 243, 240);
 }
 
 .back_color_tel {

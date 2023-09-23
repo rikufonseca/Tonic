@@ -1,20 +1,20 @@
 <div data-controller="navbar">
   <div class="nav-comp">
-    <div class="booking_bar" data-navbar-target="upbar">
+    <div class="booking_bar new_color" data-navbar-target="upbar">
       <p class="opacity" data-navbar-target="textbar"> <%= t('.for_booking') %>
-       <a href="tel:+30 211 001 5271"> +30 211 001 5271 </a> <p>
+       <a href="tel:+30 211 001 5271" class="new_color"> +30 211 001 5271 </a> <p>
     </div>
     <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
       <div class="navbar navbar-expand-sm navbar-light navbar-lewagon back_color <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
         <div class="navbar-lewagon-flex">
-          <%= link_to t('.services'), services_path, class: "navbar-brand padding margin" %>
-          <%= link_to t('.products'), products_path, class: "navbar-brand padding" %>
-          <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding" %>
+          <%= link_to t('.services'), services_path, class: "navbar-brand padding margin new_color" %>
+          <%= link_to t('.products'), products_path, class: "navbar-brand padding new_color" %>
+          <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding new_color" %>
         </div>
         <%= image_tag "TONIC_logo.png", class: "logo" %>
         <div class="navbar-lewagon-flex-two">
-          <%= link_to t('.about'), root_path, class: "navbar-brand padding" %>
-          <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding" %>
+          <%= link_to t('.about'), root_path, class: "navbar-brand padding new_color" %>
+          <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding new_color" %>
             <% if params[:locale] == "en" || params[:locale].nil? %>
               <%= link_to root_path(locale: "gr"),  class:"greek" do %>
                 <% image_tag("greek_flag.png", width: 28) %>
