@@ -155,6 +155,7 @@ export default class extends Controller {
            console.log("in-one-one")
           navtel.classList.remove("display-menu");
           navtel.style.opacity = "1";
+          navtel.style.backgroundImage = "linear-gradient(to top, rgba(255, 255, 255, 1), transparent)";
           navtel.style.top = '112px';
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");
