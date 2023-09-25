@@ -5,7 +5,7 @@
        <a href="tel:+30 211 001 5271" class="new_color"> +30 211 001 5271 </a> <p>
     </div>
     <div class="<%= "home-page" if params[:locale].nil? || current_page?(root_path(locale: params[:locale])) %>">
-      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon back_color <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
+      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon back_color gradient <%= "display-color-white" if current_page?(contacts_path(locale:params[:locale])) %>" data-navbar-target="navigation">
         <div class="navbar-lewagon-flex">
           <%= link_to t('.services'), services_path, class: "navbar-brand padding margin new_color" %>
           <%= link_to t('.products'), products_path, class: "navbar-brand padding new_color" %>
@@ -44,19 +44,19 @@
 
     <div data-navbar-target="navtel" class="menu opacity back_color <%= "display-menu" if params[:language].present? %>">
       <div class="navbar-lewagon-flex">
-        <%= link_to t('.services'), services_path, class: "navbar-brand padding margin dropdown-items #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
-        <%= link_to t('.products'), products_path, class: "navbar-brand padding dropdown-items #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
-        <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding dropdown-items #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.services'), services_path, class: "navbar-brand padding margin new_color dropdown-items #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.products'), products_path, class: "navbar-brand padding dropdown-items new_color #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.jewelries'), jewelries_path, class: "navbar-brand padding dropdown-items new_color #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
       </div>
       <div class="navbar-lewagon-flex padd">
         <div style="width: 30px; opacity: 0"></div>
-        <%= link_to t('.about'), root_path + href="#about_link", class: "navbar-brand padding #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
-        <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.about'), root_path + href="#about_link", class: "navbar-brand padding new_color #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
+        <%= link_to t('.contact'), contacts_path, class: "navbar-brand padding new_color #{params[:language].present? ? '' : 'd-none'}", data: { navbar_target: "menuLink" } %>
         <div style="width: 30px; opacity: 0"></div>
       </div>
       <div class="navbar-lewagon-flex padding">
         <div style="width: 30px; opacity: 0"></div>
-        <%= link_to t('.book_now'), "https://widget.treatwell.gr/place/100049725/menu/", class: "book-link" %>
+        <%= link_to t('.book_now'), "https://widget.treatwell.gr/place/100049725/menu/", class: "book-link new_color" %>
         <%= image_tag "menu.png", height: 30, width: 30, style: "opacity: 0", data: { action: "click->navbar#displayMenu" } %>
       </div>
       <div style="text-align: center">

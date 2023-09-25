@@ -73,7 +73,7 @@ export default class extends Controller {
           navtel.style.top = "-33px";
         }
         upbar[1].classList.remove("move-down-call");
-        navtel.style.backgroundColor = "#f0e4dc";
+        navtel.style.backgroundColor = "#f6f3f0";
         navigation[1].style.opacity = "0";
         navigation[1].style.top = "0px";
       } else if (top <= 97 && navtel.classList.contains("opacity")){
@@ -91,7 +91,6 @@ export default class extends Controller {
            console.log("in-three");
           navtel.classList.remove("display-menu");
           navtel.style.backgroundColor = "rgba(222, 208, 199,0)"
-          upbar[1].classList.remove("move-down-call");
           navtel.style.top = "-15px";
           navigation[1].style.opacity = "1"
           navigation[1].style.top = "0px";
@@ -112,7 +111,6 @@ export default class extends Controller {
   displayMenu(event) {
     console.log("in")
     event.preventDefault();
-    const links = this.element.querySelectorAll('a');
     const navtel = this.navtelTarget;
     const navigation = this.navigationTargets;
     const pageup = this.pageupTargets;
@@ -170,7 +168,7 @@ export default class extends Controller {
         }
       } else {
         console.log("137px")
-         navtel.style.backgroundColor = "#ded0c7"
+        navtel.style.backgroundColor = "#f6f3f0"
         if (navtel.classList.contains("show-call")) {
          console.log("in-three-three")
           navtel.classList.remove("display-menu");
@@ -181,20 +179,19 @@ export default class extends Controller {
           upbar[1].style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.add("opacity");
           navtel.classList.remove("show-call");
-          upbar[1].classList.remove("move-down-call");
         } else {
          console.log("in-four-four")
           if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
             textbar[1].style.top = "-20px";
           } else {
             navtel.classList.remove("display-menu");
-            navtel.style.top = '137px';
+            navtel.style.top = '160px';
             navtel.style.opacity = "1";
           }
           if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts") {
-            navtel.style.backgroundColor = "rgba(244, 244, 244,1)";
+            navtel.style.backgroundColor = "#f6f3f0";
           } else {
-          navtel.style.backgroundColor = "#f0e4dc";
+            navtel.style.backgroundColor = "#f6f3f0";
           }
           navtel.style.transition = "opacity 1s linear, top 1s linear";
           navtel.classList.remove("opacity");

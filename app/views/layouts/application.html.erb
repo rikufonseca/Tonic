@@ -13,7 +13,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="<%= "display-color-light-pink" if current_page?(services_path(locale:params[:locale])) %>">
+  <body class="<%= "display-color-tonic" if current_page?(services_path(locale:params[:locale])) %>">
 <%= render "shared/navbar" %>
 <%= render "shared/flashes" %>
 

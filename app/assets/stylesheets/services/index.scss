@@ -7,7 +7,6 @@ h5 {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100vw;
   top: 141px;
 }
 
@@ -48,14 +47,14 @@ h5 {
   gap: 19px;
 }
 
-.border-light-pink {
-  border-bottom: 9px solid #e5b99d47;
+.border-tonic-color {
+  border-bottom: 9px solid rgb(227, 219, 210);
   width: 90vw;
   text-align: center;
 }
 
-.upper-line-pink {
-  border-top: 9px solid #e5b99d47;
+.upper-tonic-color {
+  border-top: 9px solid rgb(227, 219, 210);
 }
 
 .grid-item {
