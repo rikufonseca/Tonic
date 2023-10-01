@@ -120,7 +120,7 @@ export default class extends Controller {
       ? navtel.style.backgroundColor = "rgba(244, 244, 244,1)"
       : navtel.style.backgroundColor = "rgba(222, 208, 199,0)"
 
-    if ((topNav === 0) && (pageTop >= 267)) {
+    if ((topNav === 0) && (pageTop >= 267) && !window.location.pathname.includes("contacts")) {
         this.displayOrHideMenuHomeUp(navtel)
     } else {
       navtel.style.backgroundColor = "#f6f3f0"
@@ -143,12 +143,12 @@ export default class extends Controller {
         textbar[1].style.top = "-20px";
       } else {
         navtel.classList.remove("display-menu");
-        navtel.style.top = '160px';
+        navtel.style.top = '137px';
         navtel.style.opacity = "1";
       }
 
       window.location.pathname.includes("contacts")
-        ? navtel.style.backgroundColor = "#f6f3f0"
+        ? navtel.style.backgroundColor = "#F4F4F4"
         : navtel.style.backgroundColor = "#f6f3f0"
 
       navtel.classList.remove("opacity");
