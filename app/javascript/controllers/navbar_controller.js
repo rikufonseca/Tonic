@@ -62,7 +62,6 @@ export default class extends Controller {
   }
 
   hidePhoneNumber(navtel, upbar, navigation) {
-    console.log("hidePhoneNumber");
     navtel.classList.remove("display-menu");
     upbar[1].classList.remove("move-down-call");
     navigation[1].style.opacity = "1"
@@ -72,7 +71,6 @@ export default class extends Controller {
   }
 
   displayPhoneNumber(navtel, navigation, upbar, textbar) {
-    console.log("displayPhoneNumber");
     navtel.classList.remove("display-menu");
     navigation[1].classList.add("seen_tel");
     navigation[1].style.top = "25px";
@@ -84,7 +82,6 @@ export default class extends Controller {
   }
 
   menuAtTop(navtel, upbar, navigation) {
-    console.log("menuAtTop");
     navtel.classList.remove("display-menu");
     window.location.pathname.includes("services") ? navtel.style.top = "-1px" : navtel.style.top = "-33px"
     upbar[1].classList.remove("move-down-call");
@@ -94,14 +91,13 @@ export default class extends Controller {
   }
 
   displayMenu() {
-    console.log("in")
     const navtel = this.navtelTarget;
     const navigation = this.navigationTargets;
-    const pageup = this.pageupTargets;
+    const pageup = this.pageupTarget;
     const upbar = this.upbarTargets;
     const textbar = this.textbarTargets;
     const menuLinks = this.menuLinkTargets;
-    const rects = []
+    const pagePosition = pageup.getBoundingClientRect();
 
     if (window.location.pathname.includes("services")) {
       navtel.classList.add("seen_tel");
@@ -117,73 +113,60 @@ export default class extends Controller {
       link.classList.remove('d-none');
     })
 
-    pageup.forEach((page) => {
-      const rect = page.getBoundingClientRect();
-      rects.push(rect)
-    });
+    const pageTop = pagePosition.top;
+    let rectNav = navigation[1].getBoundingClientRect();
+    const topNav = rectNav.top;
+    window.location.pathname.includes("contacts")
+      ? navtel.style.backgroundColor = "rgba(244, 244, 244,1)"
+      : navtel.style.backgroundColor = "rgba(222, 208, 199,0)"
 
-    rects.forEach((rect) => {
-      const top = rect.top;
-      let rectNav = navigation[1].getBoundingClientRect();
-      const topNav = rectNav.top;
-      //  console.log(topNav)
-      if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts") {
-        navtel.style.backgroundColor = "rgba(244, 244, 244,1)";
+    if ((topNav === 0) && (pageTop >= 267)) {
+        this.displayOrHideMenuHomeUp(navtel)
+    } else {
+      navtel.style.backgroundColor = "#f6f3f0"
+      this.displayOrHideMenu(navtel, upbar, textbar)
+    }
+  }
+
+  displayOrHideMenu(navtel, upbar, textbar) {
+    navtel.style.transition = "opacity 1s linear, top 1s linear";
+    if (navtel.classList.contains("show-call")) {
+      navtel.classList.remove("display-menu", "show-call");
+      navtel.style.top = '-15px';
+      navtel.classList.add("seen_tel", "opacity");
+      navtel.style.opacity = "0";
+      upbar[1].style.transition = "opacity 1s linear, top 1s linear";
+    } else {
+      if (window.location.pathname.includes("services")) {
+        textbar[1].style.top = "-20px";
       } else {
-        navtel.style.backgroundColor = "rgba(222, 208, 199,0)";
+        navtel.classList.remove("display-menu");
+        navtel.style.top = '160px';
+        navtel.style.opacity = "1";
       }
 
-      if ((topNav === 0) && (top >= 267)) {
-          console.log("112px")
-        if(navtel.classList.contains("opacity")){
-           console.log("in-one-one")
-          navtel.classList.remove("display-menu");
-          // navtel.classList.remove("d-none");
-          navtel.style.opacity = "1";
-          navtel.style.backgroundImage = "linear-gradient(to top, rgba(255, 255, 255, 1), transparent)";
-          navtel.style.top = '112px';
-          navtel.style.transition = "opacity 1s linear, top 1s linear";
-          navtel.classList.remove("opacity");
-        } else {
-           console.log("in-two-two")
-          navtel.classList.remove("display-menu");
-          navtel.style.opacity = "0";
-          navtel.style.top = '0px';
-          navtel.style.transition = "opacity 1s linear, top 1s linear";
-          navtel.classList.add("opacity");
-        }
-      } else {
-        console.log("137px")
-        navtel.style.backgroundColor = "#f6f3f0"
-        if (navtel.classList.contains("show-call")) {
-         console.log("in-three-three")
-          navtel.classList.remove("display-menu");
-          navtel.style.top = '-15px';
-          navtel.classList.add("seen_tel");
-          navtel.style.opacity = "0";
-          navtel.style.transition = "opacity 1s linear, top 1s linear";
-          upbar[1].style.transition = "opacity 1s linear, top 1s linear";
-          navtel.classList.add("opacity");
-          navtel.classList.remove("show-call");
-        } else {
-         console.log("in-four-four")
-          if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
-            textbar[1].style.top = "-20px";
-          } else {
-            navtel.classList.remove("display-menu");
-            navtel.style.top = '160px';
-            navtel.style.opacity = "1";
-          }
-          if (window.location.pathname === "/en/contacts" || window.location.pathname === "/gr/contacts") {
-            navtel.style.backgroundColor = "#f6f3f0";
-          } else {
-            navtel.style.backgroundColor = "#f6f3f0";
-          }
-          navtel.style.transition = "opacity 1s linear, top 1s linear";
-          navtel.classList.remove("opacity");
-          navtel.classList.add("show-call");
-        }
-      }
-    })
+      window.location.pathname.includes("contacts")
+        ? navtel.style.backgroundColor = "#f6f3f0"
+        : navtel.style.backgroundColor = "#f6f3f0"
+
+      navtel.classList.remove("opacity");
+      navtel.classList.add("show-call");
+      navtel.style.zIndex = "90"
+    }
+  }
+
+  displayOrHideMenuHomeUp(navtel) {
+    navtel.classList.remove("display-menu");
+    navtel.style.transition = "opacity 1s linear, top 1s linear";
+    if (navtel.classList.contains("opacity")) {
+      navtel.classList.remove("opacity");
+      navtel.style.opacity = "1";
+      navtel.style.backgroundImage = "linear-gradient(to top, rgba(255, 255, 255, 1), transparent)";
+      navtel.style.top = '112px';
+    } else {
+      navtel.style.opacity = "0";
+      navtel.style.top = '0px';
+      navtel.classList.add("opacity");
+    }
   }
 }
