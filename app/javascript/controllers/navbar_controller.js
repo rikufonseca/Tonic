@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["navigation", "pageup", "upbar", "textbar", "navtel", "logo", "menuLink"];
+  static targets = ["navigation", "pageup", "upbar", "textbar", "navtel", "logo", "menuLink", "burgerMenu"];
 
   connect() {
     if( window.matchMedia("(min-width:1000px)").matches){
@@ -129,6 +129,7 @@ export default class extends Controller {
   }
 
   displayOrHideMenu(navtel, upbar, textbar) {
+    const burger = this.burgerMenuTarget
     navtel.style.transition = "opacity 1s linear, top 1s linear";
     if (navtel.classList.contains("show-call")) {
       navtel.classList.remove("display-menu", "show-call");
@@ -136,6 +137,7 @@ export default class extends Controller {
       navtel.classList.add("seen_tel", "opacity");
       navtel.style.opacity = "0";
       upbar[1].style.transition = "opacity 1s linear, top 1s linear";
+      burger.style.opacity = 0
     } else {
       if (window.location.pathname.includes("services")) {
         textbar[1].style.top = "-20px";
@@ -152,7 +154,11 @@ export default class extends Controller {
       navtel.classList.remove("opacity");
       navtel.classList.add("show-call");
       navtel.style.zIndex = "90"
+      setTimeout(() => {
+        burger.style.opacity = 1
+      }, "900");
     }
+
   }
 
   displayOrHideMenuHomeUp(navtel) {

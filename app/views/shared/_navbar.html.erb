@@ -57,7 +57,7 @@
       <div class="navbar-lewagon-flex padding">
         <div style="width: 30px; opacity: 0"></div>
         <%= link_to t('.book_now'), "https://widget.treatwell.gr/place/100049725/menu/", class: "book-link", style:"color: #af8f3c" %>
-        <%= image_tag "menu.png", height: 30, width: 30, style: "opacity: 0", data: { action: "click->navbar#displayMenu" } %>
+        <%= image_tag "menu.png", height: 30, width: 30, style: "opacity: 0", data: { navbar_target: "burgerMenu", action: "click->navbar#displayMenu" } %>
       </div>
       <div style="text-align: center">
           <% if params[:locale] == "en" || params[:locale].nil? %>
