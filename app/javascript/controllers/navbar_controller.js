@@ -5,15 +5,15 @@ export default class extends Controller {
 
   connect() {
     if( window.matchMedia("(min-width:1000px)").matches){
-      window.addEventListener("scroll", this.updatePosition);
+      window.addEventListener("scroll", this.updatePositionForDesktop);
     }
 
     if(window.matchMedia("(max-width:1000px)").matches) {
-      window.addEventListener("scroll", this.updatePositionWithMenuOpen);
+      window.addEventListener("scroll", this.updatePositionForMobile);
     }
   }
 
-  updatePosition = () => {
+  updatePositionForDesktop = () => {
     const navigation = this.navigationTargets;
     const pageup = this.pageupTargets;
     const upbar = this.upbarTargets;
@@ -46,7 +46,7 @@ export default class extends Controller {
     })
   }
 
-  updatePositionWithMenuOpen = (event) => {
+  updatePositionForMobile = (event) => {
     event.preventDefault();
     const navigation = this.navigationTargets;
     const pageup = this.pageupTargets;
