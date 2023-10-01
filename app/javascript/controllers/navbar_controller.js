@@ -27,17 +27,13 @@ export default class extends Controller {
 
     rects.forEach((rect) => {
       const top = rect.top;
-      // console.log(top)
 
       if(top <= 108){
-        // console.log("start here")
-        // console.log("in here")
         navigation[0].classList.add("seen");
         navigation[0].classList.add("move-down");
         upbar[0].classList.add("move-down-call");
         textbar[0].classList.add("show-call");
       } else {
-        // console.log("in there")
         navigation[0].classList.remove("seen");
         navigation[0].classList.remove("move-down");
         upbar[0].classList.remove("move-down-call");
@@ -46,71 +42,59 @@ export default class extends Controller {
     })
   }
 
-  updatePositionForMobile = (event) => {
-    event.preventDefault();
+  updatePositionForMobile = () => {
     const navigation = this.navigationTargets;
-    const pageup = this.pageupTargets;
+    const pageup = this.pageupTarget;
     const upbar = this.upbarTargets;
     const textbar = this.textbarTargets;
     const navtel = this.navtelTarget;
-    const rects = []
+    const pagePosition = pageup.getBoundingClientRect();
 
-    pageup.forEach((page) => {
-      const rect = page.getBoundingClientRect();
-      rects.push(rect)
-    });
-
-    rects.forEach((rect) => {
-      const top = rect.top;
-      // console.log(top);
-
-      if (top <= 203 && navtel.style.opacity === "1"){
-         console.log("in-one");
-        navtel.classList.remove("display-menu");
-        if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
-          navtel.style.top = "-1px";
-        } else {
-          navtel.style.top = "-33px";
-        }
-        upbar[1].classList.remove("move-down-call");
-        navtel.style.backgroundColor = "#f6f3f0";
-        navigation[1].style.opacity = "0";
-        navigation[1].style.top = "0px";
-      } else if (top <= 97 && navtel.classList.contains("opacity")){
-         console.log("in-two");
-        navtel.classList.remove("display-menu");
-        navigation[1].classList.add("seen_tel");
-        navigation[1].style.top = "25px";
-        navtel.style.top = '25px';
-        navigation[1].classList.add("move-down-tel");
-        upbar[1].classList.add("move-down-call");
-        textbar[1].classList.add("show-call");
-        // put the button here in js
-      } else {
-        if(navtel.style.opacity === "1"){
-           console.log("in-three");
-          navtel.classList.remove("display-menu");
-          navtel.style.backgroundColor = "rgba(222, 208, 199,0)"
-          navtel.style.top = "-15px";
-          navigation[1].style.opacity = "1"
-          navigation[1].style.top = "0px";
-          navtel.style.top = "112px";
-        }
-         console.log("in-four");
-        navtel.classList.remove("display-menu");
-        upbar[1].classList.remove("move-down-call");
-        navtel.style.top = "-15px";
-        navigation[1].style.opacity = "1"
-        navigation[1].style.top = "0px";
-        navtel.style.top = "112px";
-        navigation[1].classList.remove("seen_tel");
-      }
-    })
+    const pageTop = pagePosition.top;
+    if (pageTop <= 203 && navtel.style.opacity === "1"){
+      this.menuAtTop(navtel, upbar, navigation)
+    } else if (pageTop <= 97 && navtel.classList.contains("opacity")){
+      this.displayPhoneNumber(navtel, navigation, upbar, textbar)
+    } else {
+      if(navtel.style.opacity === "1") navtel.style.backgroundColor = "rgba(222, 208, 199,0)"
+      this.hidePhoneNumber(navtel, upbar, navigation)
+    }
   }
 
-  displayMenu(event) {
+  hidePhoneNumber(navtel, upbar, navigation) {
+    console.log("hidePhoneNumber");
+    navtel.classList.remove("display-menu");
+    upbar[1].classList.remove("move-down-call");
+    navigation[1].style.opacity = "1"
+    navigation[1].style.top = "0px";
+    navtel.style.top = "112px";
+    navigation[1].classList.remove("seen_tel");
+  }
+
+  displayPhoneNumber(navtel, navigation, upbar, textbar) {
+    console.log("displayPhoneNumber");
+    navtel.classList.remove("display-menu");
+    navigation[1].classList.add("seen_tel");
+    navigation[1].style.top = "25px";
+    navtel.style.top = '25px';
+    navigation[1].classList.add("move-down-tel");
+    upbar[1].classList.add("move-down-call");
+    textbar[1].classList.add("show-call");
+    // put the button here in js
+  }
+
+  menuAtTop(navtel, upbar, navigation) {
+    console.log("menuAtTop");
+    navtel.classList.remove("display-menu");
+    window.location.pathname.includes("services") ? navtel.style.top = "-1px" : navtel.style.top = "-33px"
+    upbar[1].classList.remove("move-down-call");
+    navtel.style.backgroundColor = "#f6f3f0";
+    navigation[1].style.opacity = "0";
+    navigation[1].style.top = "0px";
+  }
+
+  displayMenu() {
     console.log("in")
-    event.preventDefault();
     const navtel = this.navtelTarget;
     const navigation = this.navigationTargets;
     const pageup = this.pageupTargets;
@@ -119,7 +103,7 @@ export default class extends Controller {
     const menuLinks = this.menuLinkTargets;
     const rects = []
 
-    if (window.location.pathname === "/en/services" || window.location.pathname === "/gr/services") {
+    if (window.location.pathname.includes("services")) {
       navtel.classList.add("seen_tel");
       upbar[1].classList.add("move-down-call");
       navtel.style.opacity = "1";
