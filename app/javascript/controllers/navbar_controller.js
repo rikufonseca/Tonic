@@ -15,31 +15,21 @@ export default class extends Controller {
 
   updatePositionForDesktop = () => {
     const navigation = this.navigationTargets;
-    const pageup = this.pageupTargets;
+    const pageup = this.pageupTarget;
     const upbar = this.upbarTargets;
     const textbar = this.textbarTargets;
-    const rects = []
+    const pagePosition = pageup.getBoundingClientRect();
+    const pageTop = pagePosition.top;
 
-    pageup.forEach((page) => {
-      const rect = page.getBoundingClientRect();
-      rects.push(rect)
-    });
-
-    rects.forEach((rect) => {
-      const top = rect.top;
-
-      if(top <= 108){
-        navigation[0].classList.add("seen");
-        navigation[0].classList.add("move-down");
-        upbar[0].classList.add("move-down-call");
-        textbar[0].classList.add("show-call");
-      } else {
-        navigation[0].classList.remove("seen");
-        navigation[0].classList.remove("move-down");
-        upbar[0].classList.remove("move-down-call");
-        textbar[0].classList.remove("show-call");
-      }
-    })
+    if (pageTop <= 108){
+      navigation[0].classList.add("seen", "move-down");
+      upbar[0].classList.add("move-down-call");
+      textbar[0].classList.add("show-call");
+    } else {
+      navigation[0].classList.remove("seen", "move-down");
+      upbar[0].classList.remove("move-down-call");
+      textbar[0].classList.remove("show-call");
+    }
   }
 
   updatePositionForMobile = () => {
