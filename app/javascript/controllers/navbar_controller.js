@@ -144,9 +144,6 @@ export default class extends Controller {
       navtel.classList.remove("opacity");
       navtel.classList.add("show-call");
       navtel.style.zIndex = "90"
-      setTimeout(() => {
-        burger.style.opacity = 1
-      }, "900");
     }
   }
 
