@@ -5,19 +5,17 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= display_meta_tags site: "Tonic - Nails & Jewelry in Kolonaki, Athens",
-      keywords: request.original_url.include?("gr") ? "tonic, πολυτέλεια, νύχια, κοσμήματα, κολωνάκι, αθήνα, ελλάδα" : "tonic, luxury, nails, jewelry, kolonaki, athens, greece",
-      icon: image_tag("favicon.png"), type: "image/png"
+      keywords: request.original_url.include?("gr") ? "tonic, πολυτέλεια, νύχια, κοσμήματα, κολωνάκι, αθήνα, ελλάδα" : "tonic, luxury, nails, jewelry, kolonaki, athens, greece"
     %>
-
+    <%= favicon_link_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body class="<%= "display-color-tonic" if current_page?(services_path(locale:params[:locale])) %>">
-<%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
-
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
     <%= yield %>
-<%= render "shared/footer" %>
+    <%= render "shared/footer" %>
   </body>
 </html>
