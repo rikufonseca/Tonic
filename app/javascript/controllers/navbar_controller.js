@@ -158,7 +158,6 @@ export default class extends Controller {
         burger.style.opacity = 1
       }, "900");
     }
-
   }
 
   displayOrHideMenuHomeUp(navtel) {
