@@ -6,6 +6,9 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+config.assets.precompile += %w[active_admin.js active_admin.css]
+
+
 module Tonic
   class Application < Rails::Application
     config.generators do |generate|
