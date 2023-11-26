@@ -47,6 +47,7 @@
         <%= form.label :content, t(".message") %>
         <%= form.text_area :content, required: true, rows: 7, cols: 40 %>
         <div class="submit">
+          <%= recaptcha_tags %>
           <%= form.submit t(".send"), class: "envoyer" %>
         </div>
       <% end %>
