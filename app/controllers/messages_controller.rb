@@ -25,7 +25,7 @@ class MessagesController < ApplicationController
 
     @message.contact = contact
 
-    if @message.save!
+    if verify_recaptcha(model: @message) && @message.save!
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity
