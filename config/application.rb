@@ -1,4 +1,5 @@
 require_relative "boot"
+require 'active_admin'
 
 require "rails/all"
 
@@ -14,6 +15,8 @@ module Tonic
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.assets.precompile += %w[active_admin.js active_admin.css]
+    $LOAD_PATH.unshift("#{Rails.root}/lib")
 
     # Configuration for the application, engines, and railties goes here.
     #
