@@ -3,20 +3,14 @@ class MessagesController < ApplicationController
 
   def new
     set_contact_meta_tags
-
-    if params[:locale] == "en" || params[:locale].nil?
-      @categories = Message::CATEGORIES_EN
-      @sub_categories = Message::SUB_CATEGORIES_EN
-    else
-      @categories = Message::CATEGORIES_GR
-      @sub_categories = Message::SUB_CATEGORIES_GR
-    end
+    change_for_languages
     @message = Message.new
     @message.build_contact
   end
 
   def create
     @message = Message.new(message_params)
+    change_for_languages
     contact = Contact.find_or_create_by!(email: params[:message][:contact_attributes][:email].downcase) do |user|
       user.first_name = params[:message][:contact_attributes][:first_name]
       user.last_name = params[:message][:contact_attributes][:last_name]
@@ -69,5 +63,15 @@ class MessagesController < ApplicationController
       site_name: "Tonic - Nails & Jewelry",
       alternate: { "en" => "https://tonic-society.com/en/contacts", "gr" => "https://tonic-society.com/gr/contacts" }
     }
+  end
+
+  def change_for_languages
+    if params[:locale] == "en" || params[:locale].nil?
+      @categories = Message::CATEGORIES_EN
+      @sub_categories = Message::SUB_CATEGORIES_EN
+    else
+      @categories = Message::CATEGORIES_GR
+      @sub_categories = Message::SUB_CATEGORIES_GR
+    end
   end
 end
