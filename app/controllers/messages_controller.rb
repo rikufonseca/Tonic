@@ -11,6 +11,9 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     change_for_languages
+    @categories.each do |category|
+      @message.categories << category if params['message'][category] == "1"
+    end
     contact = Contact.find_or_create_by!(email: params[:message][:contact_attributes][:email].downcase) do |user|
       user.first_name = params[:message][:contact_attributes][:first_name]
       user.last_name = params[:message][:contact_attributes][:last_name]
@@ -18,7 +21,6 @@ class MessagesController < ApplicationController
     end
 
     @message.contact = contact
-
     if verify_recaptcha(model: @message) && @message.save!
       redirect_to root_path
     else

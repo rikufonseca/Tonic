@@ -10,6 +10,5 @@ export default class extends Controller {
 
   select(){
     this.categories = this.categoriesTargets;
-
   }
 }

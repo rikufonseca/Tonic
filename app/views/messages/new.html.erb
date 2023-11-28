@@ -38,9 +38,9 @@
         <% end %>
         <%= form.label :categories, t(".cats"), class: "cats" %>
         <div data-controller="new-messages">
-          <% @categories.each do |categorie| %>
-            <%= form.check_box :categories, { multiple: true }, class:"label-checkbox", data: {new_messages_target: "categories"}, action: "change->new-messages#select"%>
-            <%= categorie %>
+          <% @categories.each do |category| %>
+            <%= form.check_box category %>
+            <%= form.label category %>
           <% end %>
         </div>
         <%= form.label :content, t(".message") %>
