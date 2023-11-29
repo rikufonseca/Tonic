@@ -21,13 +21,21 @@ class MessagesController < ApplicationController
     end
 
     @message.contact = contact
-
-    # check = verify_recaptcha action: 'create', minimum_score: 0.7, secret_key: ENV['RECAPTCHA_SECRET_KEY']
-     if @message.save!
-      redirect_to root_path
+    if validate_recaptchas && @message.save!
+      redirect_to_root_path
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  protected
+
+  def validate_recaptchas
+    v3_verify = verify_recaptcha(action: 'create',
+                                 minimum_score: 0.9,
+                                 secret_key: ENV['RECAPTCHA_SECRET_KEY_V3'])
+    v2_verify = verify_recaptcha(secret_key: ENV['RECAPTCHA_SECRET_KEY_V2'])
+    return if v3_verify || v2_verify
   end
 
   private
