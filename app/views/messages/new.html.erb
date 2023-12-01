@@ -24,9 +24,8 @@
     </div>
   </section>
   <section class="frame-two">
-    <%= turbo_frame_tag @message, target: '_top' do %>
     <div class="about-page-contact" data-navbar-target="pageup">
-      <%= form_with model: @message, html: { class: "pad-form"} do |form| %>
+      <%= form_with model: @message, html: { class: "pad-form", data_turbolinks: "false" } do |form| %>
         <%= form.fields_for :contact do |contact_form| %>
           <%= contact_form.label :first_name, t(".name"), required: true %>
           <%= contact_form.text_field :first_name %>
@@ -47,15 +46,11 @@
         <%= form.label :content, t(".message") %>
         <%= form.text_area :content, required: true, rows: 7, cols: 40 %>
         <div class="submit">
-          <%= turbo_frame_tag 'recaptcha-v3' do %>
-            <%= recaptcha_v3 action: 'create', site_key: ENV['RECAPTCHA_SITE_KEY_V3'], turbolinks: true %>
-          <% end %>
-          <div id="recaptchaV2" data-controller='load-recaptcha-v2' data-load-recaptcha-v2-site-key-value=<%= ENV['RECAPTCHA_SITE_KEY_V2'] %>></div>
+          <%= recaptcha_tags %>
           <%= form.submit t(".send"), class: "envoyer" %>
         </div>
       <% end %>
     </div>
-    <% end %>
   </section>
   <section class="frame-three box-in-the-center">
     <div class="last-section"> </div>

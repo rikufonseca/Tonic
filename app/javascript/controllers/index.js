@@ -10,6 +10,3 @@ application.register("navbar", NavbarController)
 
 import NewMessagesController from "./new_messages_controller"
 application.register("new-messages", NewMessagesController)
-
-import LoadRecaptchaV2Controller from "./load_recaptcha_v2_controller"
-application.register("load_recaptcha_v2", LoadRecaptchaV2Controller)

@@ -1,5 +1,0 @@
-<%= turbo_stream.replace dom_id(@message), template: 'messages/new', locals: {message: @message} %>
-<%= turbo_stream.replace 'recaptcha' do %>
-  <div data-controller='load-recaptcha-v2' id='recaptchaV2' data-load-recaptcha-v2-site-key-value=<%= ENV['RECAPTCHA_SITE_KEY_V2'] %>></div>
-<% end %>
-<%= turbo_stream.update(:flashes, partial: 'shared/flashes', locals: { alert: 'Please check the ReCaptcha to continue' }) %>

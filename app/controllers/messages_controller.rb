@@ -22,24 +22,11 @@ class MessagesController < ApplicationController
 
     @message.contact = contact
     @message.validate
-    if validate_recaptchas && @message.save!
+    if verify_recaptcha(model: @message) && @message.save!
       redirect_to_root_path
     else
-      @message.validate
-      @message.errors.add(:base, t('recaptcha.errors.verification_failed')) unless validate_recaptchas
-
       render :new
     end
-  end
-
-  protected
-
-  def validate_recaptchas
-    v3_verify = verify_recaptcha(action: 'create',
-                                 minimum_score: 0.7,
-                                 secret_key: ENV['RECAPTCHA_SECRET_KEY_V3'])
-    v2_verify = verify_recaptcha(model: @message, secret_key: ENV['RECAPTCHA_SECRET_KEY_V2'])
-    return if v3_verify || v2_verify
   end
 
   private
