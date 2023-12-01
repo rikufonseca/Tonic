@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
     @message.contact = contact
     @message.validate
     if verify_recaptcha(model: @message) && @message.save!
-      redirect_to root_path
+      redirect_to_root_path
     else
       render :new
     end
