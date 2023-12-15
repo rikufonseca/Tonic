@@ -51,13 +51,19 @@ class PagesController < ApplicationController
        (date.month == 1 && date.day >= 1 && date.day <= 31)
       "photo-winter"
     elsif date.month == 2 && date.day >= 1 && date.day <= 29
-      return "Happy Valentine's Day!"
-    elsif date.month == 4 && date.day >= 1 && date.day <= 29
-      return "Happy Easter!"
+      "photo-valentin"
+    elsif date.month == 5 && date.day >= 1 && date.day <= 29
+       "photo-easter"
     elsif (date.month == 10 && date.day >= 1 && date.day <= 31) ||
           (date.month == 11 && date.day >= 1 && date.day <= 30 )
       "photo-automn"
-
+    elsif (date.month == 6 && date.day >= 1 && date.day <= 30) ||
+          (date.month == 7 && date.day >= 1 && date.day <= 31) ||
+          (date.month == 8 && date.day >= 1 && date.day <= 31) ||
+          (date.month == 9 && date.day >= 1 && date.day <= 30)
+      "photo-summer"
+    else
+      "photo-spring"
     end
   end
 end
