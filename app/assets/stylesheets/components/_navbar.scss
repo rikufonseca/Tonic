@@ -190,8 +190,7 @@ p {
 
 @media only screen and (min-width:279px) and (max-width:1000px) {
 
-  .home-page-tel {
-    background-image: url("tel-home-winter.jpg");
+  .photos {
     position: fixed !important;
     top: 0;
     left: 0 !important;
@@ -203,6 +202,14 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .photo-winter {
+    background-image: url("tel-home-winter.jpg");
+  }
+
+  .photo-automn {
+    background-image: url("tel-home-automn.jpg");
   }
 
   body, html { margin: 0px; }
