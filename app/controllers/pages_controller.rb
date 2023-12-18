@@ -1,5 +1,3 @@
-require "date"
-
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
 
@@ -46,24 +44,22 @@ class PagesController < ApplicationController
 
   def picture(date_str)
     date = Date.parse(date_str)
+    month = date.month
+    day = date.day
 
-    if (date.month == 12 && date.day >= 1 && date.day <= 31) ||
-       (date.month == 1 && date.day >= 1 && date.day <= 31)
-      "photo-winter"
-    elsif date.month == 2 && date.day >= 1 && date.day <= 29
-      "photo-valentin"
-    elsif date.month == 5 && date.day >= 1 && date.day <= 29
-       "photo-easter"
-    elsif (date.month == 10 && date.day >= 1 && date.day <= 31) ||
-          (date.month == 11 && date.day >= 1 && date.day <= 30 )
-      "photo-automn"
-    elsif (date.month == 6 && date.day >= 1 && date.day <= 30) ||
-          (date.month == 7 && date.day >= 1 && date.day <= 31) ||
-          (date.month == 8 && date.day >= 1 && date.day <= 31) ||
-          (date.month == 9 && date.day >= 1 && date.day <= 30)
-      "photo-summer"
+    case month
+    when 12, 1
+      "photo-winter" if (1..31).cover?(day)
+    when 2
+      "photo-valentin" if (1..29).cover?(day)
+    when 5
+      "photo-easter" if (1..29).cover?(day)
+    when 10, 11
+      "photo-automn" if (1..30).cover?(day)
+    when 6..9
+      "photo-summer" if (1..30).cover?(day)
     else
-      "photo-spring"
+      "photo-spring" if (1..31).cover?(day)
     end
   end
 end
