@@ -11,6 +11,7 @@ puts ""
 puts "destroy datas"
 User.destroy_all if Rails.env.development?
 Service.destroy_all if Rails.env.development?
+Artist.destroy_all if Rails.env.development?
 puts "Datas destroyed"
 puts ""
 
@@ -269,4 +270,21 @@ Service.create!(sub_name_gr: "ΟΛΟ ΤΟ ΠΡΟΣΩΠΟ",
                 category_gr: "ΕΞΤΡΑ")
 
 puts "all services done"
+puts "start artists seeds"
+
+Artist.create!(name_gr: "Βασίλης Γιαμπουράς",
+               name_en: "Vasilis Giampouras",
+               description_gr: "Ο Βασίλης Γιαμπουράς είναι καλλιτέχνης κοσμημάτων από τη Νάξο, ο οποίος βλέπει τη δημιουργία κοσμημάτων ως μέσο έκφρασης και μοιρασιάς της δημιουργικότητάς του. Μελέτησε σχεδίαση κοσμημάτων στο Λονδίνο στο Guildhall University, όπου συνειδητοποίησε τη ζωντάνια και την ψυχή που περιέχει κάθε κοσμηματοποιία. Το τιτάνιο μπορεί να δίνει υπέροχα χρώματα όταν οξειδώνεται, έτσι μπορεί να δημιουργήσει κοσμήματα σε όλα τα χρώματα του ουράνιου τόξου.",
+               description_en: "Vassilis Giambouras is a jewelry artist from Naxos who sees jewelry creation as a means of expressing and sharing his creativity. He studied jewelery design in London at Guildhall University, where he realized the vibrancy and soul that every piece of jewelery contains. Titanium can give wonderful colors when it oxidizes, so it can create jewelry in all the colors of the rainbow.")
+Artist.create!(name_gr: "Μαρια Καναλε",
+               name_en: "Maria Kanala",
+               description_gr: "Η Μαρία Κανάλε είναι σχεδιάστρια-δημιουργός κοσμημάτων. Δημιουργεί αποκλειστικά κομμάτια, ένα μόνο στο κάθε είδος, γιατί θεωρεί ότι κάθε γυναίκα είναι μοναδική και της αξίζει να φορά κάτι που θα ανήκει μόνο στην ίδια. Τα υλικά που χρησιμοποιεί είναι  ημιπολύτιμες πέτρες διαφορετικών χρωμάτων, σχημάτων και μεγεθών, φίνα σύρματα κοσμημάτων επάργυρα και επίχρυσα, μεταλλικά νήματα και πολυμερικό πηλό. Η δουλειά της έχει δημοσιευθεί στην British Vogue, το Tattler, το New Media International και το British Elle.",
+               description_en: "Maria Canale is a jewelry designer-creator. He creates exclusive pieces, only one of each type, because he believes that every woman is unique and deserves to wear something that will belong only to her. The materials she uses are semi-precious stones of different colors, shapes and sizes, fine silver-plated and gold-plated jewelry wires, metal threads and polymer clay. Her work has been published in British Vogue, Tattler, New Media International and British Elle.")
+
+Artist.create(name_en: "Tonic Collection",
+              name_gr: "Tonic Collection",
+              description_en: "Effortlessly chic, these silver treasures complement any nail color, blending simplicity with timeless beauty. Elevate your style with Tonic Collection and let your individuality shine.",
+              description_gr: "Effortlessly chic, these silver treasures complement any nail color, blending simplicity with timeless beauty. Elevate your style with Tonic Collection and let your individuality shine.")
+
+puts "all artists done"
 puts "Seeds successfully finished !"

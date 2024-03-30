@@ -9,9 +9,13 @@
   height: 0;
 }
 
+.upper-line-pink {
+  border-top: 9px solid #e3dbd2;
+}
+
 .title {
   font-style: italic;
-  padding: 3em;
+  padding: 2rem;
   margin-bottom: 0;
 }
 .about_page {
@@ -41,18 +45,18 @@
   align-items: center;
 }
 
-.frame_one, .frame_two {
+.frame_two, .frame_three {
   width: 45vw;
-  height: 45vw;
-}
-
-.frame_one {
-  background-image: url("SHOP_TONIC_PICTURE.jpg");
-  background-size: cover;
+  height: 33vw;
 }
 
 .frame_two {
   background-image:url("SHOP_TONIC_PICTURE_2.jpg");
+  background-size: cover;
+}
+
+.frame_three {
+  background-image: url("SHOP_TONIC_PICTURE_3.jpg");
   background-size: cover;
 }
 
@@ -73,10 +77,6 @@
   .shop_pic {
     width: 90vw;
     height: auto;
-  }
-
-  .title {
-    padding: 2rem;
   }
 
   .frame_one, .frame_two {
