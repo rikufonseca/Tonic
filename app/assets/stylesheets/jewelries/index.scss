@@ -1,0 +1,36 @@
+.all-jewelries {
+  display: flex;
+  justify-content: center;
+  top: 121px;
+  position: relative;
+}
+
+.center-sentence {
+  text-align: center;
+  color: #826c34;
+}
+
+.style {
+  font-size: 17px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 50px repeat(3, 450px);
+  grid-template-columns: repeat(3, 350px) 550px;
+  gap: 10px;
+  background-color: #6d7378;
+  padding: 10px;
+  grid-template-areas:
+    'header header header header'
+}
+
+.block-one {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-one {
+  grid-area: header;
+  text-align: center;
+}
