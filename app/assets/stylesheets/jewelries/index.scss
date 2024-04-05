@@ -8,6 +8,7 @@
 .center-sentence {
   text-align: center;
   color: #826c34;
+  width: 100%;
 }
 
 .style {
@@ -16,21 +17,95 @@
 
 .grid-container {
   display: grid;
-  grid-template-rows: 50px repeat(3, 450px);
-  grid-template-columns: repeat(3, 350px) 550px;
+  justify-items: center;
+  place-self: center;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  grid-auto-rows: 456px;
   gap: 10px;
-  background-color: #6d7378;
-  padding: 10px;
-  grid-template-areas:
-    'header header header header'
+  padding: 0;
+  width: 100%;
 }
 
 .block-one {
   display: flex;
   flex-direction: column;
+  width: 88%;
 }
 
-.item-one {
-  grid-area: header;
+.filter-wrapper {
+  height: 73px;
   text-align: center;
+}
+
+.item {
+  justify-self: stretch;
+}
+
+.card-artist, .span_three {
+  background-color: white;
+  color: #725e2b;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 99px;
+}
+.order_one {
+  order: 1;
+}
+
+.order_two {
+  order: 0;
+}
+
+.order_three {
+  order: 3;
+}
+
+.order_four {
+  order: 4;
+}
+
+.order_five {
+  order: 5;
+}
+
+.artist-name {
+  padding: 20px;
+  font-size: xx-large;
+}
+
+.span_one {
+  grid-column: span 1;
+}
+
+.span_one img {
+  width: 100%;
+  height: 411px;
+  vertical-align: unset;
+}
+
+.span_two img {
+  width: 100%;
+  height: 411px;
+  vertical-align: unset;
+}
+
+.span_three {
+  grid-column: span 3;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 39px;
+  background-color: white;
+  color: #725e2b;
+  font-size: 18px;
+}
+
+.span_two {
+  grid-column: span 2;
 }

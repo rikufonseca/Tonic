@@ -11,8 +11,8 @@ puts ""
 puts "destroy datas"
 User.destroy_all if Rails.env.development?
 Service.destroy_all if Rails.env.development?
-Artist.destroy_all if Rails.env.development?
 Jewelry.destroy_all if Rails.env.development?
+Artist.destroy_all if Rails.env.development?
 puts "Datas destroyed"
 puts ""
 
@@ -314,7 +314,7 @@ Jewelry.create!(name_en: "Multiple Band Ring",
                 artist_id: artist_one.id,
                 picture: "272.JPG")
 
-Jewelry.create!(name_en: "Anniversary Ring With A Sterling Silver Bar Of 6 Zircons",
+Jewelry.create!(name_en: "Anniversary Ring",
                 name_gr: "Επετειακό δαχτυλίδι με ασημένια μπάρα 6 ζιργκόν",
                 description_gr: "Μοναδικό Δαχτυλίδι Επετείου από Ανοδιωμένο Τιτάνιο με Ασημένια Μπάρα με 6 Ζιργκόν. Είναι ένα υποαλλεργικό δαχτυλίδι, κατάλληλο για ευαίσθητο δέρμα, που θα σας ακολουθήσει για ολόκληρη τη ζωή σας. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Unique Anniversary Ring in Anodized Titanium with Silver Bar with 6 Zirconia. It is a hypoallergenic ring, suitable for sensitive skin, that will follow you for your entire life. The jewelry comes in a luxurious gift box.",
@@ -530,7 +530,7 @@ Jewelry.create!(name_en: "Blue Cherry Blossom Adjustable Ring",
                 artist_id: artist_one.id,
                 picture: "4172.JPG")
 
-Jewelry.create!(name_en: "Red Poppy Flower Ring",
+Jewelry.create!(name_en: "Red Big Poppy Flower Ring",
                 name_gr: "Δαχτυλίδι με Κόκκινο Λουλούδι Παπαρούνας",
                 description_gr: "Από ασήμι (925), ζωγραφισμενο με εμάγιε σε θερμοκρασία 850°C. Η φύση είναι μια ατελείωτη πηγή έμπνευσης. Αφιερώνονται στην άνοιξη. Όταν το φοράτε, στέκεται στη μέση των δακτύλων σας, κοσμώντας το χέρι σας με έναν τρόπο που δεν ενοχλεί. Η εντυπωσιακή λεπτομέρεια στο κέντρο του λουλουδιού είναι οι χρυσοπλατινωμένοι στήμονες της παπαρούνας. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Made of silver (925), painted with enamel at a temperature of 850°C. Nature is an endless source of inspiration. They are dedicated to spring. When you wear it, it sits between your fingers, adorning your hand in a non-obtrusive way. The striking detail in the center of the flower is the gold-plated poppy stamens. The jewelry comes in a luxurious gift box.",
@@ -554,7 +554,7 @@ Jewelry.create!(name_en: "Red Poppy Flower Ring",
                 artist_id: artist_one.id,
                 picture: "4372.JPG")
 
-Jewelry.create!(name_en: "Red Poppy Flower Adjustable Ring",
+Jewelry.create!(name_en: "Red Medium Poppy Flower Ring",
                 name_gr: "Ρυθμιζόμενο Δαχτυλίδι με Κόκκινο Λουλούδι Παπαρούνας",
                 description_gr: "Από Ασήμι (925)  και ζωγραφισμενο με εμάγιε σε θερμοκρασία 850°C. Ένα βελούδινο κόκκινο δαχτυλίδι με λεπτομερείς χρυσοπλατινωμένους στήμονες. Η ομορφιά και η δόνησή τους μπορούν να μας προσφέρουν την πιο δυνατή προστασία. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Made of Silver (925) and painted with enamel at a temperature of 850°C. A velvety red ring with detailed gold plated stamens. Their beauty and vibration can offer us the strongest protection. The jewelry comes in a luxurious gift box.",
@@ -566,7 +566,7 @@ Jewelry.create!(name_en: "Red Poppy Flower Adjustable Ring",
                 artist_id: artist_one.id,
                 picture: "4472.JPG")
 
-Jewelry.create!(name_en: "Silver-Enameled Poppy Ring with Gold Plated Stamens",
+Jewelry.create!(name_en: "Red Small Poppy Flower Ring",
                 name_gr: "Ασημένιο-Εμαγιέ Δαχτυλίδι Παπαρούνας με Χρυσοπλατινωμένους Στήμονες",
                 description_gr: "Από ασήμι (925°) και έχει ζωγραφιστεί με εμάγιε σε θερμοκρασία 850°C. Η εντυπωσιακή λεπτομέρεια στο κέντρο του λουλουδιού είναι οι χρυσοπλατινωμένοι στήμονες. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Made of silver (925°) and painted with enamel at a temperature of 850°C. The striking detail in the center of the flower is the gold-plated stamens. The jewelry comes in a luxurious gift box.",

@@ -3,11 +3,56 @@
     <p class="style-sentence center-sentence <%= "font-for-greek style" if params[:locale] == "gr" %>">
       <%= t('.intertitle_one') %>
     </p>
+    <div class="filter-wrapper">Header</div>
     <div class="grid-container">
-      <div class="item-one">Header</div>
-      <div class="item-two">Menu</div>
-      <div class="item-three">Main</div>
-      <div class="item-four">Right</div>
+      <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where(category_en: "Titanium Ring").each_with_index do |jewelry, index| %>
+        <div class="span_one item">
+          <div><%= image_tag(jewelry.picture) %></div>
+          <div class="name"><%= jewelry.name_en %></div>
+        </div>
+        <% if index == 1 %>
+          <div class="item span_two card-artist">
+            <h3 class="artist-name"> <%= jewelry.artist.name_en %> </h3>
+            <%= jewelry.artist.description_en %>
+          </div>
+        <% end %>
+      <% end %>
+      <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where(category_en: "Enamel Ring").each do |jewelry| %>
+        <div class="span_one item">
+          <div><%= image_tag(jewelry.picture) %></div>
+          <div class="name"><%= jewelry.name_en %></div>
+        </div>
+      <% end %>
+      <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where(category_en: "Titanium Bracelet").each do |jewelry| %>
+        <% if jewelry.name_en != "Wide Arm Bracelet"  %>
+          <div class="span_two item order_one">
+            <div><%= image_tag(jewelry.picture) %></div>
+            <div class="name"><%= jewelry.name_en %></div>
+          </div>
+        <% else %>
+          <div class="span_one item order_two">
+            <div><%= image_tag(jewelry.picture) %></div>
+            <div class="name"><%= jewelry.name_en %></div>
+          </div>
+        <% end %>
+      <% end %>
+      <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where(category_en: "Titanium Earrings").each do |jewelry| %>
+        <div class="span_one item order_three">
+          <div><%= image_tag(jewelry.picture) %></div>
+          <div class="name"><%= jewelry.name_en %></div>
+        </div>
+      <% end %>
+      <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where(category_en: "Enamel Earrings").each do |jewelry| %>
+        <div class="span_one item order_four">
+          <div><%= image_tag(jewelry.picture) %></div>
+          <div class="name"><%= jewelry.name_en %></div>
+        </div>
+        <div class="span_three item order_five">
+          <p class="style-sentence center-sentence <%= "font-for-greek style" if params[:locale] == "gr" %>">
+            <%= t('.intertitle_two') %>
+          </p>
+        </div>
+      <% end %>
     </div>
   </div>
   </div>
