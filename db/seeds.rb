@@ -315,7 +315,7 @@ Jewelry.create!(name_en: "Multiple Band Ring",
                 picture: "272.JPG")
 
 Jewelry.create!(name_en: "Anniversary Ring",
-                name_gr: "Επετειακό δαχτυλίδι με ασημένια μπάρα 6 ζιργκόν",
+                name_gr: "Επετειακό δαχτυλίδι",
                 description_gr: "Μοναδικό Δαχτυλίδι Επετείου από Ανοδιωμένο Τιτάνιο με Ασημένια Μπάρα με 6 Ζιργκόν. Είναι ένα υποαλλεργικό δαχτυλίδι, κατάλληλο για ευαίσθητο δέρμα, που θα σας ακολουθήσει για ολόκληρη τη ζωή σας. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Unique Anniversary Ring in Anodized Titanium with Silver Bar with 6 Zirconia. It is a hypoallergenic ring, suitable for sensitive skin, that will follow you for your entire life. The jewelry comes in a luxurious gift box.",
                 price: 128,
@@ -471,7 +471,7 @@ Jewelry.create!(name_en: "Circle And Triangle Shaped Earrings",
                 picture: "2072.JPG")
 
 Jewelry.create!(name_en: "Earrings With Minimalist Geometric Design",
-                name_gr: "Σκουλαρίκια Με Μινιμαλιστικό Γεωμετρικό Σχέδιο",
+                name_gr: "Σκουλαρίκια Με Μινιμαλιστικό Σχέδιο",
                 description_gr: "Αυτά τα υποαλλεργικά σκουλαρίκια τιτανίου προσθέτουν ένα μοντέρνο και δυναμικό στοιχείο στο ντύσιμό σας. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "These hypoallergenic titanium earrings add a modern and dynamic element to your outfit. The jewelry comes in a luxurious gift box.",
                 price: 80,
@@ -483,7 +483,7 @@ Jewelry.create!(name_en: "Earrings With Minimalist Geometric Design",
                 picture: "1972.JPG")
 
 Jewelry.create!(name_en: "Dangling Earrings With Red Poppy Flowers",
-                name_gr: "Σκουλαρίκια Κρεμαστά Με Κόκκινα Λουλούδια Παπαρούνας",
+                name_gr: "Σκουλαρίκια Κρεμαστά Με Παπαρούνας",
                 description_gr: "Από ασήμι και εμάγιε. Είναι σαν πραγματικές παπαρούνες, αφιερωμένη στην άνοιξη. Είναι από ασήμι (925°) και έχουν ζωγραφιστεί με εμάγιε σε θερμοκρασία 850°C. Η εντυπωσιακή λεπτομέρεια στο κέντρο του λουλουδιού είναι οι χρυσοπλατινωμένοι στήμονες της παπαρούνας, κάνοντάς το πιο ρεαλιστικό. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Made of silver and enamel. They are like real poppies, dedicated to spring. They are made of silver (925°) and painted with enamel at a temperature of 850°C. The striking detail in the center of the flower is the gold-plated poppy stamens, making it more realistic. The jewelry comes in a luxurious gift box.",
                 price: 160,
@@ -519,7 +519,7 @@ Jewelry.create!(name_en: "Wide Arm Bracelet",
                 picture: "4072.JPG")
 
 Jewelry.create!(name_en: "Blue Cherry Blossom Adjustable Ring",
-                name_gr: "Ρυθμιζόμενο Δαχτυλίδι Με Μπλε Λουλούδια Κερασιάς",
+                name_gr: "Δαχτυλίδι Με Μπλε Λουλούδια Κερασιάς",
                 description_gr: "Από ασήμι (925°) ζωγραφισμενα με εμάγιε σε θερμοκρασία 850°C. Είναι δημιουργημένο με λεπτομέρεια. Η λεπτότητα και η σαφήνεια παρέχουν ένα ρεαλιστικό αποτέλεσμα. Η άνθιση της κερασιάς, ή Sakura, για τον Ιαπωνικό πολιτισμό, είναι ένα σύμβολο ανανέωσης και αισιοδοξίας. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Made of silver (925°) painted with enamel at a temperature of 850°C. It is crafted with detail. Thinness and clarity provide a realistic result. The cherry blossom, or Sakura, for Japanese culture, is a symbol of renewal and optimism. The jewelry comes in a luxurious gift box.",
                 price: 112,
@@ -531,7 +531,7 @@ Jewelry.create!(name_en: "Blue Cherry Blossom Adjustable Ring",
                 picture: "4172.JPG")
 
 Jewelry.create!(name_en: "Red Big Poppy Flower Ring",
-                name_gr: "Δαχτυλίδι με Κόκκινο Λουλούδι Παπαρούνας",
+                name_gr: "Δαχτυλίδι με Μεγάλη Παπαρούνα",
                 description_gr: "Από ασήμι (925), ζωγραφισμενο με εμάγιε σε θερμοκρασία 850°C. Η φύση είναι μια ατελείωτη πηγή έμπνευσης. Αφιερώνονται στην άνοιξη. Όταν το φοράτε, στέκεται στη μέση των δακτύλων σας, κοσμώντας το χέρι σας με έναν τρόπο που δεν ενοχλεί. Η εντυπωσιακή λεπτομέρεια στο κέντρο του λουλουδιού είναι οι χρυσοπλατινωμένοι στήμονες της παπαρούνας. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Made of silver (925), painted with enamel at a temperature of 850°C. Nature is an endless source of inspiration. They are dedicated to spring. When you wear it, it sits between your fingers, adorning your hand in a non-obtrusive way. The striking detail in the center of the flower is the gold-plated poppy stamens. The jewelry comes in a luxurious gift box.",
                 price: 300,
@@ -555,7 +555,7 @@ Jewelry.create!(name_en: "Red Poppy Flower Ring",
                 picture: "4372.JPG")
 
 Jewelry.create!(name_en: "Red Medium Poppy Flower Ring",
-                name_gr: "Ρυθμιζόμενο Δαχτυλίδι με Κόκκινο Λουλούδι Παπαρούνας",
+                name_gr: "Δαχτυλίδι Με Μεσαία Παπαρούνα",
                 description_gr: "Από Ασήμι (925)  και ζωγραφισμενο με εμάγιε σε θερμοκρασία 850°C. Ένα βελούδινο κόκκινο δαχτυλίδι με λεπτομερείς χρυσοπλατινωμένους στήμονες. Η ομορφιά και η δόνησή τους μπορούν να μας προσφέρουν την πιο δυνατή προστασία. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Made of Silver (925) and painted with enamel at a temperature of 850°C. A velvety red ring with detailed gold plated stamens. Their beauty and vibration can offer us the strongest protection. The jewelry comes in a luxurious gift box.",
                 price: 220,
@@ -567,7 +567,7 @@ Jewelry.create!(name_en: "Red Medium Poppy Flower Ring",
                 picture: "4472.JPG")
 
 Jewelry.create!(name_en: "Red Small Poppy Flower Ring",
-                name_gr: "Ασημένιο-Εμαγιέ Δαχτυλίδι Παπαρούνας με Χρυσοπλατινωμένους Στήμονες",
+                name_gr: "Δαχτυλίδι Με Μικρή Παπαρούνα",
                 description_gr: "Από ασήμι (925°) και έχει ζωγραφιστεί με εμάγιε σε θερμοκρασία 850°C. Η εντυπωσιακή λεπτομέρεια στο κέντρο του λουλουδιού είναι οι χρυσοπλατινωμένοι στήμονες. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Made of silver (925°) and painted with enamel at a temperature of 850°C. The striking detail in the center of the flower is the gold-plated stamens. The jewelry comes in a luxurious gift box.",
                 price: 160,
@@ -703,20 +703,6 @@ Jewelry.create!(name_en: "Grace earrings",
                 category_en: "Earrings",
                 category_gr: "Σκουλαρίκια",
                 artist_id: artist_two.id,
-                picture: "3872.JPG")
-
-Jewelry.create!(name_en: "Milena earrings",
-                name_gr: "Σκουλαρικια Milena",
-                description_gr: "Από χρυσαφί σύρμα κοσμημάτων και χρυσό μεταλλικό νήμα
-                με πέτρες  'Ιασπη 'Dragon Blood'. Μήκος 3,7 εκ,  Πλάτος 3,7 εκ., (χωρίς τον γάντζο). Γάντζοι επίχρυσοι , 100% Xειροποίητα, Μοναδικό ζευγάρι. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
-                description_en: "Made of gold jewelry wire and gold metallic thread
-                with 'Dragon Blood' jasper stones. Length 3.7 cm, Width 3.7 cm, (without the hook). Gold plated hooks, 100% Handmade, Unique pair. The jewelry comes in a luxurious gift box.",
-                price: 100,
-                theme_en: "Faith",
-                theme_gr: "Πίστη",
-                category_en: "Earrings",
-                category_gr: "Σκουλαρίκια",
-                artist_id: artist_two.id,
                 picture: "3772.JPG")
 
 Jewelry.create!(name_en: "Isabella Necklace",
@@ -749,7 +735,7 @@ Jewelry.create!(name_en: "Volcano Ring",
                 description_gr: "Από ασημί (επάργυρο) σύρμα κοσμημάτων και μεταλλικό νήμα με πέτρα Λάβας, Νο. 59-60, 100% Χειροποίητο, Μοναδικό κομμάτι. Το κοσμήμα έρχεται σε πολυτελή συσκευασία δώρου.",
                 description_en: "Made of silver jewelry wire and metal thread with Lava stone, No. 59-60, 100% Handmade, Unique piece. The jewelry comes in a luxurious gift box.",
                 price: 120,
-                theme_en: "Lava stone",
+                theme_en: "Lava Stone",
                 theme_gr: "Πέτρα Λάβας",
                 category_en: "Ring",
                 category_gr: "Δαχτυλίδι",
