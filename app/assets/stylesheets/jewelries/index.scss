@@ -52,11 +52,7 @@
   align-items: center;
   padding: 99px;
 }
-.order_one {
-  order: 1;
-}
-
-.order_two {
+.order_one, .order_two{
   order: 0;
 }
 

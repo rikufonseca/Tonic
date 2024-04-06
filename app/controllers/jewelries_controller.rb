@@ -3,5 +3,6 @@ class JewelriesController < ApplicationController
 
   def index
     @jewelries = Jewelry.all
+    @flowers = @jewelries.select { |jewelry| jewelry.theme_en == "Flowers" }
   end
 end
