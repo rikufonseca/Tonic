@@ -1,0 +1,11 @@
+<div class="all-jewelries direction-column" data-navbar-target="pageup">
+  <div class="center">
+    <h2> <%= @jewelry.name_en %></h2>
+    <div> From <%= @jewelry.artist.name_en %></div>
+  </div>
+  <div class="side-to-side">
+    <%= image_tag(@jewelry.picture) %>
+    <%= @jewelry.description_en %>
+  </div>
+  <div><%= @jewelry.price %> E</div>
+</div>

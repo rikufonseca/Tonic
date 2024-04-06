@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /gr|en/ do
     root to: "pages#home"
-    resources :jewelries, only: :index
+    resources :jewelries, only: [:index, :show]
     resources :products, only: :index
     resources :services, only: :index
     get "contacts", to: "messages#new"

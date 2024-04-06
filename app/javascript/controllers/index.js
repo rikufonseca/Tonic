@@ -8,5 +8,8 @@ import { application } from "./application"
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
 
+import JewelriesController from "./jewelries_controller"
+application.register("jewelries", JewelriesController)
+
 import NewMessagesController from "./new_messages_controller"
 application.register("new-messages", NewMessagesController)

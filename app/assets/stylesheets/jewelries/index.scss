@@ -24,6 +24,8 @@
   gap: 10px;
   padding: 0;
   width: 100%;
+  margin-top: 3rem;
+  cursor: pointer;
 }
 
 .block-one {
@@ -34,8 +36,18 @@
 }
 
 .filter-wrapper {
-  height: 73px;
-  text-align: center;
+  height: 43px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #725e2b;
+  border-top: 1px solid #725e2b;
+  color: #725e2b;
+  cursor: pointer;
+}
+
+.gap {
+  padding: 0 1rem;
 }
 
 .item {

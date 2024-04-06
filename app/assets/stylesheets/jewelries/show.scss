@@ -1,0 +1,16 @@
+.direction-column {
+  flex-direction: column;
+}
+
+.center {
+  text-align: center;
+  padding: 3rem 0 3rem 2rem;
+  color: #826c34;
+}
+
+.side-to-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+}

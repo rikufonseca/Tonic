@@ -4,18 +4,18 @@
         <p class="style-sentence center-sentence">
           <%= t('.intertitle_one') %>
         </p>
-        <div class="filter-wrapper">
-          <p> THEME </p>
-          <% if false  %>
-          <%= link_to "Flowers", @flowers %>
-          <% end %>
+        <div class="filter-wrapper" data-controller="jewelries" data-jewelries-target="line">
+          <p class="gap" data-action="click->jewelries#displayFiltres">THEME</p>
+          <p data-action="click->jewelries#displayFiltres">CATEGORY</p>
         </div>
         <div class="grid-container">
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where(theme_en: "Fashionable").each_with_index do |jewelry, index| %>
-            <div class="span_one item">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_en %></div>
-            </div>
+          <% @fashionables.each_with_index do |jewelry, index| %>
+              <div class="span_one item">
+                <%= link_to jewelry_path(jewelry) do %>
+                  <div><%= image_tag(jewelry.picture) %></div>
+                  <div class="name"><%= jewelry.name_en %></div>
+                <% end %>
+              </div>
             <% if index == 1 %>
               <div class="item span_two card-artist">
                 <h3 class="artist-name"> <%= jewelry.artist.name_en %> </h3>
@@ -23,23 +23,29 @@
               </div>
             <% end %>
           <% end %>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where( theme_en: "Flowers").each do |jewelry| %>
-            <div class="span_one item">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_en %></div>
-            </div>
+          <% @flowers_giampouras.each do |jewelry| %>
+              <div class="span_one item">
+                <%= link_to jewelry_path(jewelry) do %>
+                  <div><%= image_tag(jewelry.picture) %></div>
+                  <div class="name"><%= jewelry.name_en %></div>
+                <% end %>
+              </div>
           <% end %>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where(theme_en: "Timeless").each do |jewelry| %>
+          <% @timeless.each do |jewelry| %>
             <% if jewelry.name_en == "Textured Cuff Bracelet" || jewelry.name_en == "Adjustable Bright Bracelet" %>
-              <div class="span_two item order_one">
-                <div><%= image_tag(jewelry.picture) %></div>
-                <div class="name"><%= jewelry.name_en %></div>
-              </div>
+                <div class="span_two item order_one">
+                  <%= link_to jewelry_path(jewelry) do %>
+                    <div><%= image_tag(jewelry.picture) %></div>
+                    <div class="name"><%= jewelry.name_en %></div>
+                  <% end %>
+                </div>
             <% else %>
-              <div class="span_one item order_two">
-                <div><%= image_tag(jewelry.picture) %></div>
-                <div class="name"><%= jewelry.name_en %></div>
-              </div>
+                <div class="span_one item order_two">
+                  <%= link_to jewelry_path(jewelry) do %>
+                    <div><%= image_tag(jewelry.picture) %></div>
+                    <div class="name"><%= jewelry.name_en %></div>
+                  <% end %>
+                </div>
             <% end %>
           <% end %>
           <div class="span_three item order_five no-tel">
@@ -47,10 +53,12 @@
               <%= t('.intertitle_two') %>
             </p>
           </div>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Maria Kanala")).where(theme_en: "Lava Stone").each_with_index do |jewelry, index| %>
+          <% @lava_stone.each_with_index do |jewelry, index| %>
             <div class="span_one item order_six">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_en %></div>
+              <%= link_to jewelry_path(jewelry) do %>
+                <div><%= image_tag(jewelry.picture) %></div>
+                <div class="name"><%= jewelry.name_en %></div>
+              <% end %>
             </div>
             <% if index == 1 %>
               <div class="item span_two card-artist order_seven">
@@ -59,16 +67,20 @@
               </div>
             <% end %>
           <% end %>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Maria Kanala")).where(theme_en: "Faith").each do |jewelry| %>
+          <% @faith.each do |jewelry| %>
             <div class="span_one item order_eight">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_en %></div>
+              <%= link_to jewelry_path(jewelry) do %>
+                <div><%= image_tag(jewelry.picture) %></div>
+                <div class="name"><%= jewelry.name_en %></div>
+              <% end %>
             </div>
           <% end %>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Maria Kanala")).where(theme_en: "Flowers").each do |jewelry| %>
+          <% @flowers_kanale.each do |jewelry| %>
             <div class="span_one item order_nine">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_en %></div>
+              <%= link_to jewelry_path(jewelry) do %>
+                <div><%= image_tag(jewelry.picture) %></div>
+                <div class="name"><%= jewelry.name_en %></div>
+              <% end %>
             </div>
           <% end %>
         </div>
@@ -82,10 +94,12 @@
         </p>
         <div class="filter-wrapper">Header</div>
         <div class="grid-container">
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where(theme_en: "Fashionable").each_with_index do |jewelry, index| %>
+          <% @fashionables.each_with_index do |jewelry, index| %>
             <div class="span_one item">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_gr %></div>
+              <%= link_to jewelry_path(jewelry) do %>
+                <div><%= image_tag(jewelry.picture) %></div>
+                <div class="name"><%= jewelry.name_gr %></div>
+              <% end %>
             </div>
             <% if index == 1 %>
               <div class="item span_two card-artist">
@@ -94,22 +108,28 @@
               </div>
             <% end %>
           <% end %>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where( theme_en: "Flowers").each do |jewelry| %>
+          <% @flowers_giampouras.each do |jewelry| %>
             <div class="span_one item">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_gr %></div>
-            </div>
-          <% end %>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Vasilis Giampouras")).where(theme_en: "Timeless").each do |jewelry| %>
-            <% if jewelry.name_en == "Textured Cuff Bracelet" || jewelry.name_en == "Adjustable Bright Bracelet" %>
-              <div class="span_two item order_one">
+              <%= link_to jewelry_path(jewelry) do %>
                 <div><%= image_tag(jewelry.picture) %></div>
                 <div class="name"><%= jewelry.name_gr %></div>
+              <% end %>
+            </div>
+          <% end %>
+          <% @timeless.each do |jewelry| %>
+            <% if jewelry.name_en == "Textured Cuff Bracelet" || jewelry.name_en == "Adjustable Bright Bracelet" %>
+              <div class="span_two item order_one">
+                <%= link_to jewelry_path(jewelry) do %>
+                  <div><%= image_tag(jewelry.picture) %></div>
+                  <div class="name"><%= jewelry.name_gr %></div>
+                <% end %>
               </div>
             <% else %>
               <div class="span_one item order_two">
-                <div><%= image_tag(jewelry.picture) %></div>
-                <div class="name"><%= jewelry.name_gr %></div>
+                <%= link_to jewelry_path(jewelry) do %>
+                  <div><%= image_tag(jewelry.picture) %></div>
+                  <div class="name"><%= jewelry.name_gr %></div>
+                <% end %>
               </div>
             <% end %>
           <% end %>
@@ -118,10 +138,12 @@
               <%= t('.intertitle_two') %>
             </p>
           </div>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Maria Kanala")).where(theme_en: "Lava Stone").each_with_index do |jewelry, index| %>
+          <% @lava_stone.each_with_index do |jewelry, index| %>
             <div class="span_one item order_six">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_gr %></div>
+              <%= link_to jewelry_path(jewelry) do %>
+                <div><%= image_tag(jewelry.picture) %></div>
+                <div class="name"><%= jewelry.name_gr %></div>
+              <% end %>
             </div>
             <% if index == 1 %>
               <div class="item span_two card-artist order_seven">
@@ -130,16 +152,20 @@
               </div>
             <% end %>
           <% end %>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Maria Kanala")).where(theme_en: "Faith").each do |jewelry| %>
+          <% @faith.each do |jewelry| %>
             <div class="span_one item order_eight">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_gr %></div>
+              <%= link_to jewelry_path(jewelry) do %>
+                <div><%= image_tag(jewelry.picture) %></div>
+                <div class="name"><%= jewelry.name_gr %></div>
+              <% end %>
             </div>
           <% end %>
-          <% @jewelries.where(artist_id: Artist.find_by(name_en: "Maria Kanala")).where(theme_en: "Flowers").each do |jewelry| %>
+          <% @flowers_kanale.each do |jewelry| %>
             <div class="span_one item order_nine">
-              <div><%= image_tag(jewelry.picture) %></div>
-              <div class="name"><%= jewelry.name_gr %></div>
+              <%= link_to jewelry_path(jewelry) do %>
+                <div><%= image_tag(jewelry.picture) %></div>
+                <div class="name"><%= jewelry.name_gr %></div>
+              <% end %>
             </div>
           <% end %>
         </div>
