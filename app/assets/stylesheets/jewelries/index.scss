@@ -122,3 +122,24 @@
 .span_two {
   grid-column: span 2;
 }
+
+@media only screen and (min-width:279px) and (max-width:900px) {
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  text-align: center;
+  height: 54px;
+}
+
+.no-tel {
+  display: none;
+}
+
+.order_seven {
+  order: 5;
+}
+}
