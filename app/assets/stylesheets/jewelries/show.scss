@@ -9,8 +9,56 @@
 }
 
 .side-to-side {
+  margin-bottom: 9rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 100%;
+}
+
+.width-text {
+  width: 31%;
+  padding-left: 98px;
+}
+
+.price-center {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.pics-dim {
+  width: 600px;
+  height: 600px;
+}
+
+@media only screen and (min-width:279px) and (max-width:900px) {
+
+  .width-text {
+    width: 85%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .pics-dim {
+    width: 85%;
+    height: auto;
+  }
+
+  .tel-middle-space {
+    display: flex;
+    justify-content: center;
+  }
+
+  .price-center {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .side-to-side {
+    flex-direction: column;
+  }
+
+  .center {
+    padding: 3rem 0 3rem 0rem;
+  }
 }

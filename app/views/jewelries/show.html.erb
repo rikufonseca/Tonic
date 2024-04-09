@@ -4,8 +4,12 @@
     <div> From <%= @jewelry.artist.name_en %></div>
   </div>
   <div class="side-to-side">
-    <%= image_tag(@jewelry.picture) %>
-    <%= @jewelry.description_en %>
+    <div class="tel-middle-space">
+      <%= image_tag(@jewelry.picture, class: "pics-dim") %>
+    </div>
+    <div class="width-text">
+      <%= @jewelry.description_en %>
+      <p class="price-center"><%= @jewelry.price %> E</p>
+    </div>
   </div>
-  <div><%= @jewelry.price %> E</div>
 </div>
