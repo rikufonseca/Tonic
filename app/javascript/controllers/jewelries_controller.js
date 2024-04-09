@@ -1,12 +1,11 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["line"];
+  static targets = ["lineup"];
 
   displayFiltres() {
-    const line = this.lineTarget;
-
-    console.log(line);
+    const lineup = this.lineupTarget;
+    lineup.classList.toggle("display-filtres");
   }
 
 }

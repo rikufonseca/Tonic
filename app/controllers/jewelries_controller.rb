@@ -11,6 +11,13 @@ class JewelriesController < ApplicationController
     @lava_stone = jewelries_kanale.where(theme_en: "Lava Stone")
     @faith = jewelries_kanale.where(theme_en: "Faith")
     @flowers_kanale = jewelries_kanale.where(theme_en: "Flowers")
+
+    @all_theme = []
+    @all_category = []
+    @jewelries.each do |jewelry|
+      @all_theme << jewelry.theme_en
+      @all_category << jewelry.category_en
+    end
   end
 
   def show

@@ -1,14 +1,26 @@
   <% if params[:locale] == "en" || params[:locale].nil? %>
-    <div class="all-jewelries" data-navbar-target="pageup">
+    <div class="all-jewelries" data-navbar-target="pageup" data-controller="jewelries">
       <div class="block-one">
         <p class="style-sentence center-sentence">
           <%= t('.intertitle_one') %>
         </p>
-        <div class="filter-wrapper" data-controller="jewelries" data-jewelries-target="line">
-          <p class="gap" data-action="click->jewelries#displayFiltres">THEME</p>
-          <p data-action="click->jewelries#displayFiltres">CATEGORY</p>
-        </div>
-        <div class="grid-container">
+          <div class="filter-wrapper border-center">
+            <p data-action="click->jewelries#displayFiltres">CATEGORY</p>
+            <p data-action="click->jewelries#displayFiltres">THEME</p>
+          </div>
+          <div class="filter-wrapper">
+            <div class="column">
+              <% @all_category.uniq.each do |category| %>
+                <div><%= category %></div>
+              <% end %>
+            </div>
+            <div class="column">
+              <% @all_theme.uniq.each do |theme| %>
+                <div><%= theme %></div>
+              <% end %>
+            </div>
+          </div>
+        <div class="grid-container-menu" data-jewelries-target="lineup">
           <% @fashionables.each_with_index do |jewelry, index| %>
               <div class="span_one item">
                 <%= link_to jewelry_path(jewelry) do %>
