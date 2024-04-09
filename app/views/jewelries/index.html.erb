@@ -10,13 +10,13 @@
           </div>
           <div class="filter-wrapper">
             <div class="column">
-              <% @all_category.uniq.each do |category| %>
-                <div><%= category %></div>
+              <% @categories_en.each do |category| %>
+                <div><%= link_to category, jewelries_path(category: category) %></div>
               <% end %>
             </div>
             <div class="column">
-              <% @all_theme.uniq.each do |theme| %>
-                <div><%= theme %></div>
+              <% @themes_en.each do |theme| %>
+                <div><%= link_to theme, jewelries_path(theme: theme) %></div>
               <% end %>
             </div>
           </div>
