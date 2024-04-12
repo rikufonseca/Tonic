@@ -24,7 +24,7 @@
           <% @fashionables.each_with_index do |jewelry, index| %>
               <div class="span_one item">
                 <%= link_to jewelry_path(jewelry) do %>
-                  <div><%= image_tag(jewelry.picture) %></div>
+                  <div><%= image_tag(jewelry.picture, alt: jewelry.categories_en) %></div>
                   <div class="name"><%= jewelry.name_en %></div>
                 <% end %>
               </div>
@@ -38,7 +38,7 @@
           <% @flowers_giampouras.each do |jewelry| %>
               <div class="span_one item">
                 <%= link_to jewelry_path(jewelry) do %>
-                  <div><%= image_tag(jewelry.picture) %></div>
+                  <div><%= image_tag(jewelry.picture, alt: jewelry.categories_en) %></div>
                   <div class="name"><%= jewelry.name_en %></div>
                 <% end %>
               </div>
@@ -47,14 +47,14 @@
             <% if jewelry.name_en == "Textured Cuff Bracelet" || jewelry.name_en == "Adjustable Bright Bracelet" %>
                 <div class="span_two item order_one">
                   <%= link_to jewelry_path(jewelry) do %>
-                    <div><%= image_tag(jewelry.picture) %></div>
+                    <div><%= image_tag(jewelry.picture, alt: jewelry.categories_en) %></div>
                     <div class="name"><%= jewelry.name_en %></div>
                   <% end %>
                 </div>
             <% else %>
                 <div class="span_one item order_two">
                   <%= link_to jewelry_path(jewelry) do %>
-                    <div><%= image_tag(jewelry.picture) %></div>
+                    <div><%= image_tag(jewelry.picture, alt: jewelry.categories_en) %></div>
                     <div class="name"><%= jewelry.name_en %></div>
                   <% end %>
                 </div>
@@ -68,7 +68,7 @@
           <% @lava_stone.each_with_index do |jewelry, index| %>
             <div class="span_one item order_six">
               <%= link_to jewelry_path(jewelry) do %>
-                <div><%= image_tag(jewelry.picture) %></div>
+                <div><%= image_tag(jewelry.picture, alt: jewelry.categories_en) %></div>
                 <div class="name"><%= jewelry.name_en %></div>
               <% end %>
             </div>
@@ -82,7 +82,7 @@
           <% @faith.each do |jewelry| %>
             <div class="span_one item order_eight">
               <%= link_to jewelry_path(jewelry) do %>
-                <div><%= image_tag(jewelry.picture) %></div>
+                <div><%= image_tag(jewelry.picture, alt: jewelry.categories_en) %></div>
                 <div class="name"><%= jewelry.name_en %></div>
               <% end %>
             </div>
@@ -90,7 +90,7 @@
           <% @flowers_kanale.each do |jewelry| %>
             <div class="span_one item order_nine">
               <%= link_to jewelry_path(jewelry) do %>
-                <div><%= image_tag(jewelry.picture) %></div>
+                <div><%= image_tag(jewelry.picture, alt: jewelry.categories_en) %></div>
                 <div class="name"><%= jewelry.name_en %></div>
               <% end %>
             </div>
@@ -124,7 +124,7 @@
           <% @fashionables.each_with_index do |jewelry, index| %>
             <div class="span_one item">
               <%= link_to jewelry_path(jewelry) do %>
-                <div><%= image_tag(jewelry.picture) %></div>
+                <div><%= image_tag(jewelry.picture, alt: jewelry.categories_gr) %></div>
                 <div class="name"><%= jewelry.name_gr %></div>
               <% end %>
             </div>
@@ -138,7 +138,7 @@
           <% @flowers_giampouras.each do |jewelry| %>
             <div class="span_one item">
               <%= link_to jewelry_path(jewelry) do %>
-                <div><%= image_tag(jewelry.picture) %></div>
+                <div><%= image_tag(jewelry.picture, alt: jewelry.categories_gr) %></div>
                 <div class="name"><%= jewelry.name_gr %></div>
               <% end %>
             </div>
@@ -147,14 +147,14 @@
             <% if jewelry.name_en == "Textured Cuff Bracelet" || jewelry.name_en == "Adjustable Bright Bracelet" %>
               <div class="span_two item order_one">
                 <%= link_to jewelry_path(jewelry) do %>
-                  <div><%= image_tag(jewelry.picture) %></div>
+                  <div><%= image_tag(jewelry.picture, alt: jewelry.categories_gr) %></div>
                   <div class="name"><%= jewelry.name_gr %></div>
                 <% end %>
               </div>
             <% else %>
               <div class="span_one item order_two">
                 <%= link_to jewelry_path(jewelry) do %>
-                  <div><%= image_tag(jewelry.picture) %></div>
+                  <div><%= image_tag(jewelry.picture, alt: jewelry.categories_gr) %></div>
                   <div class="name"><%= jewelry.name_gr %></div>
                 <% end %>
               </div>
@@ -168,7 +168,7 @@
           <% @lava_stone.each_with_index do |jewelry, index| %>
             <div class="span_one item order_six">
               <%= link_to jewelry_path(jewelry) do %>
-                <div><%= image_tag(jewelry.picture) %></div>
+                <div><%= image_tag(jewelry.picture, alt: jewelry.categories_gr) %></div>
                 <div class="name"><%= jewelry.name_gr %></div>
               <% end %>
             </div>
@@ -182,7 +182,7 @@
           <% @faith.each do |jewelry| %>
             <div class="span_one item order_eight">
               <%= link_to jewelry_path(jewelry) do %>
-                <div><%= image_tag(jewelry.picture) %></div>
+                <div><%= image_tag(jewelry.picture, alt: jewelry.categories_gr) %></div>
                 <div class="name"><%= jewelry.name_gr %></div>
               <% end %>
             </div>
@@ -190,7 +190,7 @@
           <% @flowers_kanale.each do |jewelry| %>
             <div class="span_one item order_nine">
               <%= link_to jewelry_path(jewelry) do %>
-                <div><%= image_tag(jewelry.picture) %></div>
+                <div><%= image_tag(jewelry.picture, alt: jewelry.categories_gr) %></div>
                 <div class="name"><%= jewelry.name_gr %></div>
               <% end %>
             </div>
