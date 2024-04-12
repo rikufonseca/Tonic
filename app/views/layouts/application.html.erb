@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="eu-EU">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="30">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= display_meta_tags site: "Tonic - Nails & Jewelry in Kolonaki, Athens",
-      keywords: request.original_url.include?("gr") ? "tonic, πολυτέλεια, νύχια, κοσμήματα, κολωνάκι, αθήνα, ελλάδα" : "tonic, luxury, nails, jewelry, kolonaki, athens, greece"
+      keywords: request.original_url.include?("gr") ? "Τonic, πολυτέλεια, νύχια, κοσμήματα, Κολωνάκι, Αθήνα, Ελλάδα, Μανικιούρ, Πεντικιούρ, Κέντρο ομορφιάς" : "Tonic, luxury, nails, jewelry, Kolonaki, Athens, Greece, Nail salon, Manicure, Pedicure, Beauty salon, Nail treatments, Nail design, Nail extensions", description: "Elevate your style with Tonic Nails' expert manicures and pedicures. Experience luxury and sophistication like never before."
     %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
