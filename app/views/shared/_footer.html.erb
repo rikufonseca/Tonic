@@ -1,5 +1,5 @@
   <% unless current_page?(contacts_path(locale:params[:locale])) %>
-    <div class="footer <%= "fixed-down" if current_page?( products_path) || current_page?(jewelries_path) %>">
+    <footer class="footer <%= "fixed-down" if current_page?( products_path) || current_page?(jewelries_path) %>">
       <div class="icon">
         <a href="https://www.facebook.com/profile.php?id=100094305683230" target="_blank">
           <%= image_tag "icons8-facebook-128.png", class: "facebook" %>
@@ -15,7 +15,7 @@
           <a href="mailto:contact@tonic-society.com" class="new_color"> contact@tonic-society.com </a>
         </div>
       </div>
-    </div>
+    </footer>
     <section class="<%= "section-off" if current_page?(services_path(locale:params[:locale])) %>"> </section>
   <% end %>
   </section>
