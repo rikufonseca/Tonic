@@ -9,10 +9,10 @@ puts "Seeds start..."
 puts ""
 
 puts "destroy datas"
-User.destroy_all if Rails.env.development?
-Service.destroy_all if Rails.env.development?
-Jewelry.destroy_all if Rails.env.development?
-Artist.destroy_all if Rails.env.development?
+User.destroy_all
+Service.destroy_all
+Jewelry.destroy_all
+Artist.destroy_all
 puts "Datas destroyed"
 puts ""
 
