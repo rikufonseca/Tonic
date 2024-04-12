@@ -7,7 +7,6 @@
     <%= display_meta_tags site: "Tonic - Nails & Jewelry in Kolonaki, Athens",
       keywords: request.original_url.include?("gr") ? "tonic, πολυτέλεια, νύχια, κοσμήματα, κολωνάκι, αθήνα, ελλάδα" : "tonic, luxury, nails, jewelry, kolonaki, athens, greece"
     %>
-    <%= favicon_link_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
