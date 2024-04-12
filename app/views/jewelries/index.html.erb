@@ -5,8 +5,8 @@
           <%= t('.intertitle_one') %>
         </p>
           <div class="filter-wrapper border-center">
-            <p data-action="click->jewelries#displayFiltres">CATEGORY</p>
-            <p data-action="click->jewelries#displayFiltres">THEME</p>
+            <p data-action="click->jewelries#displayFiltres"><%= t('.cat') %></p>
+            <p data-action="click->jewelries#displayFiltres"><%= t('.theme') %></p>
           </div>
           <div class="filter-wrapper">
             <div class="column">
@@ -99,13 +99,28 @@
       </div>
     </div>
   <% else %>
-    <div class="all-jewelries" data-navbar-target="pageup">
+    <div class="all-jewelries" data-navbar-target="pageup" data-controller="jewelries">
       <div class="block-one">
-        <p class="style-sentence center-sentence">
+        <p class="style-sentence center-sentence <%= "font-for-greek style" if params[:locale] == "gr" %>">
           <%= t('.intertitle_one') %>
         </p>
-        <div class="filter-wrapper">Header</div>
-        <div class="grid-container">
+        <div class="filter-wrapper border-center">
+          <p data-action="click->jewelries#displayFiltres"><%= t('.cat') %></p>
+          <p data-action="click->jewelries#displayFiltres"><%= t('.theme') %></p>
+        </div>
+        <div class="filter-wrapper">
+          <div class="column">
+            <% @categories_gr.each do |category| %>
+              <div><%= link_to category, jewelries_path(category: category) %></div>
+            <% end %>
+          </div>
+          <div class="column">
+            <% @themes_gr.each do |theme| %>
+              <div><%= link_to theme, jewelries_path(theme: theme) %></div>
+            <% end %>
+          </div>
+        </div>
+        <div class="grid-container-menu greek-top" data-jewelries-target="lineup">
           <% @fashionables.each_with_index do |jewelry, index| %>
             <div class="span_one item">
               <%= link_to jewelry_path(jewelry) do %>

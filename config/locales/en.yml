@@ -71,3 +71,7 @@ en:
     index:
       intertitle_one: "At Tonic, we invite you to embrace a complete luxury experience that celebrates not only your nails but also the artistry and elegance of Greek design"
       intertitle_two: "Whether you seek a statement piece to complement your style or a meaningful gift to cherish, our collection of Greek designer jewelry offers a range of options to suit every taste"
+      cat: "CATEGORIES"
+      theme: "THEMES"
+    show:
+      from: "from"
