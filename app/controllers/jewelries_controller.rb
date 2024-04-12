@@ -49,6 +49,6 @@ class JewelriesController < ApplicationController
   end
 
   def show
-    @jewelry = Jewelry.find(params[:id])
+    @jewelry = Jewelry.find_by(name_en: params[:jewelry])
   end
 end

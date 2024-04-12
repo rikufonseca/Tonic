@@ -300,7 +300,7 @@ Jewelry.create!(name_en: "Colorful Flat Band Ring",
                 category_en: "Titanium Ring",
                 category_gr: "Τιτανίο Δαχτυλίδι",
                 artist_id: artist_one.id,
-                picture: "172.JPG")
+                picture: "Anodized_titanium_ring_giampouras_one.JPG")
 
 Jewelry.create!(name_en: "Multiple Band Ring",
                 name_gr: "Δαχτυλίδι πολλαπλών ζωνών",
@@ -312,7 +312,7 @@ Jewelry.create!(name_en: "Multiple Band Ring",
                 category_en: "Titanium Ring",
                 category_gr: "Τιτανίο Δαχτυλίδι",
                 artist_id: artist_one.id,
-                picture: "272.JPG")
+                picture: "Anodized_titanium_ring_giampouras_two.JPG")
 
 Jewelry.create!(name_en: "Anniversary Ring",
                 name_gr: "Επετειακό δαχτυλίδι",
@@ -324,7 +324,7 @@ Jewelry.create!(name_en: "Anniversary Ring",
                 category_en: "Titanium Ring",
                 category_gr: "Τιτανίο Δαχτυλίδι",
                 artist_id: artist_one.id,
-                picture: "372.JPG")
+                picture: "Anodized_titanium_ring_giampouras_three.JPG")
 
 Jewelry.create!(name_en: "Textured Cuff Bracelet",
                 name_gr: "Βραχιόλι με ανάγλυφη μανσέτα",
@@ -336,7 +336,7 @@ Jewelry.create!(name_en: "Textured Cuff Bracelet",
                 category_en: "Titanium Bracelet",
                 category_gr: "Βραχιόλι Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "472.JPG")
+                picture: "Anodized_titanium_bracelet_giampouras_one.JPG")
 
 Jewelry.create!(name_en: "Two Drops Earrings",
                 name_gr: "Δύο Σταγόνες Σκουλαρίκια",
@@ -348,7 +348,7 @@ Jewelry.create!(name_en: "Two Drops Earrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "572.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_one.JPG")
 
 Jewelry.create!(name_en: "Μinimalistic Εarrings",
                 name_gr: "Μινιμαλιστικά Σκουλαρίκια",
@@ -360,7 +360,7 @@ Jewelry.create!(name_en: "Μinimalistic Εarrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "672.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_two.JPG")
 
 Jewelry.create!(name_en: "Olive Leaf Earrings",
                 name_gr: "Σκουλαρίκια Φύλλων Ελιάς",
@@ -372,7 +372,7 @@ Jewelry.create!(name_en: "Olive Leaf Earrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "772.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_three.JPG")
 
 Jewelry.create!(name_en: "Small Stud Earrings",
                 name_gr: "Μικρά Σκουλαρίκια-Καρφάκια",
@@ -384,7 +384,7 @@ Jewelry.create!(name_en: "Small Stud Earrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "1072.JPG" && "1172.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_four.JPG" && "Anodized_titanium_earrings_giampouras_five.JPG")
 
 Jewelry.create!(name_gr: "Επίπεδα Μεσαία Σκουλαρίκια Κρίκοι",
                 name_en: "Flat Medium Hoop Earrings",
@@ -396,7 +396,7 @@ Jewelry.create!(name_gr: "Επίπεδα Μεσαία Σκουλαρίκια Κ�
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "872.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_six.JPG")
 
 Jewelry.create!(name_en: "Stalactite Earrings",
                 name_gr: "Σκουλαρίκια Σταλακτίτης",
@@ -408,7 +408,7 @@ Jewelry.create!(name_en: "Stalactite Earrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "1372.JPG" && "1472.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_seven.JPG" && "Anodized_titanium_earrings_giampouras_eight.JPG")
 
 Jewelry.create!(name_gr: "Μεγάλα Σκουλαρίκια Κρίκοι",
                 name_en: "Big Hoop Earrings",
@@ -420,7 +420,7 @@ Jewelry.create!(name_gr: "Μεγάλα Σκουλαρίκια Κρίκοι",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "1872.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_nine.JPG")
 
 Jewelry.create!(name_en: "Medium Hoop Earrings",
                 name_gr: "Μεσαία Σκουλαρίκια Κρίκοι",
@@ -432,7 +432,7 @@ Jewelry.create!(name_en: "Medium Hoop Earrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "1772.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_ten.JPG")
 
 Jewelry.create!(name_en: "3D Geometric Triangle Earrings",
                 name_gr: "Σκουλαρίκια Γεωμετρικού Τριγώνου 3Δ",
@@ -444,7 +444,7 @@ Jewelry.create!(name_en: "3D Geometric Triangle Earrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "1572.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_eleven.JPG")
 
 Jewelry.create!(name_en: "3D Geometric Sphere Earrings",
                 name_gr: "Σκουλαρίκια Γεωμετρικής Σφαίρας 3Δ",
@@ -456,7 +456,7 @@ Jewelry.create!(name_en: "3D Geometric Sphere Earrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "1672.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_twelve.JPG")
 
 Jewelry.create!(name_en: "Circle And Triangle Shaped Earrings",
                 name_gr: "Σκουλαρίκια Με Σχήμα Κύκλου Και Τριγώνου",
@@ -468,7 +468,7 @@ Jewelry.create!(name_en: "Circle And Triangle Shaped Earrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "2072.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_thirteen.JPG")
 
 Jewelry.create!(name_en: "Minimalist Geometric Earrings",
                 name_gr: "Σκουλαρίκια Με Μινιμαλιστικό Σχέδιο",
@@ -480,7 +480,7 @@ Jewelry.create!(name_en: "Minimalist Geometric Earrings",
                 category_en: "Titanium Earrings",
                 category_gr: "Σκουλαρίκια Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "1972.JPG")
+                picture: "Anodized_titanium_earrings_giampouras_fourteen.JPG")
 
 Jewelry.create!(name_en: "Earrings With Red Poppy Flowers",
                 name_gr: "Σκουλαρίκια Κρεμαστά Με Παπαρούνας",
@@ -492,7 +492,7 @@ Jewelry.create!(name_en: "Earrings With Red Poppy Flowers",
                 category_en: "Enamel Earrings",
                 category_gr: "Σμάλτο Σκουλαρίκια",
                 artist_id: artist_one.id,
-                picture: "2272.JPG")
+                picture: "Enamel_earrings_giampouras_one.JPG")
 
 Jewelry.create!(name_en: "Adjustable Bright Bracelet",
                 name_gr: "Ρυθμιζόμενο Λαμπερό Βραχιόλι",
@@ -504,7 +504,7 @@ Jewelry.create!(name_en: "Adjustable Bright Bracelet",
                 category_en: "Titanium Bracelet",
                 category_gr: "Βραχιόλι Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "3972.JPG")
+                picture: "Anodized_titanium_bracelet_giampouras_two.JPG")
 
 Jewelry.create!(name_en: "Wide Arm Bracelet",
                 name_gr: "Βραχιόλι Από Ευρεία Μπράτσα",
@@ -516,7 +516,7 @@ Jewelry.create!(name_en: "Wide Arm Bracelet",
                 category_en: "Titanium Bracelet",
                 category_gr: "Βραχιόλι Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "4072.JPG")
+                picture: "Anodized_titanium_bracelet_giampouras_three.JPG")
 
 Jewelry.create!(name_en: "Blue Cherry Blossom Adjustable Ring",
                 name_gr: "Δαχτυλίδι Με Μπλε Λουλούδια Κερασιάς",
@@ -528,7 +528,7 @@ Jewelry.create!(name_en: "Blue Cherry Blossom Adjustable Ring",
                 category_en: "Enamel Ring",
                 category_gr: "Σμάλτο Δαχτυλίδι",
                 artist_id: artist_one.id,
-                picture: "4172.JPG")
+                picture: "Enamel_ring_giampouras_one.JPG")
 
 Jewelry.create!(name_en: "Red Big Poppy Flower Ring",
                 name_gr: "Δαχτυλίδι με Μεγάλη Παπαρούνα",
@@ -540,7 +540,7 @@ Jewelry.create!(name_en: "Red Big Poppy Flower Ring",
                 category_en: "Enamel Ring",
                 category_gr: "Σμάλτο Δαχτυλίδι",
                 artist_id: artist_one.id,
-                picture: "4272.JPG")
+                picture: "Enamel_ring_giampouras_two.JPG")
 
 Jewelry.create!(name_en: "Red Poppy Flower Ring",
                 name_gr: "Δαχτυλίδι Με Στοίβαση Πεταλούδας",
@@ -552,7 +552,7 @@ Jewelry.create!(name_en: "Red Poppy Flower Ring",
                 category_en: "Enamel Ring",
                 category_gr: "Σμάλτο Δαχτυλίδι",
                 artist_id: artist_one.id,
-                picture: "4372.JPG")
+                picture: "Enamel_ring_giampouras_three.JPG")
 
 Jewelry.create!(name_en: "Red Medium Poppy Flower Ring",
                 name_gr: "Δαχτυλίδι Με Μεσαία Παπαρούνα",
@@ -564,7 +564,7 @@ Jewelry.create!(name_en: "Red Medium Poppy Flower Ring",
                 category_en: "Enamel Ring",
                 category_gr: "Σμάλτο Δαχτυλίδι",
                 artist_id: artist_one.id,
-                picture: "4472.JPG")
+                picture: "Enamel_ring_giampouras_four.JPG")
 
 Jewelry.create!(name_en: "Red Small Poppy Flower Ring",
                 name_gr: "Δαχτυλίδι Με Μικρή Παπαρούνα",
@@ -576,7 +576,7 @@ Jewelry.create!(name_en: "Red Small Poppy Flower Ring",
                 category_en: "Enamel Ring",
                 category_gr: "Σμάλτο Δαχτυλίδι",
                 artist_id: artist_one.id,
-                picture: "4572.JPG")
+                picture: "Enamel_ring_giampouras_five.JPG")
 
 Jewelry.create!(name_en: "Statement Ring",
                 name_gr: "Δαχτυλίδι Δήλωσης",
@@ -588,7 +588,7 @@ Jewelry.create!(name_en: "Statement Ring",
                 category_en: "Titanium Ring",
                 category_gr: "Δαχτυλίδι Τιτανίο",
                 artist_id: artist_one.id,
-                picture: "4672.JPG")
+                picture: "Anodized_titanium_ring_giampouras_four.JPG")
 
 puts "Giampouras done"
 puts "start Kanale"
@@ -605,7 +605,7 @@ Jewelry.create!(name_en: "Volcano Earrings",
                 category_en: "Earrings",
                 category_gr: "Σκουλαρίκια",
                 artist_id: artist_two.id,
-                picture: "2472.JPG")
+                picture: "Lava_earrings_Maria_Kanale.JPG")
 
 Jewelry.create!(name_en: "Floral Earrings",
                 name_gr: "Λουλουδένια Σκουλαρίκια",
@@ -617,7 +617,7 @@ Jewelry.create!(name_en: "Floral Earrings",
                 category_en: "Earrings",
                 category_gr: "Σκουλαρίκια",
                 artist_id: artist_two.id,
-                picture: "2672.JPG")
+                picture: "Flowers_earrings_Maria_Kanale_one.JPG")
 
 Jewelry.create!(name_en: "Floral Earrings",
                 name_gr: "Λουλουδένια Σκουλαρίκια",
@@ -629,7 +629,7 @@ Jewelry.create!(name_en: "Floral Earrings",
                 category_en: "Earrings",
                 category_gr: "Σκουλαρίκια",
                 artist_id: artist_two.id,
-                picture: "2772.JPG")
+                picture: "Flowers_earrings_Maria_Kanale_two.JPG")
 
 Jewelry.create!(name_en: "Selma Earrings",
                 name_gr: "Σελμα Σκουλαρίκια",
@@ -641,7 +641,7 @@ Jewelry.create!(name_en: "Selma Earrings",
                 category_en: "Earrings",
                 category_gr: "Σκουλαρίκια",
                 artist_id: artist_two.id,
-                picture: "2572.JPG")
+                picture: "Faith_earrings_Maria_Kanale_one.JPG")
 
 Jewelry.create!(name_en: "Floral Earrings",
                 name_gr: "Λουλουδένια Σκουλαρίκια",
@@ -653,7 +653,7 @@ Jewelry.create!(name_en: "Floral Earrings",
                 category_en: "Earrings",
                 category_gr: "Σκουλαρίκια",
                 artist_id: artist_two.id,
-                picture: "2872.JPG")
+                picture: "Flowers_earrings_Maria_Kanale_three.JPG")
 
 Jewelry.create!(name_en: "Melissa Earrings",
                 name_gr: "Melissa Σκουλαρίκια",
@@ -665,7 +665,7 @@ Jewelry.create!(name_en: "Melissa Earrings",
                 category_en: "Earrings",
                 category_gr: "Σκουλαρίκια",
                 artist_id: artist_two.id,
-                picture: "2372.JPG")
+                picture: "Faith_earrings_Maria_Kanale_two.JPG")
 
 Jewelry.create!(name_en: "Isabella ring",
                 name_gr: "Δακτυλίδι Isabella",
@@ -677,7 +677,7 @@ Jewelry.create!(name_en: "Isabella ring",
                 category_en: "Ring",
                 category_gr: "Δακτυλίδι",
                 artist_id: artist_two.id,
-                picture: "2972.JPG")
+                picture: "Flowers_ring_Maria_Kanale_one.JPG")
 
 Jewelry.create!(name_en: "Mara Ring",
                 name_gr: "Δακτυλίδι Aμαρα",
@@ -689,7 +689,7 @@ Jewelry.create!(name_en: "Mara Ring",
                 category_en: "Ring",
                 category_gr: "Δακτυλίδι",
                 artist_id: artist_two.id,
-                picture: "3572.JPG")
+                picture: "Faith_ring_Maria_Kanale_one.JPG")
 
 Jewelry.create!(name_en: "Grace earrings",
                 name_gr: "Σκουλαρίκια Grace",
@@ -703,7 +703,7 @@ Jewelry.create!(name_en: "Grace earrings",
                 category_en: "Earrings",
                 category_gr: "Σκουλαρίκια",
                 artist_id: artist_two.id,
-                picture: "3772.JPG")
+                picture: "Faith_earrings_Maria_Kanale_three.JPG")
 
 Jewelry.create!(name_en: "Isabella Necklace",
                 name_gr: "Περιδέραιο Isabella",
@@ -715,7 +715,7 @@ Jewelry.create!(name_en: "Isabella Necklace",
                 category_en: "Necklace",
                 category_gr: "Περιδέραιο",
                 artist_id: artist_two.id,
-                picture: "3372.JPG")
+                picture: "Flowers_necklace_Maria_Kanale.JPG")
 
 
 Jewelry.create!(name_en: "Elodie Bracelet",
@@ -728,7 +728,7 @@ Jewelry.create!(name_en: "Elodie Bracelet",
                 category_en: "Bracelet",
                 category_gr: "Βραχιόλι",
                 artist_id: artist_two.id,
-                picture: "3472.JPG")
+                picture: "Faith_bracelet_Maria_Kanale.JPG")
 
 Jewelry.create!(name_en: "Volcano Ring",
                 name_gr: "Δαχτυλίδι Ηφαιστείου",
@@ -740,7 +740,7 @@ Jewelry.create!(name_en: "Volcano Ring",
                 category_en: "Ring",
                 category_gr: "Δαχτυλίδι",
                 artist_id: artist_two.id,
-                picture: "3072.JPG")
+                picture: "Lava_ring_Maria_Kanale.JPG")
 
 Jewelry.create!(name_en: "Margo ring",
                 name_gr: "Δακτυλίδι Margo",
@@ -752,7 +752,7 @@ Jewelry.create!(name_en: "Margo ring",
                 category_en: "Ring",
                 category_gr: "Δαχτυλίδι",
                 artist_id: artist_two.id,
-                picture: "3272.JPG")
+                picture: "Flowers_ring_Maria_Kanale_two.JPG")
 
 Jewelry.create!(name_en: "Selma bracelet",
                 name_gr: "Βραχιόλι Selma",
@@ -764,6 +764,6 @@ Jewelry.create!(name_en: "Selma bracelet",
                 category_en: "Bracelet",
                 category_gr: "Βραχιόλι",
                 artist_id: artist_two.id,
-                picture: "3172.JPG")
+                picture: "Faith_bracelet_Maria_Kanale_two.JPG")
 
 puts "Seeds successfully finished !"
