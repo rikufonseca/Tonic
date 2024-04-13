@@ -1,15 +1,23 @@
+<%
+  set_meta_tags(
+    title: "Jewelry stores Athens, accessories shop, kolonaki greece",
+    description: "fine art beauty shop, located in Athens, kolonaki, jewelry from greek designers",
+    keywords: "Ring, Bracelet, Necklace, earrings, Titanium, Silver, jewelries, jewelry, bijou nails, Giampouras, Maria Kanale"
+  )
+  %>
+
 <% if params[:locale] == "en" || params[:locale].nil? %>
   <div class="all-jewelries direction-column" data-navbar-target="pageup">
     <div class="center">
       <h2> <%= @jewelry.name_en %></h2>
-      <div> <%= t('.from') %> <%= @jewelry.artist.name_en %></div>
+      <div> <%= t('.from') %> <%= keywords @jewelry.artist.name_en %></div>
     </div>
     <div class="side-to-side">
       <div class="tel-middle-space">
         <%= image_tag(@jewelry.picture, alt: @jewelry.category_en, class: "pics-dim") %>
       </div>
       <div class="width-text">
-        <%= @jewelry.description_en %>
+        <%= description @jewelry.description_en %>
         <p class="price-center"><%= @jewelry.price %> €</p>
       </div>
     </div>
@@ -18,14 +26,14 @@
   <div class="all-jewelries direction-column" data-navbar-target="pageup">
     <div class="center">
       <h2> <%= @jewelry.name_en %></h2>
-      <div> <%= t('.from') %> <%= @jewelry.artist.name_gr %></div>
+      <div> <%= t('.from') %> <%= keywords @jewelry.artist.name_gr %></div>
     </div>
     <div class="side-to-side">
       <div class="tel-middle-space">
         <%= image_tag(@jewelry.picture, alt: @jewelry.category_gr, class: "pics-dim") %>
       </div>
       <div class="width-text">
-        <%= @jewelry.description_gr %>
+        <%= description @jewelry.description_gr %>
         <p class="price-center"><%= @jewelry.price %> €</p>
       </div>
     </div>
