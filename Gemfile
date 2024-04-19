@@ -47,6 +47,7 @@ gem 'letter_opener', group: :development
 
 # SEO
 gem "meta-tags"
+gem 'search-engine-optimization', '~> 1.2'
 
 
 # Use Sass to process CSS
